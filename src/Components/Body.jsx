@@ -5,7 +5,7 @@ import MncCard from "./MncCard";
 const Body = () => {
   return (
     <>
-      <div className="flex h-96 justify-evenly">
+      <div className="flex h-96 justify-evenly mt-10">
         <div className="flex flex-col items-start">
           <h1 className="font-bold text-5xl mt-20 my-2">
             Everything you need to <br />
@@ -15,7 +15,7 @@ const Body = () => {
             Level up your career and land your next role with courses, mock
             interviews, and community.
           </small>
-          <button className="px-5 py-2 rounded-2xl bg-gradient my-2 text-white">
+          <button className=" mt-10 px-6 py-3 rounded-2xl bg-gradient-to-r from-blue-500 to-purple-600 text-white my-2 transition-transform transform hover:scale-105 hover:shadow-lg">
             Get Started For Free
           </button>
         </div>

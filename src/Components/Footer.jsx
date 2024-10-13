@@ -1,113 +1,137 @@
 const Footer = () => {
   return (
     <div>
-      <footer className="bg-black text-white py-10">
+      <footer className="bg-black text-white py-20"> {/* Changed background to solid black */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-16">
+            
             {/* Column 1 - Company Info */}
             <div>
-              <h2 className="text-2xl font-semibold">MockSkills</h2>
-              <p className="mt-2 text-gray-400">
-                Empowers your interview journey with AI-driven insights and
-                human expertise, delivering unmatched preparation for success.
+              <h2 className="text-3xl font-bold text-white mb-4">MockSkills</h2>
+              <p className="text-gray-400 leading-relaxed mb-6">
+                Empowering your interview journey with AI-driven insights and human expertise, delivering unmatched preparation for success.
               </p>
-              <p className="mt-4">
-                <strong>Contact Us:</strong> <br /> +01 123 4567 890
-              </p>
-              <p>
-                <strong>Email:</strong> info@mockskills.com
-              </p>
+              <div className="space-y-2 text-gray-300">
+                <p>
+                  <strong>Contact Us:</strong>{" "}
+                  <a href="tel:+011234567890" className="text-gray-400 hover:text-white transition-all duration-300">
+                    +01 123 4567 890
+                  </a>
+                </p>
+                <p>
+                  <strong>Email:</strong>{" "}
+                  <a href="mailto:info@mockskills.com" className="text-gray-400 hover:text-white transition-all duration-300">
+                    info@mockskills.com
+                  </a>
+                </p>
+                <p><strong>Address:</strong> 1234 Skill Drive, Bangalore, India</p>
+              </div>
             </div>
-
-            {/* Column 2 - Discover FinTrackX */}
+            
+            {/* Column 2 - Quick Links */}
             <div>
-              <h2 className="text-lg font-semibold">Discover MockSkills</h2>
-              <ul className="mt-4 space-y-2">
+              <h2 className="text-2xl font-semibold text-white mb-4">Quick Links</h2>
+              <ul className="space-y-4 text-gray-400">
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white">
-                    About Us
+                  <a href="#" className="flex items-center text-gray-400 hover:text-white transition-all duration-300">
+                    <i className="fas fa-info-circle mr-2"></i> About Us
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white">
-                    Services
+                  <a href="#" className="flex items-center text-gray-400 hover:text-white transition-all duration-300">
+                    <i className="fas fa-concierge-bell mr-2"></i> Services
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white">
-                    Client Success Stories
+                  <a href="#" className="flex items-center text-gray-400 hover:text-white transition-all duration-300">
+                    <i className="fas fa-bullseye mr-2"></i> Client Success Stories
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white">
-                    Insights
+                  <a href="#" className="flex items-center text-gray-400 hover:text-white transition-all duration-300">
+                    <i className="fas fa-lightbulb mr-2"></i> Insights
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white">
-                    Contact
+                  <a href="#" className="flex items-center text-gray-400 hover:text-white transition-all duration-300">
+                    <i className="fas fa-phone-alt mr-2"></i> Contact
                   </a>
                 </li>
               </ul>
             </div>
-
+            
             {/* Column 3 - Resources */}
             <div>
-              <h2 className="text-lg font-semibold">Resources</h2>
-              <ul className="mt-4 space-y-2">
+              <h2 className="text-2xl font-semibold text-white mb-4">Resources</h2>
+              <ul className="space-y-4 text-gray-400">
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white">
-                    FAQs
+                  <a href="#" className="flex items-center text-gray-400 hover:text-white transition-all duration-300">
+                    <i className="fas fa-question-circle mr-2"></i> FAQs
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white">
-                    Support
+                  <a href="#" className="flex items-center text-gray-400 hover:text-white transition-all duration-300">
+                    <i className="fas fa-headset mr-2"></i> Support
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white">
-                    Terms of Service
+                  <a href="#" className="flex items-center text-gray-400 hover:text-white transition-all duration-300">
+                    <i className="fas fa-file-contract mr-2"></i> Terms of Service
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white">
-                    Privacy Policy
+                  <a href="#" className="flex items-center text-gray-400 hover:text-white transition-all duration-300">
+                    <i className="fas fa-shield-alt mr-2"></i> Privacy Policy
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white">
-                    Help
+                  <a href="#" className="flex items-center text-gray-400 hover:text-white transition-all duration-300">
+                    <i className="fas fa-life-ring mr-2"></i> Help
                   </a>
                 </li>
               </ul>
             </div>
-
+            
             {/* Column 4 - Stay Connected */}
             <div>
-              <h2 className="text-lg font-semibold">Stay Connected</h2>
-              <p className="mt-4 text-gray-400">
-                Subscribe to our newsletter for the latest Interview Content
-                insights and updates.
+              <h2 className="text-2xl font-semibold text-white mb-4">Stay Connected</h2>
+              <p className="text-gray-400 mb-6">
+                Subscribe to our newsletter for the latest interview content insights and updates.
               </p>
-              <div className="flex mt-4 space-x-4">
-                <a href="#" className="text-white hover:text-gray-400">
-                  <i className="fab fa-facebook-f fa-lg"></i>
+              <div className="flex items-center space-x-4 mb-6">
+                <a href="#" className="text-gray-400 hover:text-white transition-all duration-300">
+                  <i className="fab fa-facebook-f fa-2x"></i>
                 </a>
-                <a href="#" className="text-white hover:text-gray-400">
-                  <i className="fab fa-twitter fa-lg"></i>
+                <a href="#" className="text-gray-400 hover:text-white transition-all duration-300">
+                  <i className="fab fa-twitter fa-2x"></i>
                 </a>
-                <a href="#" className="text-white hover:text-gray-400">
-                  <i className="fab fa-linkedin-in fa-lg"></i>
+                <a href="#" className="text-gray-400 hover:text-white transition-all duration-300">
+                  <i className="fab fa-linkedin-in fa-2x"></i>
                 </a>
+                <a href="#" className="text-gray-400 hover:text-white transition-all duration-300">
+                  <i className="fab fa-youtube fa-2x"></i>
+                </a>
+              </div>
+              <div className="flex flex-col">
+                <input
+                  type="email"
+                  className="w-full px-4 py-3 rounded-md text-gray-900 focus:outline-none focus:ring-2 focus:ring-teal-400"
+                  placeholder="Enter your email"
+                />
+                <button className="mt-4 py-3 bg-teal-400 rounded-md text-white hover:bg-teal-500 transition-all duration-300 shadow-md hover:shadow-lg">
+                  Subscribe
+                </button>
               </div>
             </div>
           </div>
-
-          <div className="border-t border-gray-700 mt-10 pt-6 text-center text-gray-500">
+          
+          {/* Footer Bottom */}
+          <div className="border-t border-gray-700 mt-16 pt-8 text-center text-gray-500">
             <p>
-              Copyright 2024 All Rights Reserved by{" "}
-              <span className="text-teal-500">MockSkills</span>
+              © 2024 All Rights Reserved by <span className="text-teal-400 font-semibold">MockSkills</span>
+            </p>
+            <p className="mt-2 text-sm">
+              Follow us on social media for more updates and success stories.
             </p>
           </div>
         </div>
