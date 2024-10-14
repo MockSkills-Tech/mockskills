@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { FaChevronDown, FaTimes } from "react-icons/fa";
+import { FaChevronDown, FaTimes, FaClipboardList, FaCode, FaChartBar, FaUsers, FaNetworkWired } from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleForm } from "../Utils/loginSlice";
@@ -10,16 +10,25 @@ const Header = () => {
   const [showModal, setShowModal] = useState(false);
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [showBanner, setShowBanner] = useState(true);
+  const isLoginForm = useSelector((store) => store.login.isLogin);
 
   const handleLoginForm = () => {
     dispatch(toggleForm(true));
+    setShowModal(true);
   };
 
   const handleSignupForm = () => {
     dispatch(toggleForm(false));
+    setShowModal(true);
   };
 
-  const isLoginForm = useSelector((store) => store.login.isLogin);
+  useEffect(() => {
+    if (showModal) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+  }, [showModal]);
 
   return (
     <>
@@ -50,11 +59,10 @@ const Header = () => {
 
         <div className="flex items-center space-x-2">
           <SearchBar />
-          <AuthButtons
-            isLoginForm={isLoginForm}
-            handleLoginForm={handleLoginForm}
-            handleSignupForm={handleSignupForm}
-            setShowModal={setShowModal}
+          <AuthButtons 
+            isLoginForm={isLoginForm} 
+            handleLoginForm={handleLoginForm} 
+            handleSignupForm={handleSignupForm} 
           />
         </div>
 
@@ -63,6 +71,7 @@ const Header = () => {
           className="md:hidden p-2"
           onClick={() => setMobileMenuOpen((prev) => !prev)}
           aria-label="Toggle mobile menu"
+          aria-expanded={isMobileMenuOpen}
         >
           <FaChevronDown className={`transform transition-transform duration-300 ${isMobileMenuOpen ? 'rotate-180' : ''}`} />
         </button>
@@ -93,61 +102,49 @@ const Header = () => {
     </>
   );
 };
-
 const HeaderMenu = ({ mobile }) => {
-  const [isQuestionsOpen, setIsQuestionsOpen] = useState(false);
-  const [isCoachingOpen, setIsCoachingOpen] = useState(false);
-  const questionsRef = useRef(null);
-  const coachingRef = useRef(null);
+  const [activeDropdown, setActiveDropdown] = useState(null);
 
-  const toggleQuestionsDropdown = () => {
-    setIsQuestionsOpen((prev) => !prev);
-    setIsCoachingOpen(false);
+  const courseItems = [
+    { name: "Product Management", description: "Ace product interviews from strategy cases to technical skills.", icon: <FaClipboardList /> },
+    { name: "Software Engineering", description: "Learn essential strategies for coding problems and more.", icon: <FaCode /> },
+    { name: "Data Science", description: "Execute statistical techniques and experimentation effectively.", icon: <FaChartBar /> },
+    { name: "Engineering Management", description: "Review key leadership and people management skills.", icon: <FaUsers /> },
+    { name: "System Design", description: "Define architectures, interfaces, and databases in a time crunch.", icon: <FaNetworkWired /> },
+  ];
+
+  const toggleDropdown = (dropdown) => {
+    setActiveDropdown((prev) => (prev === dropdown ? null : dropdown));
   };
-
-  const toggleCoachingDropdown = () => {
-    setIsCoachingOpen((prev) => !prev);
-    setIsQuestionsOpen(false);
-  };
-
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (
-        questionsRef.current &&
-        !questionsRef.current.contains(event.target) &&
-        coachingRef.current &&
-        !coachingRef.current.contains(event.target)
-      ) {
-        setIsQuestionsOpen(false);
-        setIsCoachingOpen(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
 
   return (
     <nav className={`flex ${mobile ? 'flex-col space-y-2' : 'space-x-6'}`}>
-      <div className="relative inline-block" ref={questionsRef}>
+      {/* Courses Menu */}
+      <div
+        className="relative inline-block"
+        onMouseEnter={() => toggleDropdown('courses')}
+        onMouseLeave={() => toggleDropdown(null)}
+      >
         <button
-          onClick={toggleQuestionsDropdown}
           className={`flex items-center text-gray-700 hover:text-blue-600 transition duration-200 ${mobile ? 'text-lg' : ''}`}
+          aria-expanded={activeDropdown === 'courses'}
+          aria-controls="courseDropdown"
         >
-          Questions <FaChevronDown className="ml-1" />
+          Courses <FaChevronDown className="ml-1" />
         </button>
-        {isQuestionsOpen && (
-          <div className="absolute z-10 mt-2 w-40 bg-white border border-gray-300 rounded-md shadow-lg transition duration-200">
-            <ul className="py-1 text-gray-700">
-              {["C#", "Java", "Python"].map((question) => (
-                <li key={question}>
-                  <a
-                    href="#"
-                    className="block px-4 py-2 rounded-md hover:bg-blue-400 transition duration-150"
-                  >
-                    {question}
+        {activeDropdown === 'courses' && (
+          <div id="courseDropdown" className="absolute z-10 mt-2 w-80 bg-white border border-gray-300 rounded-md shadow-lg transition duration-200">
+            <ul className="p-4 space-y-3 text-gray-700">
+              {courseItems.map((course) => (
+                <li key={course.name}>
+                  <a href="#" className="flex items-start space-x-3 hover:text-blue-600 transition duration-150">
+                    <span className="text-blue-500 text-xl mt-1">
+                      {course.icon}
+                    </span>
+                    <div>
+                      <h4 className="font-semibold">{course.name}</h4>
+                      <p className="text-sm text-gray-500">{course.description}</p>
+                    </div>
                   </a>
                 </li>
               ))}
@@ -156,15 +153,21 @@ const HeaderMenu = ({ mobile }) => {
         )}
       </div>
 
-      <div className="relative inline-block" ref={coachingRef}>
+      {/* Coaching Menu */}
+      <div
+        className="relative inline-block"
+        onMouseEnter={() => toggleDropdown('coaching')}
+        onMouseLeave={() => toggleDropdown(null)}
+      >
         <button
-          onClick={toggleCoachingDropdown}
           className={`flex items-center text-gray-700 hover:text-blue-600 transition duration-200 ${mobile ? 'text-lg' : ''}`}
+          aria-expanded={activeDropdown === 'coaching'}
+          aria-controls="coachingDropdown"
         >
           Coaching <FaChevronDown className="ml-1" />
         </button>
-        {isCoachingOpen && (
-          <div className="absolute z-10 mt-2 w-40 bg-white border border-gray-300 rounded-md shadow-lg transition duration-200">
+        {activeDropdown === 'coaching' && (
+          <div id="coachingDropdown" className="absolute z-10 mt-2 w-40 bg-white border border-gray-300 rounded-md shadow-lg transition duration-200">
             <ul className="py-1 text-gray-700">
               {["CoachingA", "CoachingB"].map((coaching) => (
                 <li key={coaching}>
@@ -181,10 +184,13 @@ const HeaderMenu = ({ mobile }) => {
         )}
       </div>
 
-      <div className={`text-gray-700 hover:text-blue-600 transition duration-200 cursor-pointer ${mobile ? 'text-lg' : ''}`}>Partners</div>
+      <div className={`text-gray-700 hover:text-blue-600 transition duration-200 cursor-pointer ${mobile ? 'text-lg' : ''}`}>
+        Partners
+      </div>
     </nav>
   );
 };
+
 
 const SearchBar = () => (
   <div className="flex items-center border border-gray-300 rounded-full overflow-hidden shadow-sm hover:shadow-md transition duration-200">
@@ -199,24 +205,18 @@ const SearchBar = () => (
   </div>
 );
 
-const AuthButtons = ({ isLoginForm, handleLoginForm, handleSignupForm, setShowModal }) => (
+const AuthButtons = ({ isLoginForm, handleLoginForm, handleSignupForm }) => (
   <>
     <button
       className={`px-5 py-2 rounded-md transition duration-200 ${isLoginForm ? "bg-gradient text-white" : "bg-gray-100 text-gray-800 hover:bg-gray-200"}`}
-      onClick={() => {
-        handleLoginForm();
-        setShowModal(true);
-      }}
+      onClick={handleLoginForm}
       aria-label="Login"
     >
       Login
     </button>
     <button
       className={`px-4 py-2 rounded-md transition duration-200 ${!isLoginForm ? "bg-gradient text-white" : "bg-gray-100 text-gray-800 hover:bg-gray-200"}`}
-      onClick={() => {
-        handleSignupForm();
-        setShowModal(true);
-      }}
+      onClick={handleSignupForm}
       aria-label="Sign Up"
     >
       Sign Up
