@@ -7,7 +7,9 @@ const Body = () => {
     <>
       <div className="flex h-96 justify-evenly mt-10">
         <div className="flex flex-col items-start">
-          <h1 className="font-bold text-5xl mt-20 my-2">
+                  <h1 className="font-bold text-5xl mt-20 my-2">
+
+
             Everything you need to <br />
             <span className="text-gradient">ace</span> your tech interviews
           </h1>
