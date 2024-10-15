@@ -134,5 +134,38 @@ export const MNC_DATA = [
     logo: "fab fa-yelp fa-3x text-red-600",
   },
 ];
-
+export const COURSE_DATA = [
+  {
+    id: 1,
+    title: "Machine Learning Engineer Interviews",
+    description:
+      "Ace your ML Engineer interviews with common topics and questions.",
+    courses: 7,
+    students: "12k",
+    image: "https://example.com/image1.jpg",
+  },
+  {
+    id: 2,
+    title: "Security Engineering and Cybersecurity Interviews",
+    description: "Learn the best practices for security interviews.",
+    courses: 6,
+    students: "10k",
+    image: "https://example.com/image2.jpg",
+  },
+  {
+    id: 3,
+    title: "Product Management Interviews",
+    description: "Master PM interviews with the top questions and frameworks.",
+    courses: 11,
+    students: "25k",
+    image: "https://example.com/image3.jpg",
+  },
+];
+export const TAGS = [
+  "All",
+  "PM",
+  "Machine Learning",
+  "Data Science",
+  "Security",
+];
 export const ITEM_WIDTH = 240;

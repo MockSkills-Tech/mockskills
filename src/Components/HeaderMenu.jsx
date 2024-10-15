@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import {
   FaChartBar,
@@ -7,6 +8,7 @@ import {
   FaNetworkWired,
   FaUsers,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const HeaderMenu = ({ mobile }) => {
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -61,7 +63,8 @@ const HeaderMenu = ({ mobile }) => {
           aria-expanded={activeDropdown === "courses"}
           aria-controls="courseDropdown"
         >
-          Courses <FaChevronDown className="ml-1" />
+          <Link to={"/courses"}>Courses</Link>{" "}
+          <FaChevronDown className="ml-1" />
         </button>
         {activeDropdown === "courses" && (
           <div

@@ -29,7 +29,6 @@ const Body = () => {
 
         {/* MNC Card Section */}
         <div className="w-full text-center mb-4">
-          <MncCard />
           <h1 className="font-bold text-3xl mb-4">
             Our HR & Interviewers from Top MNCs
           </h1>

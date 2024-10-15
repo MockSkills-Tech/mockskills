@@ -3,6 +3,7 @@ import Body from "./Components/Body";
 import MainLayout from "./MainLayout";
 import CSharpPage from "./Components/Questions/CSharpPage";
 import JavaPage from "./Components/Questions/JavaPage";
+import Course from "./Components/Courses/Course";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -13,6 +14,10 @@ const App = () => {
         {
           path: "/",
           element: <Body />,
+        },
+        {
+          path: "/courses",
+          element: <Course />,
         },
         {
           path: "question/csharp",
