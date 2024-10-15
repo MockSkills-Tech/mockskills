@@ -12,7 +12,7 @@ const MncCard = () => {
         slidesPerView={10}
         spaceBetween={30}
         autoplay={{
-          delay: 3000,
+          delay: 1000,
           disableOnInteraction: false,
         }}
         pagination={{

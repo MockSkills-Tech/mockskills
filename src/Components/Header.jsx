@@ -1,9 +1,22 @@
 import { useEffect, useRef, useState } from "react";
+<<<<<<< Updated upstream
 import { FaChevronDown, FaTimes, FaClipboardList, FaCode, FaChartBar, FaUsers, FaNetworkWired } from "react-icons/fa";
+=======
+import {
+  FaChevronDown,
+  FaTimes,
+  FaClipboardList,
+  FaCode,
+  FaChartBar,
+  FaUsers,
+  FaNetworkWired,
+} from "react-icons/fa";
+>>>>>>> Stashed changes
 import { IoSearch } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleForm } from "../Utils/loginSlice";
 import LoginSignup from "./LoginSignup";
+import HeaderMenu from "./HeaderMenu";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -50,7 +63,9 @@ const Header = () => {
 
       <header className="flex justify-between items-center p-4 bg-white shadow-md sticky top-0 z-50 transition duration-300">
         <div className="flex items-center">
-          <span className="ml-2 text-gradient text-2xl font-bold">MockSkills</span>
+          <span className="ml-2 text-gradient text-2xl font-bold">
+            MockSkills
+          </span>
         </div>
 
         <div className="hidden md:flex">
@@ -59,10 +74,17 @@ const Header = () => {
 
         <div className="flex items-center space-x-2">
           <SearchBar />
+<<<<<<< Updated upstream
           <AuthButtons 
             isLoginForm={isLoginForm} 
             handleLoginForm={handleLoginForm} 
             handleSignupForm={handleSignupForm} 
+=======
+          <AuthButtons
+            isLoginForm={isLoginForm}
+            handleLoginForm={handleLoginForm}
+            handleSignupForm={handleSignupForm}
+>>>>>>> Stashed changes
           />
         </div>
 
@@ -73,7 +95,11 @@ const Header = () => {
           aria-label="Toggle mobile menu"
           aria-expanded={isMobileMenuOpen}
         >
-          <FaChevronDown className={`transform transition-transform duration-300 ${isMobileMenuOpen ? 'rotate-180' : ''}`} />
+          <FaChevronDown
+            className={`transform transition-transform duration-300 ${
+              isMobileMenuOpen ? "rotate-180" : ""
+            }`}
+          />
         </button>
       </header>
 
@@ -102,6 +128,7 @@ const Header = () => {
     </>
   );
 };
+<<<<<<< Updated upstream
 const HeaderMenu = ({ mobile }) => {
   const [activeDropdown, setActiveDropdown] = useState(null);
 
@@ -190,6 +217,9 @@ const HeaderMenu = ({ mobile }) => {
     </nav>
   );
 };
+=======
+<HeaderMenu />;
+>>>>>>> Stashed changes
 
 
 const SearchBar = () => (
@@ -199,7 +229,10 @@ const SearchBar = () => (
       placeholder="Search"
       aria-label="Search"
     />
-    <button className="h-9 bg-gradient px-4 flex items-center justify-center rounded-r-full transition duration-200 hover:bg-blue-600" aria-label="Search button">
+    <button
+      className="h-9 bg-gradient px-4 flex items-center justify-center rounded-r-full transition duration-200 hover:bg-blue-600"
+      aria-label="Search button"
+    >
       <IoSearch className="text-white" />
     </button>
   </div>
@@ -208,14 +241,30 @@ const SearchBar = () => (
 const AuthButtons = ({ isLoginForm, handleLoginForm, handleSignupForm }) => (
   <>
     <button
+<<<<<<< Updated upstream
       className={`px-5 py-2 rounded-md transition duration-200 ${isLoginForm ? "bg-gradient text-white" : "bg-gray-100 text-gray-800 hover:bg-gray-200"}`}
+=======
+      className={`px-5 py-2 rounded-md transition duration-200 ${
+        isLoginForm
+          ? "bg-gradient text-white"
+          : "bg-gray-100 text-gray-800 hover:bg-gray-200"
+      }`}
+>>>>>>> Stashed changes
       onClick={handleLoginForm}
       aria-label="Login"
     >
       Login
     </button>
     <button
+<<<<<<< Updated upstream
       className={`px-4 py-2 rounded-md transition duration-200 ${!isLoginForm ? "bg-gradient text-white" : "bg-gray-100 text-gray-800 hover:bg-gray-200"}`}
+=======
+      className={`px-4 py-2 rounded-md transition duration-200 ${
+        !isLoginForm
+          ? "bg-gradient text-white"
+          : "bg-gray-100 text-gray-800 hover:bg-gray-200"
+      }`}
+>>>>>>> Stashed changes
       onClick={handleSignupForm}
       aria-label="Sign Up"
     >
