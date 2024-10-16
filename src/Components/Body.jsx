@@ -1,6 +1,7 @@
 import interviewImage from "../assets/interview_image.jpg";
 import CategoryCard from "./CategoryCard";
 import MncCard from "./MncCard";
+import CommunityCard from "./CommunityCard"
 
 const Body = () => {
   return (
@@ -28,15 +29,39 @@ const Body = () => {
         </div>
 
         {/* MNC Card Section */}
-        <div className="w-full text-center mb-4">
+        <div className="w-full text-center mb-4 p-6 rounded-lg">
           <h1 className="font-bold text-3xl mb-4">
-            Our HR & Interviewers from Top MNCs
+            <span className="inline-block bg-gray-50 rounded-md px-4 py-1 shadow-sm">
+              Our HR & Interviewers from Top MNCs
+            </span>
           </h1>
         </div>
 
         <div className="flex justify-center w-full">
           <div className="w-[80%] mb-7">
             <MncCard />
+          </div>
+        </div>
+
+        {/* Community Card Section */}
+        <div className="w-full text-center mb-8 p-6 rounded-lg">
+          <h1 className="font-bold text-4xl mb-2 text-gray-800">
+            <span className="inline-block bg-gray-50 rounded-md px-4 py-1 shadow-sm">
+              Be Part of Something Bigger
+            </span>
+          </h1>
+          <h2 className="text-lg font-medium text-gray-600 max-w-2xl mx-auto">
+            <span className="inline-block bg-gray-50 rounded-md px-2 py-1 shadow-sm">
+              Join over 100,000 people using{" "}
+              <span className="text-blue-500 font-semibold">MockSkills</span> to
+              elevate their skills and achieve their career goals.
+            </span>
+          </h2>
+        </div>
+
+        <div className="flex justify-center w-full">
+          <div className="w-[95%] mb-5%">
+            <CommunityCard />
           </div>
         </div>
       </div>
