@@ -20,6 +20,7 @@ const CommunityCard = () => {
         clickable: true,
       }}
       modules={[Autoplay]}
+      loop={false} // Disable looping
       breakpoints={{
         640: {
           slidesPerView: 2, // 2 slides for small tablets
@@ -38,18 +39,39 @@ const CommunityCard = () => {
     >
       {COMMUNITY_CARDS_DATA.map((item) => {
         return (
-          <SwiperSlide
-            key={item.name}
-            className="bg-white rounded-lg shadow-lg p-6 text-center transition-transform transform"
-          >
-            {/* Name and Title */}
-            <h3 className="text-xl font-semibold text-teal-600">{item.name}</h3>
-            <p className="text-sm text-gray-500 mb-3">{item.title}</p>
+          <SwiperSlide key={item.name} className="p-4">
+            <div className="max-w-xl w-full p-6 bg-gray-50 border border-gray-300 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 hover:bg-gray-100">
+              {/* Profile Section */}
+              <div className="flex items-center mb-5">
+                <a
+                  href={item.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {/* Set a consistent image size for all */}
+                  <img
+                    src={item.profileImage}
+                    alt={item.name}
+                    className="w-24 h-24 rounded-full object-cover mr-4 border-2 border-blue-500 transition-transform duration-300 hover:scale-105"
+                    style={{ objectFit: "cover" }} // Ensures images are focused
+                  />
+                </a>
+                <div className="flex-grow">
+                  {/* Allow this div to grow to use available space */}
+                  <h3 className="text-xl font-semibold text-gray-800 transition-colors duration-300 hover:text-blue-600 whitespace-nowrap overflow-hidden text-ellipsis">
+                    {item.name}
+                  </h3>
+                  <p className="text-sm text-gray-600">{item.title}</p>
+                </div>
+              </div>
 
-            {/* Feedback */}
-            <p className="mt-2 text-gray-700 border-t pt-2 italic">
-              "{item.feedback}"
-            </p>
+              {/* Feedback Section */}
+              <div className="bg-white p-4 rounded-md border border-gray-200 hover:bg-gray-50 transition-colors duration-300">
+                <p className="text-gray-700 text-base leading-relaxed italic">
+                  "{item.feedback}"
+                </p>
+              </div>
+            </div>
           </SwiperSlide>
         );
       })}
