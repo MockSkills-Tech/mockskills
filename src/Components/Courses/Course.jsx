@@ -3,28 +3,32 @@ import CourseList from "./CourseList";
 import { COURSE_DATA } from "../../Utils/constant";
 import SearchBar from "./SearchBar";
 import FilterTags from "./FilterTags";
+import CourseBody from "./CourseBody";
 
 const Course = () => {
   return (
-    <div className="mx-7 my-1">
-      <div className="p-6">
-        <div className="flex justify-between">
-          <div>
-            <h1 className="text-3xl font-bold mb-1">Course Library</h1>
-            <p className="text-gray-600 mb-4">
-              Explore all tailored courses for specific roles, companies, and
-              skills.
-            </p>
+    <>
+      <CourseBody /> {/* Wrapping the CourseBody in a fragment or a parent div */}
+      <div className="mx-7 my-1">
+        <div className="p-6">
+          <div className="flex justify-between">
+            <div>
+              <h1 className="text-3xl font-bold mb-1">Course Library</h1>
+              <p className="text-gray-600 mb-4">
+                Explore all tailored courses for specific roles, companies, and
+                skills.
+              </p>
+            </div>
+            <div>
+              <SearchBar />
+            </div>
           </div>
-          <div>
-            <SearchBar />
-          </div>
-        </div>
 
-        <FilterTags />
+          <FilterTags />
+        </div>
+        <CourseList courses={COURSE_DATA} />
       </div>
-      <CourseList courses={COURSE_DATA} />
-    </div>
+    </>
   );
 };
 
