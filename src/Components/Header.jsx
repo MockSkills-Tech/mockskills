@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { toggleForm } from "../Utils/loginSlice";
 import LoginSignup from "./LoginSignup";
 import HeaderMenu from "./HeaderMenu";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -52,7 +53,7 @@ const Header = () => {
       <header className="flex justify-between items-center p-4 bg-white shadow-md sticky top-0 z-50 transition duration-300">
         <div className="flex items-center">
           <span className="ml-2 text-gradient text-2xl font-bold">
-            MockSkills
+            <Link to={"/"}>MockSkills</Link>
           </span>
         </div>
 

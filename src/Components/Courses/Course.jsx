@@ -1,5 +1,5 @@
 import CourseList from "./CourseList";
-import { COURSE_DATA } from "../../Utils/constant";
+import { COURSES } from "../../Utils/constant";
 import SearchBar from "./SearchBar";
 import FilterTags from "./FilterTags";
 import CourseBody from "./CourseBody";
@@ -46,7 +46,7 @@ const Course = () => {
 
           <FilterTags />
         </div>
-        <CourseList courses={COURSE_DATA} />
+        <CourseList courses={COURSES} />
       </div>
     </>
   );

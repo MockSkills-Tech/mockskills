@@ -5,7 +5,7 @@ import CSharpPage from "./Components/Questions/CSharpPage";
 import JavaPage from "./Components/Questions/JavaPage";
 import Course from "./Components/Courses/Course";
 import CourseDetail from "./Components/Courses/CourseDetails/CourseDetail";
-
+import SingleCourseDetail from "./Components/Courses/CourseDetails/SingleCourseDetail";
 const App = () => {
   const router = createBrowserRouter([
     {
@@ -31,6 +31,10 @@ const App = () => {
         {
           path: "/course/:name",
           element: <CourseDetail />,
+        },
+        {
+          path: "/course/:name/:title",
+          element: <SingleCourseDetail />,
         },
       ],
     },
