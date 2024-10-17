@@ -6,15 +6,21 @@ import FilterTags from "./FilterTags";
 
 const Course = () => {
   return (
-    <div>
+    <div className="mx-7 my-1">
       <div className="p-6">
-        <h1 className="text-3xl font-bold mb-4">Course Library</h1>
-        <p className="text-gray-600 mb-4">
-          Explore all tailored courses for specific roles, companies, and
-          skills.
-        </p>
+        <div className="flex justify-between">
+          <div>
+            <h1 className="text-3xl font-bold mb-1">Course Library</h1>
+            <p className="text-gray-600 mb-4">
+              Explore all tailored courses for specific roles, companies, and
+              skills.
+            </p>
+          </div>
+          <div>
+            <SearchBar />
+          </div>
+        </div>
 
-        <SearchBar />
         <FilterTags />
       </div>
       <CourseList courses={COURSE_DATA} />

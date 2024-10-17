@@ -48,7 +48,7 @@ const CommunityCard = () => {
 
             {/* Feedback */}
             <p className="mt-2 text-gray-700 border-t pt-2 italic">
-              "{item.feedback}"
+              {item.feedback}
             </p>
           </SwiperSlide>
         );
