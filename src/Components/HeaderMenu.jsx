@@ -1,53 +1,16 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
-import {
-  FaChartBar,
-  FaChevronDown,
-  FaClipboardList,
-  FaCode,
-  FaNetworkWired,
-  FaUsers,
-} from "react-icons/fa";
-import { Link } from "react-router-dom";
 
+import { Link } from "react-router-dom";
+import { courseItems } from "../Utils/constant";
+import { FaChevronDown } from "react-icons/fa";
 const HeaderMenu = ({ mobile }) => {
   const [activeDropdown, setActiveDropdown] = useState(null);
-
-  const courseItems = [
-    {
-      name: "Product Management",
-      description:
-        "Ace product interviews from strategy cases to technical skills.",
-      icon: <FaClipboardList />,
-    },
-    {
-      name: "Software Engineering",
-      description: "Learn essential strategies for coding problems and more.",
-      icon: <FaCode />,
-    },
-    {
-      name: "Data Science",
-      description:
-        "Execute statistical techniques and experimentation effectively.",
-      icon: <FaChartBar />,
-    },
-    {
-      name: "Engineering Management",
-      description: "Review key leadership and people management skills.",
-      icon: <FaUsers />,
-    },
-    {
-      name: "System Design",
-      description:
-        "Define architectures, interfaces, and databases in a time crunch.",
-      icon: <FaNetworkWired />,
-    },
-  ];
 
   const toggleDropdown = (dropdown) => {
     setActiveDropdown((prev) => (prev === dropdown ? null : dropdown));
   };
-
+  console.log("CourseItem" + courseItems);
   return (
     <nav className={`flex ${mobile ? "flex-col space-y-2" : "space-x-6"}`}>
       {/* Courses Menu */}
@@ -73,21 +36,28 @@ const HeaderMenu = ({ mobile }) => {
           >
             <ul className="p-4 space-y-3 text-gray-700">
               {courseItems.map((course) => (
-                <li key={course.name}>
-                  <a
-                    href="#"
-                    className="flex items-start space-x-3 hover:text-blue-600 transition duration-150"
+                <li key={course.id}>
+                  <Link
+                    to={`/course/${course.name
+                      .toLowerCase()
+                      .replace(/\s+/g, "-")}`}
+                    state={{ id: course.id }} // Passing the ID as state
                   >
-                    <span className="text-blue-500 text-xl mt-1">
-                      {course.icon}
-                    </span>
-                    <div>
-                      <h4 className="font-semibold">{course.name}</h4>
-                      <p className="text-sm text-gray-500">
-                        {course.description}
-                      </p>
-                    </div>
-                  </a>
+                    <a
+                      href="#"
+                      className="flex items-start space-x-3 hover:text-blue-600 transition duration-150"
+                    >
+                      <span className="text-blue-500 text-xl mt-1">
+                        {course.icon}
+                      </span>
+                      <div>
+                        <h4 className="font-semibold">{course.name}</h4>
+                        <p className="text-sm text-gray-500">
+                          {course.description}
+                        </p>
+                      </div>
+                    </a>
+                  </Link>
                 </li>
               ))}
             </ul>

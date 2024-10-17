@@ -1,3 +1,11 @@
+import {
+  FaChartBar,
+  FaClipboardList,
+  FaCode,
+  FaNetworkWired,
+  FaUsers,
+} from "react-icons/fa";
+
 export const CATEGORIES_CARDS_DATA = [
   {
     name: "Product Management",
@@ -253,3 +261,39 @@ export const TAGS = [
   "Digital Marketing",
 ];
 export const ITEM_WIDTH = 240;
+
+export const courseItems = [
+  {
+    name: "Product Management",
+    description:
+      "Ace product interviews from strategy cases to technical skills.",
+    icon: <FaClipboardList />,
+    id: 1,
+  },
+  {
+    name: "Software Engineering",
+    description: "Learn essential strategies for coding problems and more.",
+    icon: <FaCode />,
+    id: 2,
+  },
+  {
+    name: "Data Science",
+    description:
+      "Execute statistical techniques and experimentation effectively.",
+    icon: <FaChartBar />,
+    id: 3,
+  },
+  {
+    name: "Engineering Management",
+    description: "Review key leadership and people management skills.",
+    icon: <FaUsers />,
+    id: 4,
+  },
+  {
+    name: "System Design",
+    description:
+      "Define architectures, interfaces, and databases in a time crunch.",
+    icon: <FaNetworkWired />,
+    id: 5,
+  },
+];
