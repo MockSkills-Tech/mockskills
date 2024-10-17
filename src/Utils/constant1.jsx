@@ -1,62 +1,72 @@
 export const COMMUNITY_CARDS_DATA = [
     {
-        name: "Yinka",
+        name: "Mithalesh Kumar",
         title: "Data Science Manager, Meta",
-        feedback: "Exponent gave me all the tools to succeed.",
-        logo: "fas fa-user text-blue-500 text-3xl mb-2",
+        feedback: "Exponent equipped me with essential tools to succeed in my career journey.",
+        profileImage: "src/assets/CommunityPic/mithalesh9.jpeg",
+        linkedin: "https://www.linkedin.com/in/mithalesh-kumar-123456789/" // Example link, replace with actual if available
     },
     {
-        name: "Vaibhav",
+        name: "Sumit Verma",
         title: "Software Development Manager, Amazon",
-        feedback: "The engineering manager course is one-of-a-kind and helps.",
-        logo: "fas fa-laptop-code text-blue-500 text-3xl mb-2",
+        feedback: "The engineering manager course provided invaluable insights and resources.",
+        profileImage: "src/assets/CommunityPic/sumit.jpeg",
+        linkedin: "https://www.linkedin.com/in/sumit-verma-987654321/" // Example link, replace with actual if available
     },
     {
-        name: "Anika",
+        name: "Dilip Sharma",
         title: "Product Manager, Google",
-        feedback: "Exponent helped me master product design interviews.",
-        logo: "fas fa-lightbulb text-blue-500 text-3xl mb-2",
+        feedback: "Thanks to Exponent, I mastered product design interviews and secured my dream job.",
+        profileImage: "src/assets/CommunityPic/dilip8.jpeg",
+        linkedin: "https://www.linkedin.com/in/dilip-sharma-456789012/" // Example link, replace with actual if available
     },
     {
-        name: "Rahul",
+        name: "Samardni Singh",
         title: "Data Engineer, Microsoft",
-        feedback: "The data science interview prep materials were helpful.",
-        logo: "fas fa-database text-blue-500 text-3xl mb-2",
+        feedback: "The data science interview prep materials were instrumental in my success.",
+        profileImage: "src/assets/CommunityPic/samardni.jpeg",
+        linkedin: "https://www.linkedin.com/in/samardni-singh-345678901/" // Example link, replace with actual if available
     },
     {
-        name: "Aishwarya",
+        name: "Keshav Rao",
         title: "Machine Learning Engineer, Tesla",
-        feedback: "Mock interviews helped me sharpen my skills and land.",
-        logo: "fas fa-robot text-blue-500 text-3xl mb-2",
+        feedback: "Mock interviews helped me sharpen my skills and land a role at Tesla.",
+        profileImage: "src/assets/CommunityPic/keshav5.jpeg",
+        linkedin: "https://www.linkedin.com/in/keshav-rao-234567890/" // Example link, replace with actual if available
     },
     {
-        name: "Ravi",
+        name: "Astha Sharma",
         title: "System Architect, Oracle",
-        feedback: "I aced my system design interviews thanks to resources.",
-        logo: "fas fa-puzzle-piece text-blue-500 text-3xl mb-2",
+        feedback: "I aced my system design interviews thanks to the extensive resources provided.",
+        profileImage: "src/assets/CommunityPic/astha11.jpeg",
+        linkedin: "https://www.linkedin.com/in/astha-sharma-123456789/" // Example link, replace with actual if available
     },
     {
-        name: "Pooja",
+        name: "Manish Verma",
         title: "Technical Program Manager, LinkedIn",
-        feedback: "Courses helped me understand how to approach programs.",
-        logo: "fas fa-cogs text-blue-500 text-3xl mb-2",
+        feedback: "The courses helped me understand how to effectively manage technical programs.",
+        profileImage: "src/assets/CommunityPic/manish2.jpeg",
+        linkedin: "https://www.linkedin.com/in/manish-kumar-04b50a227/"
     },
     {
-        name: "Karan",
+        name: "Kundan Singh",
         title: "Backend Engineer, Uber",
-        feedback: "The mock interview experience gave me confidence in questions.",
-        logo: "fas fa-server text-blue-500 text-3xl mb-2",
+        feedback: "The mock interview experience gave me the confidence to tackle challenging questions.",
+        profileImage: "src/assets/CommunityPic/kundan1.jpeg",
+        linkedin: "https://www.linkedin.com/in/kundanks/"
     },
     {
-        name: "Neha",
+        name: "Vishal Desai",
         title: "AI Researcher, Facebook",
-        feedback: "The AI sections prepared me for my research role.",
-        logo: "fas fa-brain text-blue-500 text-3xl mb-2",
+        feedback: "The AI-focused sections prepared me thoroughly for my research role.",
+        profileImage: "src/assets/CommunityPic/vishal12.jpeg",
+        linkedin: "https://www.linkedin.com/in/vishal-desai-456123789/" // Example link, replace with actual if available
     },
     {
-        name: "Sanjay",
+        name: "Shruti Gupta",
         title: "Full Stack Developer, Flipkart",
-        feedback: "Mock interviews helped me handle both frontend and backend.",
-        logo: "fas fa-code text-blue-500 text-3xl mb-2",
-    }
+        feedback: "Mock interviews helped me confidently handle both frontend and backend tasks.",
+        profileImage: "src/assets/CommunityPic/shruti.jpeg",
+        linkedin: "https://www.linkedin.com/in/shruti-gupta-123789456/" // Example link, replace with actual if available
+    },
 ];
