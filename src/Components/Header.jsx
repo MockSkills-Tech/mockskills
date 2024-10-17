@@ -109,7 +109,6 @@ const Header = () => {
     </>
   );
 };
-<HeaderMenu />;
 
 const SearchBar = () => (
   <div className="flex items-center border border-gray-300 rounded-full overflow-hidden shadow-sm hover:shadow-md transition duration-200">
@@ -127,7 +126,8 @@ const SearchBar = () => (
   </div>
 );
 
-const AuthButtons = (isLoginForm, handleLoginForm, handleSignupForm) => (
+// Corrected AuthButtons function component
+const AuthButtons = ({ isLoginForm, handleLoginForm, handleSignupForm }) => (
   <>
     <button
       className={`px-5 py-2 rounded-md transition duration-200 ${
