@@ -1,11 +1,19 @@
 import { useLocation } from "react-router-dom";
-import { COURSES } from "../../../Utils/constant"; // Assuming courses are here
+import { CHAPTERS, COURSES, TOPICS } from "../../../Utils/constant"; // Assuming courses are here
+import { useState } from "react";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
 const SingleCourseDetail = () => {
   const location = useLocation();
+  const [expandedIndex, setExpandedIndex] = useState(null);
   const { id } = location.state || {};
 
   const course = COURSES.find((course) => course.id === parseInt(id));
+  const chapters = CHAPTERS.filter((chapter) => course.id === chapter.courseId);
+
+  const toggleChapter = (index) => {
+    setExpandedIndex(expandedIndex === index ? null : index);
+  };
 
   if (!course) {
     return <div>Course not found</div>;
@@ -15,7 +23,6 @@ const SingleCourseDetail = () => {
     <>
       <div className="bg-gradient-to-r from-purple-400 to-indigo-500 rounded-b-lg p-8 text-white shadow-lg">
         <div className="flex items-start justify-between">
-          {/* Left side: Title and description */}
           <div className="w-2/3">
             <h2 className="text-3xl font-bold mb-4">{course.title}</h2>
             <p className="mb-6">{course.description}</p>
@@ -32,7 +39,6 @@ const SingleCourseDetail = () => {
             </div>
           </div>
 
-          {/* Right side: Video embed */}
           <div className="w-1/3">
             <iframe
               className="rounded-lg shadow-md"
@@ -47,10 +53,10 @@ const SingleCourseDetail = () => {
           </div>
         </div>
       </div>
+
       {/* Key Points and Chapter Section */}
       <div className="my-10 mx-10">
         <div className="grid grid-cols-3 gap-8">
-          {/* Key Points */}
           <div>
             <h3 className="text-xl font-bold mb-4">KEY POINTS</h3>
             <div className="flex items-center mb-4">
@@ -79,43 +85,17 @@ const SingleCourseDetail = () => {
             </div>
           </div>
         </div>
+
         <div className="mt-10">
           <h4 className="text-lg font-bold mb-4">CHAPTERS</h4>
           <div className="bg-white rounded-lg shadow p-6">
-            {[
-              {
-                title: "Introduction to Java",
-                notes: 7,
-                problems: 8,
-                exp: "20/80",
-              },
-              {
-                title: "Variables and data types",
-                notes: 9,
-                problems: 11,
-                exp: "0/110",
-              },
-              {
-                title: "Basic I/O in Java",
-                notes: 3,
-                problems: 8,
-                exp: "0/200",
-              },
-              {
-                title: "Operators in Java",
-                notes: 10,
-                problems: 11,
-                exp: "0/110",
-              },
-              {
-                title: "Practice Problems",
-                notes: 0,
-                problems: 35,
-                exp: "0/350",
-              },
-            ].map((chapter, index) => (
+            {chapters.map((chapter, index) => (
               <div key={index} className="mb-4">
-                <div className="flex items-center justify-between">
+                {/* Chapter Header */}
+                <div
+                  className="flex items-center justify-between cursor-pointer"
+                  onClick={() => toggleChapter(index)}
+                >
                   <div>
                     <h5 className="text-md font-semibold">
                       Chapter {index + 1}: {chapter.title}
@@ -124,14 +104,39 @@ const SingleCourseDetail = () => {
                       {chapter.notes} Notes & {chapter.problems} Problems
                     </p>
                   </div>
-                  <div className="text-yellow-600 flex items-center">
-                    <span className="mr-2">⚡ {chapter.exp}</span>
-                    <button className="text-orange-500 font-bold">
-                      Attempt
-                    </button>
+                  <div className=" flex items-center">
+                    <span className="mr-2">
+                      {expandedIndex === index ? (
+                        <IoIosArrowUp />
+                      ) : (
+                        <IoIosArrowDown />
+                      )}
+                    </span>
                   </div>
                 </div>
-                {index < 4 && <hr className="my-4" />}
+
+                <div
+                  className={`transition-all duration-300 ease-in-out overflow-hidden ${
+                    expandedIndex === index
+                      ? "max-h-[500px] opacity-100"
+                      : "max-h-0 opacity-0"
+                  }`}
+                >
+                  <div className="mt-2">
+                    {TOPICS.filter(
+                      (topic) => topic.chapterId === chapter.id
+                    ).map((topic) => (
+                      <p
+                        key={topic.id}
+                        className="text-gray-400 font-semibold border border-gray-200 py-4 pl-4 my-2"
+                      >
+                        {topic.title}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+
+                {index < chapters.length - 1 && <hr className="my-4" />}
               </div>
             ))}
           </div>

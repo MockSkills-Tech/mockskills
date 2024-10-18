@@ -37,6 +37,7 @@ const HeaderMenu = ({ mobile }) => {
             <ul className="p-4 space-y-3 text-gray-700">
               {courseItems.map((course) => (
                 <li key={course.id}>
+                  {/* <li className="card bg-gradient space-x-4 text-gray-500"></li> */}
                   <Link
                     to={`/course/${course.name
                       .toLowerCase()
