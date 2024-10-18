@@ -20,6 +20,5 @@
 
 Follow these steps to get started with MockSkills:
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/yourusername/mockskills.git
+.
+.
