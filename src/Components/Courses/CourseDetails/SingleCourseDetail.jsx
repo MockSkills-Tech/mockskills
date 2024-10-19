@@ -88,12 +88,12 @@ const SingleCourseDetail = () => {
 
         <div className="mt-10">
           <h4 className="text-lg font-bold mb-4">CHAPTERS</h4>
-          <div className="bg-white rounded-lg shadow p-6">
+          <div className="bg-white rounded-lg shadow-xl p-6">
             {chapters.map((chapter, index) => (
               <div key={index} className="mb-4">
                 {/* Chapter Header */}
                 <div
-                  className="flex items-center justify-between cursor-pointer"
+                  className="flex items-center justify-between cursor-pointer "
                   onClick={() => toggleChapter(index)}
                 >
                   <div>
