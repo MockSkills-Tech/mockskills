@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 const FeaturesSection = () => {
   return (
@@ -36,9 +36,11 @@ const FeaturesSection = () => {
               certificate of course completion.
             </p>
             <div className="mt-6">
-              <button className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-500 transition duration-300 ease-in-out">
-                Explore Courses →
-              </button>
+              <Link to={"/courses"}>
+                <button className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-500 transition duration-300 ease-in-out">
+                  Explore Courses →
+                </button>
+              </Link>
             </div>
           </div>
 
