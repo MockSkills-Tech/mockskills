@@ -6,7 +6,7 @@ const FilterTags = () => {
       {TAGS.map((tag) => (
         <button
           key={tag}
-          className="border border-gray-300 text-gray-500 hover:bg-gradient-to-r from-blue-600 to-purple-700 hover:text-white px-5 py-2 rounded-full hover:scale-105 transition-all duration-300 ease-in-out  whitespace-nowrap"
+          className="border border-gray-300 text-gray-800 bg-gray-100 hover:bg-gradient-to-r from-blue-500 to-purple-600 hover:text-white px-4 py-2 rounded-md transition-all duration-300 ease-in-out whitespace-nowrap"
         >
           {tag}
         </button>
