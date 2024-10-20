@@ -17,7 +17,7 @@ const FeaturesSection = () => {
       </h1>
       <p className="text-lg text-center font-medium text-gray-600 max-w-2xl mx-auto mb-6">
         Join our community for mentorship, mock interviews, and tech courses to
-        earn a <span className="text-blue-500 font-semibold">certificate</span>
+        earn a <span className="text-blue-500 font-semibold">certificate </span>
         and advance your career!
       </p>
 
