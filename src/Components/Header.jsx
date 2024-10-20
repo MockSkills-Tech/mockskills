@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FaChevronDown, FaTimes } from "react-icons/fa";
+import { FaChevronDown, FaTimes, FaGraduationCap } from "react-icons/fa"; // Use any relevant icon
 import { IoSearch } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleForm } from "../Utils/loginSlice";
@@ -52,8 +52,14 @@ const Header = () => {
 
       <header className="flex justify-between items-center p-4 bg-white shadow-md sticky top-0 z-50 transition duration-300">
         <div className="flex items-center">
-          <span className="ml-2 text-gradient text-2xl font-bold">
-            <Link to={"/"}>MockSkills</Link>
+          {/* Single Icon added here */}
+          <FaGraduationCap className="text-blue-500 text-3xl mr-2" /> {/* You can change the icon and color */}
+          
+          <span className="text-2xl font-bold">
+            <Link to={"/"}>
+              <span className="text-blue-500">Mock</span>
+              <span className="text-green-500">Skills</span>
+            </Link>
           </span>
         </div>
 
@@ -127,14 +133,13 @@ const SearchBar = () => (
   </div>
 );
 
-// Corrected AuthButtons function component
 const AuthButtons = ({ isLoginForm, handleLoginForm, handleSignupForm }) => (
   <>
     <button
       className={`px-5 py-2 rounded-md transition duration-200 ${
         isLoginForm
           ? "bg-gradient text-white"
-          : "bg-gray-100 text-gray-800 hover:bg-gray-200"
+          : "bg-gray-100 text-gray-800 font-semibold hover:bg-gray-200"
       }`}
       onClick={handleLoginForm}
       aria-label="Login"
@@ -145,7 +150,7 @@ const AuthButtons = ({ isLoginForm, handleLoginForm, handleSignupForm }) => (
       className={`px-4 py-2 rounded-md transition duration-200 ${
         !isLoginForm
           ? "bg-gradient text-white"
-          : "bg-gray-100 text-gray-800 hover:bg-gray-200"
+          : "bg-gray-100 text-gray-800 font-semibold hover:bg-gray-200"
       }`}
       onClick={handleSignupForm}
       aria-label="Sign Up"
