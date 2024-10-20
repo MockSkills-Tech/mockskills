@@ -2,6 +2,7 @@ import interviewImage from "../assets/interview_image.jpg";
 import CategoryCard from "./CategoryCard";
 import MncCard from "./MncCard";
 import CommunityCard from "./CommunityCard";
+import Features from "./Features";
 
 const Body = () => {
   return (
@@ -63,6 +64,7 @@ const Body = () => {
           </div>
         </div>
       </section>
+      <Features />
     </>
   );
 };
