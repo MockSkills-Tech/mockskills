@@ -13,14 +13,16 @@ const CommunityCard = () => {
       slidesPerView={1} // Start with 1 slide on small screens
       spaceBetween={30}
       autoplay={{
-        delay: 3000,
+        delay: 3000, // Delay between transitions
         disableOnInteraction: false,
+        pauseOnMouseEnter: true, // Pause on hover for better UX
       }}
       pagination={{
         clickable: true,
       }}
+      speed={700} // Control the transition speed
       modules={[Autoplay]}
-      loop={false} // Disable looping
+      loop={true} // Enable looping for continuous motion
       breakpoints={{
         640: {
           slidesPerView: 2, // 2 slides for small tablets
