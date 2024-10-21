@@ -1455,16 +1455,40 @@ export const CHAPTERS = [
 ];
 
 export const TOPICS = [
-  { id: 2001, chapterId: 1001, title: "What is Product Management?" },
-  { id: 2002, chapterId: 1001, title: "Key Roles and Responsibilities" },
-  { id: 2003, chapterId: 1002, title: "Understanding the Product Lifecycle" },
-  { id: 2004, chapterId: 1002, title: "Managing the Product Lifecycle" },
-  { id: 2005, chapterId: 1003, title: "Introduction to Market Research" },
-  { id: 2006, chapterId: 1003, title: "Techniques for Effective Research" },
-  { id: 2007, chapterId: 1004, title: "Key Performance Indicators (KPIs)" },
-  { id: 2008, chapterId: 1004, title: "Tracking and Measuring Success" },
-  { id: 2009, chapterId: 1005, title: "Building a Product Roadmap" },
-  { id: 2010, chapterId: 1005, title: "Prioritizing Features" },
+  // HTML Essentials (Front-End)
+  { id: 20010, chapterId: 20001, title: "Introduction to HTML Tags" },
+  { id: 20011, chapterId: 20001, title: "HTML Attributes and Elements" },
+  { id: 20012, chapterId: 20002, title: "Structuring a Web Page with HTML" },
+  { id: 20013, chapterId: 20002, title: "Semantic HTML Elements" },
+  { id: 20014, chapterId: 20003, title: "Creating Forms with HTML" },
+  { id: 20015, chapterId: 20003, title: "HTML Input Types and Validation" },
+
+  // CSS Fundamentals (Front-End)
+  { id: 20016, chapterId: 20004, title: "CSS Selectors and Properties" },
+  { id: 20017, chapterId: 20004, title: "Styling Text and Fonts with CSS" },
+  { id: 20018, chapterId: 20005, title: "Understanding the CSS Box Model" },
+  { id: 20019, chapterId: 20005, title: "CSS Margins, Padding, and Borders" },
+  { id: 20020, chapterId: 20006, title: "Building Layouts with Flexbox" },
+  { id: 20021, chapterId: 20006, title: "CSS Grid for Responsive Design" },
+
+  // JavaScript Basics (Front-End)
+  { id: 20022, chapterId: 20007, title: "JavaScript Syntax and Variables" },
+  { id: 20023, chapterId: 20007, title: "Functions and Control Flow in JS" },
+  { id: 20024, chapterId: 20008, title: "Manipulating HTML with the DOM" },
+  { id: 20025, chapterId: 20008, title: "Working with DOM Events" },
+  { id: 20026, chapterId: 20009, title: "Handling User Inputs in JavaScript" },
+  { id: 20027, chapterId: 20009, title: "Asynchronous Event Handling in JS" },
+
+  { id: 2001, chapterId: 10001, title: "What is Product Management?" },
+  { id: 2002, chapterId: 10001, title: "Key Roles and Responsibilities" },
+  { id: 2003, chapterId: 10002, title: "Understanding the Product Lifecycle" },
+  { id: 2004, chapterId: 10002, title: "Managing the Product Lifecycle" },
+  { id: 2005, chapterId: 10003, title: "Introduction to Market Research" },
+  { id: 2006, chapterId: 10003, title: "Techniques for Effective Research" },
+  { id: 2007, chapterId: 10004, title: "Key Performance Indicators (KPIs)" },
+  { id: 2008, chapterId: 10004, title: "Tracking and Measuring Success" },
+  { id: 2009, chapterId: 10005, title: "Building a Product Roadmap" },
+  { id: 2010, chapterId: 10005, title: "Prioritizing Features" },
 
   // Topics for Advanced Product Strategy (Course 102)
   { id: 2011, chapterId: 1006, title: "Developing a Strategic Mindset" },

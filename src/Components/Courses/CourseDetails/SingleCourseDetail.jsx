@@ -2,17 +2,19 @@ import { Link, useLocation } from "react-router-dom";
 import { CHAPTERS, COURSES, MODULES, TOPICS } from "../../../Utils/constant"; // Assuming courses are here
 import { useState } from "react";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
-
+import Mithalesh_image from "../../../assets/CommunityPic/mithalesh9.jpeg";
+import Kundan_image from "../../../assets/CommunityPic/kundan1.jpeg";
+import Manish_image from "../../../assets/CommunityPic/manish2.jpeg";
 const SingleCourseDetail = () => {
   const location = useLocation();
-  const [expandedIndex, setExpandedIndex] = useState(null);
+  const [expandedId, setExpandedId] = useState(null);
   const { id } = location.state || {};
 
   const course = COURSES.find((course) => course.id === parseInt(id));
   const modules = MODULES.filter((module) => module.courseId === course.id); // Should be filter, not find
 
-  const toggleChapter = (index) => {
-    setExpandedIndex(expandedIndex === index ? null : index);
+  const toggleChapter = (id) => {
+    setExpandedId(expandedId === id ? null : id);
   };
 
   if (!course) {
@@ -72,85 +74,107 @@ const SingleCourseDetail = () => {
         </h1>
 
         {/* Instructor Information */}
-        <div className="flex flex-col items-center text-center mb-10">
-          <img
-            src="DDKFL"
-            alt="Instructor Avatar"
-            className="w-24 h-24 rounded-full object-cover shadow-md mb-4"
-          />
-          <h3 className="font-semibold text-lg text-gray-900">Mithalesh</h3>
-          <p className="text-sm text-gray-600">Engineer</p>
+        <div className="flex justify-center gap-x-11 items-center text-center mx-auto">
+          <div className="flex flex-col items-center mb-10">
+            <img
+              src={Mithalesh_image}
+              alt="Instructor Avatar"
+              className="w-24 h-24 rounded-full object-cover shadow-md mb-4"
+            />
+            <h3 className="font-semibold text-lg text-gray-900">Mithalesh</h3>
+            <p className="text-sm text-gray-600">Software Eng. at Americana </p>
+          </div>
+          <div className="flex flex-col items-center mb-10">
+            <img
+              src={Kundan_image}
+              alt="Instructor Avatar"
+              className="w-24 h-24 rounded-full object-cover shadow-md mb-4"
+            />
+            <h3 className="font-semibold text-lg text-gray-900">Kundan</h3>
+            <p className="text-sm text-gray-600">
+              Software Eng. at CogniFusion
+            </p>
+          </div>
+          <div className="flex flex-col items-center mb-10">
+            <img
+              src={Manish_image}
+              alt="Instructor Avatar"
+              className="w-24 h-24 rounded-full object-cover shadow-md mb-4"
+            />
+            <h3 className="font-semibold text-lg text-gray-900">Manish</h3>
+            <p className="text-sm text-gray-600">Software Eng. at Accenture</p>
+          </div>
         </div>
+        <div className="my-10 mx-auto text-center max-w-4xl">
+          {modules.map((module) => {
+            const moduleChapters = CHAPTERS.filter(
+              (chapter) => chapter.moduleId === module.id
+            );
 
-        {/* Chapters/Modules Section */}
-        {modules.map((module) => {
-          const moduleChapters = CHAPTERS.filter(
-            (chapter) => chapter.moduleId === module.id
-          );
+            return (
+              <div
+                key={module.id}
+                className=" border border-1 shadow-sm rounded-lg my-4"
+              >
+                <h4 className="text-lg font-bold pt-4 rounded-t-lg ">
+                  {module.title}
+                </h4>
+                <div
+                  key={module.id}
+                  className="border border-gray-300  rounded-lg my-4 md:w-11/12 mx-auto bg-white"
+                >
+                  <div className="">
+                    {moduleChapters.map((ch, index) => (
+                      <div key={ch.id} className="">
+                        {/* Chapter Header */}
+                        <div
+                          className={`flex items-center justify-between cursor-pointer ${
+                            expandedId === ch.id && "bg-gray-100"
+                          }  p-4 transition`}
+                          onClick={() => toggleChapter(ch.id)}
+                        >
+                          <h5 className="text-md font-semibold">{ch.title}</h5>
+                          <span>
+                            {expandedId === ch.id ? (
+                              <IoIosArrowUp />
+                            ) : (
+                              <IoIosArrowDown />
+                            )}
+                          </span>
+                        </div>
 
-          return (
-            <div
-              key={module.id}
-              className="border border-gray-300 rounded-lg p-10 my-4 md:w-3/4 mx-auto shadow-lg"
-            >
-              <h4 className="text-lg font-bold mb-4">{module.title}</h4>
-              <div className="pb-2 border border-gray-300 rounded-lg">
-                {moduleChapters.map((ch, index) => (
-                  <div key={ch.id} className="mb-4">
-                    {/* Chapter Header */}
-                    <div
-                      className="flex items-center justify-between cursor-pointer"
-                      onClick={() => toggleChapter(index)}
-                    >
-                      <div className="px-3">
-                        <h5 className="text-md font-semibold">{ch.title}</h5>
-                        <p className="text-sm text-gray-600">
-                          {ch.notes} Notes & {ch.problems} Problems
-                        </p>
+                        {/* Chapter Topics (expandable content) */}
+                        <div
+                          className={`transition-all duration-300 ease-in-out overflow-hidden  ${
+                            expandedId === ch.id
+                              ? "max-h-[500px] opacity-100"
+                              : "max-h-0 opacity-0"
+                          }`}
+                        >
+                          {TOPICS?.filter(
+                            (topic) => topic.chapterId === ch.id
+                          ).map((topic) => (
+                            <p
+                              key={topic.id}
+                              className="text-gray-400 text-left  py-2 pl-6 pr-4  border border-t-0 border-gray-200"
+                            >
+                              {topic.title}
+                            </p>
+                          ))}
+                        </div>
+
+                        {/* Divider between chapters */}
+                        {index < moduleChapters.length - 1 && (
+                          <hr className="border-t border-gray-300" />
+                        )}
                       </div>
-                      <div className="flex items-center">
-                        <span className="mr-2">
-                          {expandedIndex === index ? (
-                            <IoIosArrowUp />
-                          ) : (
-                            <IoIosArrowDown />
-                          )}
-                        </span>
-                      </div>
-                    </div>
-
-                    {/* Chapter Topics (expandable content) */}
-                    <div
-                      className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                        expandedIndex === index
-                          ? "max-h-[500px] opacity-100"
-                          : "max-h-0 opacity-0"
-                      }`}
-                    >
-                      <div className="mt-2">
-                        {TOPICS.filter(
-                          (topic) => topic.chapterId === ch.id
-                        ).map((topic) => (
-                          <p
-                            key={topic.id}
-                            className="text-gray-400 font-semibold border border-gray-400 py-4 pl-4 my-2"
-                          >
-                            {topic.title}
-                          </p>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Render hr only if this is not the last chapter of the current module */}
-                    {index < moduleChapters.length - 1 && (
-                      <hr className="my-4 border-t border-gray-300" />
-                    )}
+                    ))}
                   </div>
-                ))}
+                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </div>
   );
