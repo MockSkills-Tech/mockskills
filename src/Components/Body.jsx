@@ -1,4 +1,5 @@
-import interviewImage from "../assets/interview_image.jpg";
+import interviewImage from "../assets/Compushomepic.png";
+
 import CategoryCard from "./CategoryCard";
 import MncCard from "./MncCard";
 import CommunityCard from "./CommunityCard";
