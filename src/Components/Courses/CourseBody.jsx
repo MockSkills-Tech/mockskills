@@ -1,4 +1,5 @@
-import interviewImage from "../../assets/1.png";
+//import interviewImage from "../../assets/1.png";
+import interviewImage from "../assets/homeGraphic.png";
 
 const CourseBody = () => {
   return (
