@@ -15,10 +15,13 @@
 
 - ⚙️ **Customizable Tools:**  
   Tailor your learning experience with tools designed to meet your unique needs and preferences.
-
+     
 ## Getting Started
-
-Follow these steps to get started with MockSkills:
+  ⚙️  We made AI-Powered ⚙️
+  Mock-Interviews-with-AI is a voice-to-ai-to-voice application  Practice your interview skills with real-time feedback and 
+  dynamic questioning.
+  
+## Follow these steps to get started with MockSkills:
 
 .
 .
