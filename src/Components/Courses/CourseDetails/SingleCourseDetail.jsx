@@ -1,5 +1,11 @@
 import { Link, useLocation } from "react-router-dom";
-import { CHAPTERS, COURSES, MODULES, TOPICS } from "../../../Utils/constant"; // Assuming courses are here
+import {
+  CHAPTERS,
+  courseItems,
+  COURSES,
+  MODULES,
+  TOPICS,
+} from "../../../Utils/constant"; // Assuming courses are here
 import { useState } from "react";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import Mithalesh_image from "../../../assets/CommunityPic/mithalesh9.jpeg";
@@ -110,7 +116,11 @@ const SingleCourseDetail = () => {
             const moduleChapters = CHAPTERS.filter(
               (chapter) => chapter.moduleId === module.id
             );
-
+            const category = courseItems
+              .find((category) => category.id == course.categoryId)
+              .name.toLowerCase()
+              .replace(/\s+/g, "-");
+            const courseTitle = course.title.toLowerCase().replace(/\s+/g, "-");
             return (
               <div
                 key={module.id}
@@ -159,12 +169,14 @@ const SingleCourseDetail = () => {
                           {TOPICS?.filter(
                             (topic) => topic.chapterId === ch.id
                           ).map((topic) => (
-                            <p
+                            <Link
                               key={topic.id}
-                              className="text-gray-600 text-left  py-2 pl-6 pr-4  border border-t-0 border-gray-200"
+                              to={`/courses/${category}/${courseTitle}/${topic.id}`}
                             >
-                              {topic.title}
-                            </p>
+                              <p className="text-gray-600 text-left  py-2 pl-6 pr-4  border border-t-0 border-gray-200">
+                                {topic.title}
+                              </p>
+                            </Link>
                           ))}
                         </div>
 

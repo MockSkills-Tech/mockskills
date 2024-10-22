@@ -8,7 +8,7 @@ import CourseDetail from "./Components/Courses/CourseDetails/CourseDetail";
 import SingleCourseDetail from "./Components/Courses/CourseDetails/SingleCourseDetail";
 import CollabZone from "./Components/CollabZone/CollabZone"; // Correct import for CollabZone
 import Partners from "./Components/Partners/Partners"; // Rename the second import to Partners
-
+import ContentBody from "./Components/Courses/ContentDetails/ContentBody";
 const App = () => {
   const router = createBrowserRouter([
     {
@@ -33,8 +33,8 @@ const App = () => {
           element: <SingleCourseDetail />,
         },
         {
-          path: "/courses/:name/:title:id",
-          element: <SingleCourseDetail />,
+          path: "/courses/:name/:title/:id",
+          element: <ContentBody />,
         },
         {
           path: "question/csharp",
