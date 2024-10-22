@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useNavigate } from "react-router-dom";
-import { MdMenuBook, MdSchool } from "react-icons/md"; 
+import { MdMenuBook, MdSchool } from "react-icons/md";
 import INTERVIEW_IMAGE from "../../assets/interview_image.jpg";
 import { courseItems } from "../../Utils/constant";
 
@@ -9,7 +9,7 @@ const CourseCard = ({
   description,
   courses,
   students,
-  image,
+  //image,
   id,
   categoryId,
 }) => {
@@ -23,14 +23,18 @@ const CourseCard = ({
     const formattedCategoryName = categoryName
       .toLowerCase()
       .replace(/\s+/g, "-");
-    navigate(`/course/${formattedCategoryName}/${formattedTitle}`, {
+    navigate(`/courses/${formattedCategoryName}/${formattedTitle}`, {
       state: { id },
     });
   };
 
   return (
-    <div className="container mx-auto px-2"> {/* Decreased px for tighter spacing */}
-      <div className="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow duration-300 max-w-lg mx-4"> {/* Changed max-w-sm to max-w-lg for wider card */}
+    <div className="container mx-auto px-2">
+      {" "}
+      {/* Decreased px for tighter spacing */}
+      <div className="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow duration-300 max-w-lg mx-4">
+        {" "}
+        {/* Changed max-w-sm to max-w-lg for wider card */}
         <img
           src={INTERVIEW_IMAGE}
           alt={title}

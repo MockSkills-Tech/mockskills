@@ -1,11 +1,11 @@
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { COURSES } from "../../../Utils/constant"; // Assuming this contains the course data
 import CourseCard from "../CourseCard";
 
 const CourseDetail = () => {
-  const { name } = useParams();
   const location = useLocation();
   const { id } = location.state || {};
+  console.log("id = ", id);
 
   // Find courses by categoryId
   const categoryCourses = COURSES.filter((course) => course.categoryId === id);

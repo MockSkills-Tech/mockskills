@@ -53,8 +53,8 @@ const Header = () => {
       <header className="flex justify-between items-center p-4 bg-white shadow-md sticky top-0 z-50 transition duration-300">
         <div className="flex items-center">
           {/* Single Icon added here */}
-          <FaGraduationCap className="text-blue-500 text-3xl mr-2" /> {/* You can change the icon and color */}
-          
+          <FaGraduationCap className="text-blue-500 text-3xl mr-2" />{" "}
+          {/* You can change the icon and color */}
           <span className="text-2xl font-bold">
             <Link to={"/"}>
               <span className="text-blue-500">Mock</span>

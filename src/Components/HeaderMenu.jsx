@@ -2,7 +2,13 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { courseItems } from "../Utils/constant";
-import { FaAngleDown, FaBook, FaChalkboardTeacher, FaUsers, FaHandsHelping } from "react-icons/fa"; // Add your desired icons
+import {
+  FaAngleDown,
+  FaBook,
+  FaChalkboardTeacher,
+  FaUsers,
+  FaHandsHelping,
+} from "react-icons/fa"; // Add your desired icons
 
 const HeaderMenu = ({ mobile }) => {
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -27,7 +33,8 @@ const HeaderMenu = ({ mobile }) => {
           aria-controls="courseDropdown"
         >
           <Link to={"/courses"} className="flex items-center">
-            <FaBook className="mr-1 text-blue-600" /> {/* Colorful icon for Courses */}
+            <FaBook className="mr-1 text-blue-600" />{" "}
+            {/* Colorful icon for Courses */}
             <span className="font-semibold">Courses</span>
             <FaAngleDown className="ml-1" /> {/* Updated icon */}
           </Link>
@@ -42,7 +49,9 @@ const HeaderMenu = ({ mobile }) => {
               {courseItems.map((course) => (
                 <li key={course.id}>
                   <Link
-                    to={`/course/${course.name.toLowerCase().replace(/\s+/g, "-")}`}
+                    to={`/courses/${course.name
+                      .toLowerCase()
+                      .replace(/\s+/g, "-")}`}
                     state={{ id: course.id }} // Passing the ID as state
                   >
                     <div className="flex items-start space-x-3 hover:text-blue-600 transition duration-150">
@@ -51,7 +60,9 @@ const HeaderMenu = ({ mobile }) => {
                       </span>
                       <div>
                         <h4 className="font-semibold">{course.name}</h4>
-                        <p className="text-sm text-gray-500">{course.description}</p>
+                        <p className="text-sm text-gray-500">
+                          {course.description}
+                        </p>
                       </div>
                     </div>
                   </Link>
@@ -76,7 +87,8 @@ const HeaderMenu = ({ mobile }) => {
           aria-controls="coachingDropdown"
         >
           <span className="flex items-center">
-            <FaChalkboardTeacher className="mr-1 text-green-600" /> {/* Colorful icon for Coaching */}
+            <FaChalkboardTeacher className="mr-1 text-green-600" />{" "}
+            {/* Colorful icon for Coaching */}
             <span className="font-semibold">Coaching</span>
           </span>
           <FaAngleDown className="ml-1" /> {/* Updated icon */}
@@ -110,7 +122,8 @@ const HeaderMenu = ({ mobile }) => {
             mobile ? "text-lg" : "text-base"
           } hover:bg-gray-100`}
         >
-          <FaUsers className="mr-1 text-purple-600" /> {/* Colorful icon for Partners */}
+          <FaUsers className="mr-1 text-purple-600" />{" "}
+          {/* Colorful icon for Partners */}
           <span className="font-semibold">Partners</span>
         </div>
       </Link>
@@ -122,7 +135,8 @@ const HeaderMenu = ({ mobile }) => {
             mobile ? "text-lg" : "text-base"
           } hover:bg-gray-100`}
         >
-          <FaHandsHelping className="mr-1 text-orange-600" /> {/* Colorful icon for CollabZone */}
+          <FaHandsHelping className="mr-1 text-orange-600" />{" "}
+          {/* Colorful icon for CollabZone */}
           <span className="font-semibold">CollabZone</span>
         </div>
       </Link>

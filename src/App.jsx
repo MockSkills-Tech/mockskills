@@ -23,6 +23,19 @@ const App = () => {
           path: "/courses",
           element: <Course />,
         },
+
+        {
+          path: "/courses/:name",
+          element: <CourseDetail />,
+        },
+        {
+          path: "/courses/:name/:title",
+          element: <SingleCourseDetail />,
+        },
+        {
+          path: "/courses/:name/:title:id",
+          element: <SingleCourseDetail />,
+        },
         {
           path: "question/csharp",
           element: <CSharpPage />,
@@ -30,14 +43,6 @@ const App = () => {
         {
           path: "question/java",
           element: <JavaPage />,
-        },
-        {
-          path: "/course/:name",
-          element: <CourseDetail />,
-        },
-        {
-          path: "/course/:name/:title",
-          element: <SingleCourseDetail />,
         },
         {
           path: "/collabzone", // Route for the CollabZone

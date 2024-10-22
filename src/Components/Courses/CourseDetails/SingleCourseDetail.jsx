@@ -129,11 +129,16 @@ const SingleCourseDetail = () => {
                         {/* Chapter Header */}
                         <div
                           className={`flex items-center justify-between cursor-pointer ${
-                            expandedId === ch.id && "bg-gray-100"
+                            expandedId === ch.id &&
+                            `bg-gradient ${
+                              index === 0 && `rounded-t-lg`
+                            }  text-white`
                           }  p-4 transition`}
                           onClick={() => toggleChapter(ch.id)}
                         >
-                          <h5 className="text-md font-semibold">{ch.title}</h5>
+                          <h5 className="text-md font-semibold">
+                            Chapter:-{index + 1} {ch.title}
+                          </h5>
                           <span>
                             {expandedId === ch.id ? (
                               <IoIosArrowUp />
@@ -156,7 +161,7 @@ const SingleCourseDetail = () => {
                           ).map((topic) => (
                             <p
                               key={topic.id}
-                              className="text-gray-400 text-left  py-2 pl-6 pr-4  border border-t-0 border-gray-200"
+                              className="text-gray-600 text-left  py-2 pl-6 pr-4  border border-t-0 border-gray-200"
                             >
                               {topic.title}
                             </p>
