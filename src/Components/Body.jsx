@@ -4,6 +4,7 @@ import CategoryCard from "./CategoryCard";
 import MncCard from "./MncCard";
 import CommunityCard from "./CommunityCard";
 import Features from "./Features";
+import NewFeatures from "./NewFeatures";
 
 const Body = () => {
   return (
@@ -65,9 +66,13 @@ const Body = () => {
           </div>
         </div>
       </section>
+      
+      <NewFeatures/>
       <Features />
     </>
   );
 };
 
 export default Body;
+
+
