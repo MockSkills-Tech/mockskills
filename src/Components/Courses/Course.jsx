@@ -24,6 +24,7 @@ const Course = () => {
             <h1 className="text-3xl font-bold text-gray-800 mb-2">Course Library</h1>
             <p className="text-gray-600 mb-4">
               Explore all tailored courses for specific roles, companies, and skills.
+              @getAlLTheData
             </p>
           </div>
           <SearchBar />
