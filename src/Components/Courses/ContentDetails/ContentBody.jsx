@@ -4,10 +4,11 @@ import ContentSideBar from "./ContentSideBar";
 
 const ContentBody = () => {
   const { id } = useParams();
+
   return (
-    <div className="text-3xl ">
+    <div className="text-3xl flex">
+      <ContentSideBar id={id} />
       <Content id={id} />
-      <ContentSideBar />
     </div>
   );
 };
