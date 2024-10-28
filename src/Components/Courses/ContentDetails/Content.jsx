@@ -1,6 +1,4 @@
-// Content.js
-import React from "react";
-
+/* eslint-disable react/prop-types */
 const Content = ({ id }) => {
   return (
     <div className="flex-1 p-6 bg-white text-gray-800 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out">

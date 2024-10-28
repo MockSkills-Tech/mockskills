@@ -13,6 +13,7 @@ import FindGenZ from "./Components/CollabZone/CollabFeatures/FindGenZ"; // Corre
 import JoinUs from "./Components/CollabZone/CollabFeatures/JoinUs"; // Correct import for JoinUs
 import Opportunities from "./Components/CollabZone/CollabFeatures/Opportunities"; // Correct import for Opportunities
 import LiveFeed from "./Components/CollabZone/CollabFeatures/LiveFeed"; // Correct import for LiveFeed
+import CollabzoneMain from "./Components/CollabZone/CollabzoneMain";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -50,28 +51,35 @@ const App = () => {
         },
         {
           path: "/collabzone",
-          element: <CollabZone />,
+          element: <CollabzoneMain />,
+          children: [
+            { path: "/collabzone", element: <CollabZone /> },
+            { path: "/collabzone/join-us", element: <JoinUs /> },
+            { path: "/collabzone/opportunities", element: <Opportunities /> },
+            { path: "/collabzone/find-genz", element: <FindGenZ /> },
+            { path: "/collabzone/live-feed", element: <LiveFeed /> },
+          ],
         },
         {
           path: "/partners",
           element: <Partners />,
         },
-        {
-          path: "/find-genz",
-          element: <FindGenZ />,
-        },
-        {
-          path: "/join-us",
-          element: <JoinUs />,
-        },
-        {
-          path: "/opportunities",
-          element: <Opportunities />,
-        },
-        {
-          path: "/live-feed",
-          element: <LiveFeed />,
-        },
+        // {
+        //   path: "/find-genz",
+        //   element: <FindGenZ />,
+        // },
+        // {
+        //   path: "/join-us",
+        //   element: <JoinUs />,
+        // },
+        // {
+        //   path: "/opportunities",
+        //   element: <Opportunities />,
+        // },
+        // {
+        //   path: "/live-feed",
+        //   element: <LiveFeed />,
+        // },
       ],
     },
   ]);
