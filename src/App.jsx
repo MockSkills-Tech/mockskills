@@ -6,9 +6,14 @@ import JavaPage from "./Components/Questions/JavaPage";
 import Course from "./Components/Courses/Course";
 import CourseDetail from "./Components/Courses/CourseDetails/CourseDetail";
 import SingleCourseDetail from "./Components/Courses/CourseDetails/SingleCourseDetail";
-import CollabZone from "./Components/CollabZone/CollabZone"; // Correct import for CollabZone
-import Partners from "./Components/Partners/Partners"; // Rename the second import to Partners
+import CollabZone from "./Components/CollabZone/CollabZone";
+import Partners from "./Components/Partners/Partners";
 import ContentBody from "./Components/Courses/ContentDetails/ContentBody";
+import FindGenZ from "./Components/CollabZone/CollabFeatures/FindGenZ"; // Correct import for FindGenZ
+import JoinUs from "./Components/CollabZone/CollabFeatures/JoinUs"; // Correct import for JoinUs
+import Opportunities from "./Components/CollabZone/CollabFeatures/Opportunities"; // Correct import for Opportunities
+import LiveFeed from "./Components/CollabZone/CollabFeatures/LiveFeed"; // Correct import for LiveFeed
+
 const App = () => {
   const router = createBrowserRouter([
     {
@@ -23,7 +28,6 @@ const App = () => {
           path: "/courses",
           element: <Course />,
         },
-
         {
           path: "/courses/:name",
           element: <CourseDetail />,
@@ -45,12 +49,28 @@ const App = () => {
           element: <JavaPage />,
         },
         {
-          path: "/collabzone", // Route for the CollabZone
-          element: <CollabZone />, // Use the correct CollabZone component
+          path: "/collabzone",
+          element: <CollabZone />,
         },
         {
-          path: "/partners", // Route for the Partners page
-          element: <Partners />, // Use the correct Partners component
+          path: "/partners",
+          element: <Partners />,
+        },
+        {
+          path: "/find-genz",
+          element: <FindGenZ />,
+        },
+        {
+          path: "/join-us",
+          element: <JoinUs />,
+        },
+        {
+          path: "/opportunities",
+          element: <Opportunities />,
+        },
+        {
+          path: "/live-feed",
+          element: <LiveFeed />,
         },
       ],
     },
