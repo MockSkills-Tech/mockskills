@@ -5,6 +5,7 @@ import MncCard from "./MncCard";
 import CommunityCard from "./CommunityCard";
 import Features from "./Features";
 import NewFeatures from "./NewFeatures";
+import AboutUs from "./AboutUs";
 
 const Body = () => {
   return (
@@ -68,7 +69,8 @@ const Body = () => {
       </section>
       
       <NewFeatures/>
-      <Features />
+{/*       <Features /> */}
+      <AboutUs/>
     </>
   );
 };
