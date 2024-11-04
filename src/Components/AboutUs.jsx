@@ -1,7 +1,7 @@
 import React from 'react';
-import aboutImage1 from '../assets/About1.png';
-import aboutImage2 from '../assets/About2.png';
-import aboutImage3 from '../assets/About3.png';
+import aboutImage1 from '../assets/About1.svg';
+import aboutImage2 from '../assets/About2.svg';
+import aboutImage3 from '../assets/About3.svg';
 import Team1 from '../assets/Kundan.jpg';
 import Team2 from '../assets/Mithalesh.jpeg';
 
