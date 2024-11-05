@@ -1,0 +1,152 @@
+.container {
+    padding: 1.5rem;
+    background-color: #ffffff;
+    color: #333;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Scoped styles for markdown content */
+.markdownContent h1 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #2a4365;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.markdownContent h2 {
+    font-size: 1.75em;
+    font-weight: bold;
+    color: #2b6cb0;
+    margin-top: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.markdownContent h3 {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #3182ce;
+    margin-top: 1rem;
+    margin-bottom: 0.6rem;
+}
+
+.markdownContent h4 {
+    font-size: 1.25em;
+    font-weight: 600;
+    color: #4299e1;
+    margin-top: 0.8rem;
+    margin-bottom: 0.4rem;
+}
+
+.markdownContent p {
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Styling for unordered (ul) and ordered (ol) lists */
+.markdownContent ul {
+    padding-left: 1.5rem;
+    list-style-type: disc;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.markdownContent ol {
+    padding-left: 1.5rem;
+    list-style-type: decimal;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.markdownContent li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* Nested lists */
+.markdownContent ul ul,
+.markdownContent ol ol,
+.markdownContent ul ol,
+.markdownContent ol ul {
+    padding-left: 1.5rem;
+    list-style-type: circle;
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Blockquote styling */
+.markdownContent blockquote {
+    border-left: 4px solid #2b6cb0;
+    padding-left: 1rem;
+    margin: 1rem 0;
+    color: #555;
+    font-style: italic;
+    background-color: #f7fafc;
+}
+
+/* Code block styling */
+.markdownContent pre {
+    background-color: #1e293b;
+    color: #e2e8f0;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    font-size: 0.95em;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.markdownContent code {
+    background-color: #edf2f7;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    color: #d53f8c;
+    font-family: "Courier New", Courier, monospace;
+}
+
+/* Table styling */
+.markdownContent table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+.markdownContent th,
+.markdownContent td {
+    border: 1px solid #e2e8f0;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+.markdownContent th {
+    background-color: #edf2f7;
+    color: #2a4365;
+    font-weight: bold;
+}
+
+.markdownContent td {
+    background-color: #ffffff;
+}
+
+/* Links and images */
+.markdownContent a {
+    color: #3182ce;
+    text-decoration: underline;
+}
+
+    .markdownContent a:hover {
+        color: #2b6cb0;
+    }
+
+.markdownContent img {
+    display: block;
+    margin: 1rem 0;
+    max-width: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
