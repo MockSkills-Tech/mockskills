@@ -59,8 +59,9 @@ const ContentSideBar = () => {
     ? course.title.toLowerCase().replace(/\s+/g, "-")
     : "";
 
-  return (
-    <div className="w-80 h-full bg-gray-900 text-white p-4 shadow-xl overflow-y-auto transition-all duration-300">
+    return (
+        
+      <div>
       {/* Progress Bar */}
       <div className="bg-gray-800 rounded-lg p-3 mb-6">
         <div className="relative h-2 bg-gray-700 rounded-full overflow-hidden">
