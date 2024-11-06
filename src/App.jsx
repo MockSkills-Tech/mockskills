@@ -19,7 +19,7 @@ import CollabzoneMain from "./Components/CollabZone/CollabzoneMain";
 const App = () => {
   return (
     <>
-      <GlobalProtection /> {/* Ensure this is inside the return block to apply protections globally */}
+         
       <RouterProvider
         router={createBrowserRouter([
           {

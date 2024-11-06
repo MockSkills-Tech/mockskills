@@ -59,10 +59,10 @@ An ordered list (__&lt;ol&gt;__) numbers items, while an unordered list (__&lt;u
 </ul>
 \`\`\`
 
-## 6. What’s the purpose of the \`<table>\` tag? Give a simple example.
-The \`<table>\` tag organizes data in rows and columns.
+## 6. What's the purpose of the &lt;table&gt; tag? Give a simple example.
+The __&lt;table&gt;__ tag organizes data in rows and columns.
 
-\`\`\`html
+\`\`\`
 <table>
   <tr>
     <th>Name</th>
@@ -75,36 +75,36 @@ The \`<table>\` tag organizes data in rows and columns.
 </table>
 \`\`\`
 
-## 7. How do you embed an image using the \`<img>\` tag?
-The \`<img>\` tag embeds an image, with attributes for the source (\`src\`) and alternate text (\`alt\`).
+## 7. How do you embed an image using the &lt;img&gt; tag?
+The __&lt;img&gt;__ tag embeds an image, with attributes for the source __(src)__ and alternate text __(alt)__.
 
-\`\`\`html
+\`\`\`
 <img src="https://via.placeholder.com/150" alt="Placeholder Image">
 \`\`\`
 
-## 8. What is the \`<form>\` tag used for in HTML?
-The \`<form>\` tag is used to collect user input, which can be submitted to a server.
+## 8. What is the &lt;form&gt; tag used for in HTML?
+The __&lt;form&gt;__ tag is used to collect user input, which can be submitted to a server.
 
-\`\`\`html
+\`\`\`
 <form action="/submit" method="post">
   <input type="text" name="username" placeholder="Enter your name">
   <button type="submit">Submit</button>
 </form>
 \`\`\`
 
-## 9. Explain the \`<input>\` tag with examples of different types.
-The \`<input>\` tag collects user input, with types like \`text\`, \`password\`, and \`checkbox\`.
+## 9. Explain the &lt;input&gt; tag with examples of different types.
+The __&lt;input&gt;__ tag collects user input, with types like __'text'__, __'password'__, and __'checkbox'__.
 
-\`\`\`html
+\`\`\`
 <input type="text" placeholder="Username">
 <input type="password" placeholder="Password">
 <input type="checkbox" checked> Subscribe to newsletter
 \`\`\`
 
-## 10. How do you create a dropdown menu with the \`<select>\` tag?
-The \`<select>\` tag creates a dropdown, with \`<option>\` elements for each choice.
+## 10. How do you create a dropdown menu with the &lt;select&gt; tag?
+The __&lt;select&gt;__ tag creates a dropdown, with &lt;option&gt; elements for each choice.
 
-\`\`\`html
+\`\`\`
 <select name="options">
   <option value="1">Option 1</option>
   <option value="2">Option 2</option>
@@ -112,32 +112,32 @@ The \`<select>\` tag creates a dropdown, with \`<option>\` elements for each cho
 \`\`\`
 
 ## 11. How do you make text bold or italic in HTML?
-Use \`<b>\` or \`<strong>\` for bold text and \`<i>\` or \`<em>\` for italic text.
+Use &lt;b&gt; or  &lt;strong&gt; for bold text and  &lt;i&gt; or  &lt;em&gt; for italic text.
 
-\`\`\`html
+\`\`\`
 <p>This is <b>bold</b> and <i>italic</i> text.</p>
 \`\`\`
 
-## 12. How can you use the \`<button>\` tag for interactions?
-The \`<button>\` tag triggers actions on click, often used in forms or for navigation.
+## 12. How can you use the &lt;button&gt; tag for interactions?
+The __&lt;button&gt;__ tag triggers actions on click, often used in forms or for navigation.
 
-\`\`\`html
+\`\`\`
 <button onclick="alert('Button clicked!')">Click Me</button>
 \`\`\`
 
-## 13. What does the \`<blockquote>\` tag do?
-The \`<blockquote>\` tag is used for longer quotes or citations.
+## 13. What does the &lt;blockquote&gt; tag do?
+The __&lt;blockquote&gt;__ tag is used for longer quotes or citations.
 
-\`\`\`html
+\`\`\`
 <blockquote>
   "This is a blockquote example."
 </blockquote>
 \`\`\`
 
-## 14. Explain the \`<header>\` and \`<footer>\` tags.
-The \`<header>\` contains introductory content, while the \`<footer>\` has end-of-page info.
+## 14. Explain the &lt;header&gt; and &lt;footer&gt; tags.
+The __&lt;header__gt; contains introductory content, while the __&lt;footer&gt;__ has end-of-page info.
 
-\`\`\`html
+\`\`\`
 <header>
   <h1>Website Title</h1>
 </header>
@@ -146,17 +146,17 @@ The \`<header>\` contains introductory content, while the \`<footer>\` has end-o
 </footer>
 \`\`\`
 
-## 15. How can you use the \`<iframe>\` tag?
-The \`<iframe>\` tag embeds another webpage or video within a page.
+## 15. How can you use the &lt;iframe&gt; tag?
+The __&lt;iframe&gt;__ tag embeds another webpage or video within a page.
 
-\`\`\`html
+\`\`\`
 <iframe src="https://www.example.com" width="600" height="400"></iframe>
 \`\`\`
 
-## 16. How do you use the \`<audio>\` and \`<video>\` tags?
-These tags embed audio and video, with attributes like \`controls\` for playback controls.
+## 16. How do you use the &lt;audio&gt; and &lt;video&gt; tags?
+These tags embed audio and video, with attributes like 'controls' for playback controls.
 
-\`\`\`html
+\`\`\`
 <audio controls>
   <source src="audio.mp3" type="audio/mpeg">
 </audio>
@@ -165,36 +165,36 @@ These tags embed audio and video, with attributes like \`controls\` for playback
 </video>
 \`\`\`
 
-## 17. What is the purpose of the \`<label>\` tag?
-The \`<label>\` tag connects a label to an input, enhancing accessibility.
+## 17. What is the purpose of the &lt;label&gt; tag?
+The __&lt;label&gt;__ tag connects a label to an input, enhancing accessibility.
 
-\`\`\`html
+\`\`\`
 <label for="username">Username:</label>
 <input type="text" id="username">
 \`\`\`
 
-## 18. How can you use the \`<meta>\` tag in HTML?
-The \`<meta>\` tag stores metadata, like charset and viewport settings.
+## 18. How can you use the &lt;meta&gt; tag in HTML?
+The __&lt;meta&gt;__ tag stores metadata, like charset and viewport settings.
 
-\`\`\`html
+\`\`\`
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 \`\`\`
 
-## 19. What’s the difference between \`<section>\` and \`<div>\`?
-\`<section>\` is semantic, indicating a section of related content, while \`<div>\` is a general container.
+## 19. What's the difference between &lt;section&gt; and &lt;div&gt;?
+__&lt;section&gt;__ is semantic, indicating a section of related content, while __&lt;div&gt;__ is a general container.
 
-\`\`\`html
+\`\`\`
 <section>
   <h2>Section Heading</h2>
   <p>Section content goes here.</p>
 </section>
 \`\`\`
 
-## 20. What is the \`<nav>\` tag used for in HTML?
-The \`<nav>\` tag contains navigation links.
+## 20. What is the &lt;nav&gt; tag used for in HTML?
+The __&lt;nav&gt;__ tag contains navigation links.
 
-\`\`\`html
+\`\`\`
 <nav>
   <a href="#home">Home</a>
   <a href="#about">About</a>
@@ -213,8 +213,8 @@ The \`<nav>\` tag contains navigation links.
         const index = node.position.start.line; // Unique identifier (based on line number of the code block)
 
         return (
-            <div className="relative mb-4">
-                <pre className="bg-gray-200 p-4 rounded-md overflow-x-auto">
+            <div className="relative flex">
+                <pre className="bg-gray-200  rounded-md overflow-x-auto">
                     <code className={className} {...props}>
                         {code}
                     </code>
