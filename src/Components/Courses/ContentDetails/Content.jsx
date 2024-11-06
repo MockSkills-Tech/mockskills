@@ -13,42 +13,42 @@ const Content = ({ id }) => {
 # HTML Interview Questions with Code Examples
 
 #### 1. What is the purpose of the &lt;div&gt; tag in HTML?
-The <div> tag is a container element used to group HTML elements together. It’s often used for styling and layout.
+The __&lt;div&gt;__ tag is a container element used to group HTML elements together. It's often used for styling and layout.
 
-\`\`\`html
+\`\`\`
 <div class="container">
   <p>This is a paragraph inside a div.</p>
 </div>
 \`\`\`
 
-## 2. What is the \`<span>\` tag used for?
-The \`<span>\` tag is an inline container for text. It’s commonly used for styling specific portions of text within a block.
+## 2. What is the &lt;span&gt; tag used for ?
+The __&lt;span&gt;__ tag is an inline container for text. It's commonly used for styling specific portions of text within a block.
 
-\`\`\`html
+\`\`\`
 <p>This is a <span style="color: blue;">blue</span> word.</p>
-</p>
+\`\`\`
 
 ## 3. What are semantic tags in HTML? Give examples.
-Semantic tags like \`<header>\`, \`<footer>\`, \`<article>\`, and \`<section>\` clearly describe their purpose, improving readability and accessibility.
+Semantic tags like __&lt;header&gt;__, __&lt;footer&gt;__, __&lt;article&gt;__, and __&lt;section&gt;__ clearly describe their purpose, improving readability and accessibility.
 
-\`\`\`html
+\`\`\`
 <article>
   <h2>Article Title</h2>
   <p>This is the article content.</p>
 </article>
 \`\`\`
 
-## 4. How does the \`<a>\` tag work for hyperlinks?
-The \`<a>\` tag creates hyperlinks, connecting to another webpage or file.
+## 4. How does the &lt;a&gt; tag work for hyperlinks?
+The __&lt;a&gt;__ tag creates hyperlinks, connecting to another webpage or file.
 
-\`\`\`html
+\`\`\`
 <a href="https://www.example.com" target="_blank">Visit Example</a>
 \`\`\`
 
 ## 5. How can we create an ordered list and an unordered list in HTML?
-An ordered list (\`<ol>\`) numbers items, while an unordered list (\`<ul>\`) uses bullets.
+An ordered list (__&lt;ol&gt;__) numbers items, while an unordered list (__&lt;ul&gt;__) uses bullets.
 
-\`\`\`html
+\`\`\`
 <ol>
   <li>First item</li>
   <li>Second item</li>
@@ -201,27 +201,27 @@ The \`<nav>\` tag contains navigation links.
 </nav>
 \`\`\`
 `;
-
-    // Function to handle copying and showing feedback
-    const handleCopy = () => {
-        setCopied(true);
-        setTimeout(() => setCopied(false), 2000); // Reset after 2 seconds
+    // Function to handle copying and showing feedback for a specific code block
+    const handleCopy = (index) => {
+        setCopied((prevState) => ({ ...prevState, [index]: true }));
+        setTimeout(() => setCopied((prevState) => ({ ...prevState, [index]: false })), 2000); // Reset after 2 seconds
     };
 
     // Custom renderer to add Copy button
     const CodeBlock = ({ node, inline, className, children, ...props }) => {
         const code = String(children).trim();
+        const index = node.position.start.line; // Unique identifier (based on line number of the code block)
 
         return (
-            <div className="relative mb-4 ">
+            <div className="relative mb-4">
                 <pre className="bg-gray-200 p-4 rounded-md overflow-x-auto">
                     <code className={className} {...props}>
                         {code}
                     </code>
                 </pre>
-                <CopyToClipboard text={code} onCopy={handleCopy}>
+                <CopyToClipboard text={code} onCopy={() => handleCopy(index)}>
                     <button className="absolute top-2 right-2 bg-blue-500 text-white px-2 py-1 rounded text-sm">
-                        {copied ? 'Copied!' : 'Copy'}
+                        {copied[index] ? 'Copied!' : 'Copy'}
                     </button>
                 </CopyToClipboard>
             </div>
