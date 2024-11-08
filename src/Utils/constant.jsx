@@ -1456,12 +1456,797 @@ export const CHAPTERS = [
 
 export const TOPICS = [
   // HTML Essentials (Front-End)
-  { id: 20010, chapterId: 20001, title: "Introduction to HTML Tags" },
-  { id: 20011, chapterId: 20001, title: "HTML Attributes and Elements" },
-  { id: 20012, chapterId: 20002, title: "Structuring a Web Page with HTML" },
-  { id: 20013, chapterId: 20002, title: "Semantic HTML Elements" },
-  { id: 20014, chapterId: 20003, title: "Creating Forms with HTML" },
-  { id: 20015, chapterId: 20003, title: "HTML Input Types and Validation" },
+    {
+        id: 20010, chapterId: 20001, title: "Introduction to HTML Tags", content: `
+#### 1. What is the purpose of the &lt;div&gt; tag in HTML?
+__Answer :-__ The __&lt;div&gt;__ tag is a container element used to group HTML elements together. It's often used for styling and layout.
+
+\`\`\`
+<div class="container">
+  <p>This is a paragraph inside a div.</p>
+</div>
+\`\`\`
+
+#### 2. What is the &lt;span&gt; tag used for ?
+__Answer :-__ The __&lt;span&gt;__ tag is an inline container for text. It's commonly used for styling specific portions of text within a block.
+
+\`\`\`
+<p>This is a <span style="color: blue;">blue</span> word.</p>
+\`\`\`
+
+#### 3. What are semantic tags in HTML? Give examples.
+__Answer :-__ Semantic tags like __&lt;header&gt;__, __&lt;footer&gt;__, __&lt;article&gt;__, and __&lt;section&gt;__ clearly describe their purpose, improving readability and accessibility.
+
+\`\`\`
+<article>
+  <h2>Article Title</h2>
+  <p>This is the article content.</p>
+</article>
+\`\`\`
+
+#### 4. How does the &lt;a&gt; tag work for hyperlinks?
+__Answer :-__ The __&lt;a&gt;__ tag creates hyperlinks, connecting to another webpage or file.
+
+\`\`\`
+<a href="https://www.example.com" target="_blank">Visit Example</a>
+\`\`\`
+
+#### 5. How can we create an ordered list and an unordered list in HTML?
+__Answer :-__ An ordered list (__&lt;ol&gt;__) numbers items, while an unordered list (__&lt;ul&gt;__) uses bullets.
+
+\`\`\`
+<ol>
+  <li>First item</li>
+  <li>Second item</li>
+</ol>
+<ul>
+  <li>First item</li>
+  <li>Second item</li>
+</ul>
+\`\`\`
+
+#### 6. What's the purpose of the &lt;table&gt; tag? Give a simple example.
+__Answer :-__ The __&lt;table&gt;__ tag organizes data in rows and columns.
+
+\`\`\`
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>30</td>
+  </tr>
+</table>
+\`\`\`
+
+#### 7. How do you embed an image using the &lt;img&gt; tag?
+__Answer :-__ The __&lt;img&gt;__ tag embeds an image, with attributes for the source __(src)__ and alternate text __(alt)__.
+
+\`\`\`
+<img src="https://via.placeholder.com/150" alt="Placeholder Image">
+\`\`\`
+
+#### 8. What is the &lt;form&gt; tag used for in HTML?
+__Answer :-__ The __&lt;form&gt;__ tag is used to collect user input, which can be submitted to a server.
+
+\`\`\`
+<form action="/submit" method="post">
+  <input type="text" name="username" placeholder="Enter your name">
+  <button type="submit">Submit</button>
+</form>
+\`\`\`
+
+#### 9. Explain the &lt;input&gt; tag with examples of different types.
+__Answer :-__ The __&lt;input&gt;__ tag collects user input, with types like __'text'__, __'password'__, and __'checkbox'__.
+
+\`\`\`
+<input type="text" placeholder="Username">
+<input type="password" placeholder="Password">
+<input type="checkbox" checked> Subscribe to newsletter
+\`\`\`
+
+#### 10. How do you create a dropdown menu with the &lt;select&gt; tag?
+__Answer :-__ The __&lt;select&gt;__ tag creates a dropdown, with &lt;option&gt; elements for each choice.
+
+\`\`\`
+<select name="options">
+  <option value="1">Option 1</option>
+  <option value="2">Option 2</option>
+</select>
+\`\`\`
+
+#### 11. How do you make text bold or italic in HTML?
+__Answer :-__ Use &lt;b&gt; or  &lt;strong&gt; for bold text and  &lt;i&gt; or  &lt;em&gt; for italic text.
+
+\`\`\`
+<p>This is <b>bold</b> and <i>italic</i> text.</p>
+\`\`\`
+
+#### 12. How can you use the &lt;button&gt; tag for interactions?
+__Answer :-__ The __&lt;button&gt;__ tag triggers actions on click, often used in forms or for navigation.
+
+\`\`\`
+<button onclick="alert('Button clicked!')">Click Me</button>
+\`\`\`
+
+#### 13. What does the &lt;blockquote&gt; tag do?
+__Answer :-__ The __&lt;blockquote&gt;__ tag is used for longer quotes or citations.
+
+\`\`\`
+<blockquote>
+  "This is a blockquote example."
+</blockquote>
+\`\`\`
+
+#### 14. Explain the &lt;header&gt; and &lt;footer&gt; tags.
+__Answer :-__ The __&lt;header__gt; contains introductory content, while the __&lt;footer&gt;__ has end-of-page info.
+
+\`\`\`
+<header>
+  <h1>Website Title</h1>
+</header>
+<footer>
+  <p>Contact us at info@example.com</p>
+</footer>
+\`\`\`
+
+#### 15. How can you use the &lt;iframe&gt; tag?
+__Answer :-__ The __&lt;iframe&gt;__ tag embeds another webpage or video within a page.
+
+\`\`\`
+<iframe src="https://www.example.com" width="600" height="400"></iframe>
+\`\`\`
+
+#### 16. How do you use the &lt;audio&gt; and &lt;video&gt; tags?
+__Answer :-__ These tags embed audio and video, with attributes like 'controls' for playback controls.
+
+\`\`\`
+<audio controls>
+  <source src="audio.mp3" type="audio/mpeg">
+</audio>
+<video controls width="320">
+  <source src="video.mp4" type="video/mp4">
+</video>
+\`\`\`
+
+#### 17. What is the purpose of the &lt;label&gt; tag?
+__Answer :-__ The __&lt;label&gt;__ tag connects a label to an input, enhancing accessibility.
+
+\`\`\`
+<label for="username">Username:</label>
+<input type="text" id="username">
+\`\`\`
+
+#### 18. How can you use the &lt;meta&gt; tag in HTML?
+__Answer :-__ The __&lt;meta&gt;__ tag stores metadata, like charset and viewport settings.
+
+\`\`\`
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+\`\`\`
+
+#### 19. What's the difference between &lt;section&gt; and &lt;div&gt;?
+__Answer :-__ __&lt;section&gt;__ is semantic, indicating a section of related content, while __&lt;div&gt;__ is a general container.
+
+\`\`\`
+<section>
+  <h2>Section Heading</h2>
+  <p>Section content goes here.</p>
+</section>
+\`\`\`
+
+#### 20. What is the &lt;nav&gt; tag used for in HTML?
+__Answer :-__ The __&lt;nav&gt;__ tag contains navigation links.
+
+\`\`\`
+<nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+</nav>
+\`\`\`
+`
+},
+    {
+        id: 20011, chapterId: 20001, title: "HTML Attributes and Elements", content: `
+#### 1. What is the purpose of the 'id' attribute in HTML?
+__Answer :-__ The 'id' attribute uniquely identifies an HTML element on a page. It's useful for styling, JavaScript interactions, and linking to specific sections.
+
+\`\`\`html
+    < div id = "unique-element" > This is a unique element.</div >
+\`\`\`
+
+#### 2. How does the class attribute work in HTML?
+__Answer :-__ The class attribute assigns one or more class names to an element, which can be targeted for styling or JavaScript.
+
+\`\`\`
+<p class="highlight">This paragraph is highlighted.</p>
+\`\`\`
+
+#### 3. What does the alt attribute do in the &lt;img&gt; tag?
+__Answer :-__ The __alt__ attribute provides alternative text for images, which is displayed if the image cannot be loaded and helps with accessibility.
+
+\`\`\`
+<img src="image.jpg" alt="A description of the image">
+\`\`\`
+
+#### 4. How can you open a link in a new tab using the &lt;a&gt; tag?
+__Answer :-__ The target="_blank" attribute in the &lt;a&gt; tag opens the linked page in a new tab.
+
+\`\`\`
+<a href="https://www.example.com" target="_blank">Open in New Tab</a>
+\`\`\`
+
+#### 5. What is the href attribute used for in anchor tags?
+__Answer :-__ The href attribute in the &lt;a&gt; tag specifies the URL or location the link points to.
+
+\`\`\`
+<a href="https://www.example.com">Visit Example</a>
+\`\`\`
+
+#### 6. How can you set default text in an &lt;input&gt; field?
+__Answer :-__ The placeholder attribute provides default text that disappears when the user starts typing in the &lt;input&gt; field.
+
+\`\`\`
+<input type="text" placeholder="Enter your name">
+\`\`\`
+
+#### 7. What is the purpose of the disabled attribute?
+__Answer :-__ The disabled attribute disables an HTML element, making it unclickable and uneditable.
+
+\`\`\`
+<button disabled>Can't Click Me</button>
+\`\`\`
+
+#### 8. How do you use the src attribute in the &lt;img&gt; tag?
+__Answer :-__ The src attribute specifies the URL of the image to display.
+
+\`\`\`
+<img src="https://via.placeholder.com/150" alt="Placeholder Image">
+\`\`\`
+
+#### 9. How can you add tooltips to elements in HTML?
+__Answer :-__ The title attribute displays a tooltip when the user hovers over the element.
+
+\`\`\`
+<p title="This is a tooltip">Hover over me to see a tooltip.</p>
+\`\`\`
+
+#### 10. What is the purpose of the required attribute in form elements?
+__Answer :-__ The required attribute ensures that the user must fill out the form field before submitting.
+
+\`\`\`
+<input type="text" name="username" required>
+\`\`\`
+`
+},
+    {
+        id: 20012, chapterId: 20002, title: "Structuring a Web Page with HTML", content: `
+#### 1. What is the purpose of the &lt;div&gt; tag in HTML?
+__Answer :-__ The __&lt;div&gt;__ tag is a container element used to group HTML elements together. It's often used for styling and layout.
+
+\`\`\`
+<div class="container">
+  <p>This is a paragraph inside a div.</p>
+</div>
+\`\`\`
+
+#### 2. What is the &lt;span&gt; tag used for ?
+__Answer :-__ The __&lt;span&gt;__ tag is an inline container for text. It's commonly used for styling specific portions of text within a block.
+
+\`\`\`
+<p>This is a <span style="color: blue;">blue</span> word.</p>
+\`\`\`
+
+#### 3. What are semantic tags in HTML? Give examples.
+__Answer :-__ Semantic tags like __&lt;header&gt;__, __&lt;footer&gt;__, __&lt;article&gt;__, and __&lt;section&gt;__ clearly describe their purpose, improving readability and accessibility.
+
+\`\`\`
+<article>
+  <h2>Article Title</h2>
+  <p>This is the article content.</p>
+</article>
+\`\`\`
+
+#### 4. How does the &lt;a&gt; tag work for hyperlinks?
+__Answer :-__ The __&lt;a&gt;__ tag creates hyperlinks, connecting to another webpage or file.
+
+\`\`\`
+<a href="https://www.example.com" target="_blank">Visit Example</a>
+\`\`\`
+
+#### 5. How can we create an ordered list and an unordered list in HTML?
+__Answer :-__ An ordered list (__&lt;ol&gt;__) numbers items, while an unordered list (__&lt;ul&gt;__) uses bullets.
+
+\`\`\`
+<ol>
+  <li>First item</li>
+  <li>Second item</li>
+</ol>
+<ul>
+  <li>First item</li>
+  <li>Second item</li>
+</ul>
+\`\`\`
+
+#### 6. What's the purpose of the &lt;table&gt; tag? Give a simple example.
+__Answer :-__ The __&lt;table&gt;__ tag organizes data in rows and columns.
+
+\`\`\`
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>30</td>
+  </tr>
+</table>
+\`\`\`
+
+#### 7. How do you embed an image using the &lt;img&gt; tag?
+__Answer :-__ The __&lt;img&gt;__ tag embeds an image, with attributes for the source __(src)__ and alternate text __(alt)__.
+
+\`\`\`
+<img src="https://via.placeholder.com/150" alt="Placeholder Image">
+\`\`\`
+
+#### 8. What is the &lt;form&gt; tag used for in HTML?
+__Answer :-__ The __&lt;form&gt;__ tag is used to collect user input, which can be submitted to a server.
+
+\`\`\`
+<form action="/submit" method="post">
+  <input type="text" name="username" placeholder="Enter your name">
+  <button type="submit">Submit</button>
+</form>
+\`\`\`
+
+#### 9. Explain the &lt;input&gt; tag with examples of different types.
+__Answer :-__ The __&lt;input&gt;__ tag collects user input, with types like __'text'__, __'password'__, and __'checkbox'__.
+
+\`\`\`
+<input type="text" placeholder="Username">
+<input type="password" placeholder="Password">
+<input type="checkbox" checked> Subscribe to newsletter
+\`\`\`
+
+#### 10. How do you create a dropdown menu with the &lt;select&gt; tag?
+__Answer :-__ The __&lt;select&gt;__ tag creates a dropdown, with &lt;option&gt; elements for each choice.
+
+\`\`\`
+<select name="options">
+  <option value="1">Option 1</option>
+  <option value="2">Option 2</option>
+</select>
+\`\`\`
+
+#### 11. How do you make text bold or italic in HTML?
+__Answer :-__ Use &lt;b&gt; or  &lt;strong&gt; for bold text and  &lt;i&gt; or  &lt;em&gt; for italic text.
+
+\`\`\`
+<p>This is <b>bold</b> and <i>italic</i> text.</p>
+\`\`\`
+
+#### 12. How can you use the &lt;button&gt; tag for interactions?
+__Answer :-__ The __&lt;button&gt;__ tag triggers actions on click, often used in forms or for navigation.
+
+\`\`\`
+<button onclick="alert('Button clicked!')">Click Me</button>
+\`\`\`
+
+#### 13. What does the &lt;blockquote&gt; tag do?
+__Answer :-__ The __&lt;blockquote&gt;__ tag is used for longer quotes or citations.
+
+\`\`\`
+<blockquote>
+  "This is a blockquote example."
+</blockquote>
+\`\`\`
+
+#### 14. Explain the &lt;header&gt; and &lt;footer&gt; tags.
+__Answer :-__ The __&lt;header__gt; contains introductory content, while the __&lt;footer&gt;__ has end-of-page info.
+
+\`\`\`
+<header>
+  <h1>Website Title</h1>
+</header>
+<footer>
+  <p>Contact us at info@example.com</p>
+</footer>
+\`\`\`
+
+#### 15. How can you use the &lt;iframe&gt; tag?
+__Answer :-__ The __&lt;iframe&gt;__ tag embeds another webpage or video within a page.
+
+\`\`\`
+<iframe src="https://www.example.com" width="600" height="400"></iframe>
+\`\`\`
+
+#### 16. How do you use the &lt;audio&gt; and &lt;video&gt; tags?
+__Answer :-__ These tags embed audio and video, with attributes like 'controls' for playback controls.
+
+\`\`\`
+<audio controls>
+  <source src="audio.mp3" type="audio/mpeg">
+</audio>
+<video controls width="320">
+  <source src="video.mp4" type="video/mp4">
+</video>
+\`\`\`
+
+#### 17. What is the purpose of the &lt;label&gt; tag?
+__Answer :-__ The __&lt;label&gt;__ tag connects a label to an input, enhancing accessibility.
+
+\`\`\`
+<label for="username">Username:</label>
+<input type="text" id="username">
+\`\`\`
+
+#### 18. How can you use the &lt;meta&gt; tag in HTML?
+__Answer :-__ The __&lt;meta&gt;__ tag stores metadata, like charset and viewport settings.
+
+\`\`\`
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+\`\`\`
+
+#### 19. What's the difference between &lt;section&gt; and &lt;div&gt;?
+__Answer :-__ __&lt;section&gt;__ is semantic, indicating a section of related content, while __&lt;div&gt;__ is a general container.
+
+\`\`\`
+<section>
+  <h2>Section Heading</h2>
+  <p>Section content goes here.</p>
+</section>
+\`\`\`
+
+#### 20. What is the &lt;nav&gt; tag used for in HTML?
+__Answer :-__ The __&lt;nav&gt;__ tag contains navigation links.
+
+\`\`\`
+<nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+</nav>
+\`\`\`
+` },
+    {
+        id: 20013, chapterId: 20002, title: "Semantic HTML Elements", content: `
+#### 1. What is the purpose of the 'id' attribute in HTML?
+__Answer :-__ The 'id' attribute uniquely identifies an HTML element on a page. It's useful for styling, JavaScript interactions, and linking to specific sections.
+
+\`\`\`html
+    < div id = "unique-element" > This is a unique element.</div >
+\`\`\`
+
+#### 2. How does the class attribute work in HTML?
+__Answer :-__ The class attribute assigns one or more class names to an element, which can be targeted for styling or JavaScript.
+
+\`\`\`
+<p class="highlight">This paragraph is highlighted.</p>
+\`\`\`
+
+#### 3. What does the alt attribute do in the &lt;img&gt; tag?
+__Answer :-__ The __alt__ attribute provides alternative text for images, which is displayed if the image cannot be loaded and helps with accessibility.
+
+\`\`\`
+<img src="image.jpg" alt="A description of the image">
+\`\`\`
+
+#### 4. How can you open a link in a new tab using the &lt;a&gt; tag?
+__Answer :-__ The target="_blank" attribute in the &lt;a&gt; tag opens the linked page in a new tab.
+
+\`\`\`
+<a href="https://www.example.com" target="_blank">Open in New Tab</a>
+\`\`\`
+
+#### 5. What is the href attribute used for in anchor tags?
+__Answer :-__ The href attribute in the &lt;a&gt; tag specifies the URL or location the link points to.
+
+\`\`\`
+<a href="https://www.example.com">Visit Example</a>
+\`\`\`
+
+#### 6. How can you set default text in an &lt;input&gt; field?
+__Answer :-__ The placeholder attribute provides default text that disappears when the user starts typing in the &lt;input&gt; field.
+
+\`\`\`
+<input type="text" placeholder="Enter your name">
+\`\`\`
+
+#### 7. What is the purpose of the disabled attribute?
+__Answer :-__ The disabled attribute disables an HTML element, making it unclickable and uneditable.
+
+\`\`\`
+<button disabled>Can't Click Me</button>
+\`\`\`
+
+#### 8. How do you use the src attribute in the &lt;img&gt; tag?
+__Answer :-__ The src attribute specifies the URL of the image to display.
+
+\`\`\`
+<img src="https://via.placeholder.com/150" alt="Placeholder Image">
+\`\`\`
+
+#### 9. How can you add tooltips to elements in HTML?
+__Answer :-__ The title attribute displays a tooltip when the user hovers over the element.
+
+\`\`\`
+<p title="This is a tooltip">Hover over me to see a tooltip.</p>
+\`\`\`
+
+#### 10. What is the purpose of the required attribute in form elements?
+__Answer :-__ The required attribute ensures that the user must fill out the form field before submitting.
+
+\`\`\`
+<input type="text" name="username" required>
+\`\`\`
+`},
+    {
+        id: 20014, chapterId: 20003, title: "Creating Forms with HTML", content: `
+#### 1. What is the purpose of the &lt;div&gt; tag in HTML?
+__Answer :-__ The __&lt;div&gt;__ tag is a container element used to group HTML elements together. It's often used for styling and layout.
+
+\`\`\`
+<div class="container">
+  <p>This is a paragraph inside a div.</p>
+</div>
+\`\`\`
+
+#### 2. What is the &lt;span&gt; tag used for ?
+__Answer :-__ The __&lt;span&gt;__ tag is an inline container for text. It's commonly used for styling specific portions of text within a block.
+
+\`\`\`
+<p>This is a <span style="color: blue;">blue</span> word.</p>
+\`\`\`
+
+#### 3. What are semantic tags in HTML? Give examples.
+__Answer :-__ Semantic tags like __&lt;header&gt;__, __&lt;footer&gt;__, __&lt;article&gt;__, and __&lt;section&gt;__ clearly describe their purpose, improving readability and accessibility.
+
+\`\`\`
+<article>
+  <h2>Article Title</h2>
+  <p>This is the article content.</p>
+</article>
+\`\`\`
+
+#### 4. How does the &lt;a&gt; tag work for hyperlinks?
+__Answer :-__ The __&lt;a&gt;__ tag creates hyperlinks, connecting to another webpage or file.
+
+\`\`\`
+<a href="https://www.example.com" target="_blank">Visit Example</a>
+\`\`\`
+
+#### 5. How can we create an ordered list and an unordered list in HTML?
+__Answer :-__ An ordered list (__&lt;ol&gt;__) numbers items, while an unordered list (__&lt;ul&gt;__) uses bullets.
+
+\`\`\`
+<ol>
+  <li>First item</li>
+  <li>Second item</li>
+</ol>
+<ul>
+  <li>First item</li>
+  <li>Second item</li>
+</ul>
+\`\`\`
+
+#### 6. What's the purpose of the &lt;table&gt; tag? Give a simple example.
+__Answer :-__ The __&lt;table&gt;__ tag organizes data in rows and columns.
+
+\`\`\`
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>30</td>
+  </tr>
+</table>
+\`\`\`
+
+#### 7. How do you embed an image using the &lt;img&gt; tag?
+__Answer :-__ The __&lt;img&gt;__ tag embeds an image, with attributes for the source __(src)__ and alternate text __(alt)__.
+
+\`\`\`
+<img src="https://via.placeholder.com/150" alt="Placeholder Image">
+\`\`\`
+
+#### 8. What is the &lt;form&gt; tag used for in HTML?
+__Answer :-__ The __&lt;form&gt;__ tag is used to collect user input, which can be submitted to a server.
+
+\`\`\`
+<form action="/submit" method="post">
+  <input type="text" name="username" placeholder="Enter your name">
+  <button type="submit">Submit</button>
+</form>
+\`\`\`
+
+#### 9. Explain the &lt;input&gt; tag with examples of different types.
+__Answer :-__ The __&lt;input&gt;__ tag collects user input, with types like __'text'__, __'password'__, and __'checkbox'__.
+
+\`\`\`
+<input type="text" placeholder="Username">
+<input type="password" placeholder="Password">
+<input type="checkbox" checked> Subscribe to newsletter
+\`\`\`
+
+#### 10. How do you create a dropdown menu with the &lt;select&gt; tag?
+__Answer :-__ The __&lt;select&gt;__ tag creates a dropdown, with &lt;option&gt; elements for each choice.
+
+\`\`\`
+<select name="options">
+  <option value="1">Option 1</option>
+  <option value="2">Option 2</option>
+</select>
+\`\`\`
+
+#### 11. How do you make text bold or italic in HTML?
+__Answer :-__ Use &lt;b&gt; or  &lt;strong&gt; for bold text and  &lt;i&gt; or  &lt;em&gt; for italic text.
+
+\`\`\`
+<p>This is <b>bold</b> and <i>italic</i> text.</p>
+\`\`\`
+
+#### 12. How can you use the &lt;button&gt; tag for interactions?
+__Answer :-__ The __&lt;button&gt;__ tag triggers actions on click, often used in forms or for navigation.
+
+\`\`\`
+<button onclick="alert('Button clicked!')">Click Me</button>
+\`\`\`
+
+#### 13. What does the &lt;blockquote&gt; tag do?
+__Answer :-__ The __&lt;blockquote&gt;__ tag is used for longer quotes or citations.
+
+\`\`\`
+<blockquote>
+  "This is a blockquote example."
+</blockquote>
+\`\`\`
+
+#### 14. Explain the &lt;header&gt; and &lt;footer&gt; tags.
+__Answer :-__ The __&lt;header__gt; contains introductory content, while the __&lt;footer&gt;__ has end-of-page info.
+
+\`\`\`
+<header>
+  <h1>Website Title</h1>
+</header>
+<footer>
+  <p>Contact us at info@example.com</p>
+</footer>
+\`\`\`
+
+#### 15. How can you use the &lt;iframe&gt; tag?
+__Answer :-__ The __&lt;iframe&gt;__ tag embeds another webpage or video within a page.
+
+\`\`\`
+<iframe src="https://www.example.com" width="600" height="400"></iframe>
+\`\`\`
+
+#### 16. How do you use the &lt;audio&gt; and &lt;video&gt; tags?
+__Answer :-__ These tags embed audio and video, with attributes like 'controls' for playback controls.
+
+\`\`\`
+<audio controls>
+  <source src="audio.mp3" type="audio/mpeg">
+</audio>
+<video controls width="320">
+  <source src="video.mp4" type="video/mp4">
+</video>
+\`\`\`
+
+#### 17. What is the purpose of the &lt;label&gt; tag?
+__Answer :-__ The __&lt;label&gt;__ tag connects a label to an input, enhancing accessibility.
+
+\`\`\`
+<label for="username">Username:</label>
+<input type="text" id="username">
+\`\`\`
+
+#### 18. How can you use the &lt;meta&gt; tag in HTML?
+__Answer :-__ The __&lt;meta&gt;__ tag stores metadata, like charset and viewport settings.
+
+\`\`\`
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+\`\`\`
+
+#### 19. What's the difference between &lt;section&gt; and &lt;div&gt;?
+__Answer :-__ __&lt;section&gt;__ is semantic, indicating a section of related content, while __&lt;div&gt;__ is a general container.
+
+\`\`\`
+<section>
+  <h2>Section Heading</h2>
+  <p>Section content goes here.</p>
+</section>
+\`\`\`
+
+#### 20. What is the &lt;nav&gt; tag used for in HTML?
+__Answer :-__ The __&lt;nav&gt;__ tag contains navigation links.
+
+\`\`\`
+<nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+</nav>
+\`\`\`
+` },
+    {
+        id: 20015, chapterId: 20003, title: "HTML Input Types and Validation", content: `
+#### 1. What is the purpose of the 'id' attribute in HTML?
+__Answer :-__ The 'id' attribute uniquely identifies an HTML element on a page. It's useful for styling, JavaScript interactions, and linking to specific sections.
+
+\`\`\`html
+    < div id = "unique-element" > This is a unique element.</div >
+\`\`\`
+
+#### 2. How does the class attribute work in HTML?
+__Answer :-__ The class attribute assigns one or more class names to an element, which can be targeted for styling or JavaScript.
+
+\`\`\`
+<p class="highlight">This paragraph is highlighted.</p>
+\`\`\`
+
+#### 3. What does the alt attribute do in the &lt;img&gt; tag?
+__Answer :-__ The __alt__ attribute provides alternative text for images, which is displayed if the image cannot be loaded and helps with accessibility.
+
+\`\`\`
+<img src="image.jpg" alt="A description of the image">
+\`\`\`
+
+#### 4. How can you open a link in a new tab using the &lt;a&gt; tag?
+__Answer :-__ The target="_blank" attribute in the &lt;a&gt; tag opens the linked page in a new tab.
+
+\`\`\`
+<a href="https://www.example.com" target="_blank">Open in New Tab</a>
+\`\`\`
+
+#### 5. What is the href attribute used for in anchor tags?
+__Answer :-__ The href attribute in the &lt;a&gt; tag specifies the URL or location the link points to.
+
+\`\`\`
+<a href="https://www.example.com">Visit Example</a>
+\`\`\`
+
+#### 6. How can you set default text in an &lt;input&gt; field?
+__Answer :-__ The placeholder attribute provides default text that disappears when the user starts typing in the &lt;input&gt; field.
+
+\`\`\`
+<input type="text" placeholder="Enter your name">
+\`\`\`
+
+#### 7. What is the purpose of the disabled attribute?
+__Answer :-__ The disabled attribute disables an HTML element, making it unclickable and uneditable.
+
+\`\`\`
+<button disabled>Can't Click Me</button>
+\`\`\`
+
+#### 8. How do you use the src attribute in the &lt;img&gt; tag?
+__Answer :-__ The src attribute specifies the URL of the image to display.
+
+\`\`\`
+<img src="https://via.placeholder.com/150" alt="Placeholder Image">
+\`\`\`
+
+#### 9. How can you add tooltips to elements in HTML?
+__Answer :-__ The title attribute displays a tooltip when the user hovers over the element.
+
+\`\`\`
+<p title="This is a tooltip">Hover over me to see a tooltip.</p>
+\`\`\`
+
+#### 10. What is the purpose of the required attribute in form elements?
+__Answer :-__ The required attribute ensures that the user must fill out the form field before submitting.
+
+\`\`\`
+<input type="text" name="username" required>
+\`\`\`
+`},
 
   // CSS Fundamentals (Front-End)
   { id: 20016, chapterId: 20004, title: "CSS Selectors and Properties" },
