@@ -1,5 +1,8 @@
 import { useState } from "react";
-
+import Homepage from "../assets/Homepage.webp";
+import homeGraphic from "../assets/homeGraphic.png";
+import Automated from "../assets/Automated.png";
+import Campus_Rec from "../assets/Campus_Rec.png";
 const NewFeaturesSection = () => {
   const [activeFeature, setActiveFeature] = useState("Tech Courses");
 
@@ -15,7 +18,7 @@ const NewFeaturesSection = () => {
       description:
         "Our curated tech courses equip you with essential skills to excel in today’s job market. Learn from industry experts and gain practical experience, preparing you to be job-ready with a completion certificate.",
       buttonText: "Explore Courses →",
-      image: "src/assets/Homepage.webp", // Use forward slashes
+      image: Homepage, // Use forward slashes
     },
     "Mock Interviews": {
       title: (
@@ -28,7 +31,7 @@ const NewFeaturesSection = () => {
       description:
         "Prepare for job interviews with our mock sessions led by professionals. Receive valuable feedback to refine your answers and boost your confidence.",
       buttonText: "Book a Mock Interview →",
-      image: "src/assets/homeGraphic.png", // Use forward slashes
+      image: homeGraphic, // Use forward slashes
     },
     "English Sessions": {
       title: (
@@ -41,7 +44,7 @@ const NewFeaturesSection = () => {
       description:
         "Improve your English for professional contexts with our interactive sessions. Focus on technical vocabulary and effective communication strategies.",
       buttonText: "Join an English Session →",
-      image: "src/assets/Automated.png", // Use forward slashes
+      image: Automated, // Use forward slashes
     },
     CollabZone: {
       title: (
@@ -54,7 +57,7 @@ const NewFeaturesSection = () => {
       description:
         "Join our CollabZone to connect with developers, share ideas, and work on projects. Collaborate to enhance your skills and build a professional network.",
       buttonText: "Explore CollabZone →",
-      image: "src/assets/Campus_Rec.png", // Use forward slashes
+      image: Campus_Rec, // Use forward slashes
     },
     "Automated Partners": {
       title: (
@@ -67,7 +70,7 @@ const NewFeaturesSection = () => {
       description:
         "Simplify collaboration with our Automated Partners solution, integrating automation to enhance productivity. Focus on strategic initiatives and streamline communications.",
       buttonText: "Discover Automation Solutions →",
-      image: "src/assets/Homepage.webp", // Use forward slashes
+      image: Homepage, // Use forward slashes
     },
   };
 
