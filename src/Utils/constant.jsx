@@ -1,4 +1,4 @@
-import {
+﻿import {
   FaChartBar,
   FaClipboardList,
   FaCode,
@@ -6,6 +6,9 @@ import {
   FaUsers,
 } from "react-icons/fa";
 
+import interviewImage from '../assets/interview_image.jpg'
+//import web_dev_img from '../assets/CoursesPic/web_dev_img.png/'
+import frontend_web_dev_img from "../assets/CoursesPic/frontend_web_dev_img.png"
 export const CATEGORIES_CARDS_DATA = [
   {
     name: "Product Management",
@@ -209,14 +212,25 @@ export const courseItems = [
 ];
 
 export const COURSES = [
+    {
+        id: 200,
+        title: "Web Developement (Front-End)",
+        description: "Learn the most commonly used Front End technology in Web.",
+        courses: 3,
+        students: "25k",
+        image: frontend_web_dev_img,
+        categoryId: 2,
+        active: true
+    },
   {
     id: 101,
     title: "Intro to Product Management",
     description: "Learn the fundamentals of managing a product lifecycle.",
     courses: 5,
     students: "8k",
-    image: "https://example.com/image101.jpg",
-    categoryId: 1,
+    image: null,
+        categoryId: 1,
+        active: false
   },
   {
     id: 102,
@@ -224,8 +238,9 @@ export const COURSES = [
     description: "Master advanced strategies in product management.",
     courses: 8,
     students: "12k",
-    image: "https://example.com/image102.jpg",
-    categoryId: 1,
+      image: null,
+      categoryId: 1,
+      active: false
   },
   {
     id: 103,
@@ -233,8 +248,9 @@ export const COURSES = [
     description: "Learn how to roadmap and prioritize product features.",
     courses: 6,
     students: "6k",
-    image: "https://example.com/image103.jpg",
-    categoryId: 1,
+    image: null,
+      categoryId: 1,
+      active: false
   },
   {
     id: 104,
@@ -242,26 +258,20 @@ export const COURSES = [
     description: "Understand key metrics and KPIs in product management.",
     courses: 4,
     students: "10k",
-    image: "https://example.com/image104.jpg",
-    categoryId: 1,
+    image: null,
+      categoryId: 1,
+      active: false
   },
-  {
-    id: 200,
-    title: "Web Developement (Front-End)",
-    description: "Learn the most commonly used Front End technology in Web.",
-    courses: 4,
-    students: "25k",
-    image: "https://example.com/image201.jpg",
-    categoryId: 2,
-  },
+  
   {
     id: 201,
     title: "Data Structures and Algorithms",
     description: "Learn the most commonly used data structures and algorithms.",
     courses: 10,
     students: "25k",
-    image: "https://example.com/image201.jpg",
-    categoryId: 2,
+    image: null,
+      categoryId: 2,
+      active: false
   },
   {
     id: 202,
@@ -269,8 +279,9 @@ export const COURSES = [
     description: "Fundamentals of designing scalable and reliable systems.",
     courses: 7,
     students: "15k",
-    image: "https://example.com/image202.jpg",
-    categoryId: 2,
+    image:null,
+      categoryId: 2,
+      active: false
   },
   {
     id: 203,
@@ -278,7 +289,7 @@ export const COURSES = [
     description: "Prepare for advanced coding interviews with real problems.",
     courses: 12,
     students: "30k",
-    image: "https://example.com/image203.jpg",
+    image: null,
     categoryId: 2,
   },
   {
@@ -287,8 +298,9 @@ export const COURSES = [
     description: "Manage databases efficiently with best practices.",
     courses: 6,
     students: "18k",
-    image: "https://example.com/image204.jpg",
-    categoryId: 2,
+    image: null,
+      categoryId: 2,
+      active: false
   },
   {
     id: 301,
@@ -296,17 +308,19 @@ export const COURSES = [
     description: "Learn essential statistics concepts for data science.",
     courses: 8,
     students: "20k",
-    image: "https://example.com/image301.jpg",
-    categoryId: 3,
+    image: null,
+      categoryId: 3,
+      active: false
   },
   {
     id: 302,
     title: "Machine Learning Basics",
     description: "Introduction to machine learning techniques and tools.",
     courses: 10,
-    students: "22k",
-    image: "https://example.com/image302.jpg",
-    categoryId: 3,
+      students: "22k",
+      image: null,
+      categoryId: 3,
+      active: false
   },
   {
     id: 303,
@@ -314,8 +328,9 @@ export const COURSES = [
     description: "Master techniques for cleaning and organizing data.",
     courses: 5,
     students: "12k",
-    image: "https://example.com/image303.jpg",
-    categoryId: 3,
+    image:null,
+      categoryId: 3,
+      active: false
   },
   {
     id: 304,
@@ -323,8 +338,9 @@ export const COURSES = [
     description: "Learn how to use Python effectively in data science.",
     courses: 9,
     students: "30k",
-    image: "https://example.com/image304.jpg",
-    categoryId: 3,
+    image:null,
+      categoryId: 3,
+      active: false
   },
   {
     id: 401,
@@ -332,8 +348,9 @@ export const COURSES = [
     description: "Develop leadership skills in an engineering context.",
     courses: 6,
     students: "18k",
-    image: "https://example.com/image401.jpg",
-    categoryId: 4,
+    image: null,
+      categoryId: 4,
+      active: false
   },
   {
     id: 402,
@@ -341,8 +358,9 @@ export const COURSES = [
     description: "Improve communication in engineering teams.",
     courses: 5,
     students: "14k",
-    image: "https://example.com/image402.jpg",
-    categoryId: 4,
+    image: null,
+      categoryId: 4,
+      active: false
   },
   {
     id: 403,
@@ -350,8 +368,9 @@ export const COURSES = [
     description: "Learn how to build and manage successful teams.",
     courses: 4,
     students: "10k",
-    image: "https://example.com/image403.jpg",
-    categoryId: 4,
+    image:null,
+      categoryId: 4,
+      active: false
   },
   {
     id: 404,
@@ -359,8 +378,9 @@ export const COURSES = [
     description: "Master conflict resolution techniques in a team setting.",
     courses: 3,
     students: "9k",
-    image: "https://example.com/image404.jpg",
-    categoryId: 4,
+    image: null,
+      categoryId: 4,
+      active: false
   },
   {
     id: 501,
@@ -368,16 +388,17 @@ export const COURSES = [
     description: "Learn the basics of system design from scratch.",
     courses: 6,
     students: "20k",
-    image: "https://example.com/image501.jpg",
-    categoryId: 5,
+    image:null,
+      categoryId: 5,
+      active: false
   },
   {
     id: 502,
     title: "Designing Scalable Systems",
     description: "Understand how to design scalable and maintainable systems.",
     courses: 8,
-    students: "22k",
-    image: "https://example.com/image502.jpg",
+      students: "22k",
+      image: null,
     categoryId: 5,
   },
   {
@@ -386,8 +407,9 @@ export const COURSES = [
     description: "Learn about microservices architecture and design patterns.",
     courses: 5,
     students: "15k",
-    image: "https://example.com/image503.jpg",
-    categoryId: 5,
+    image: null,
+      categoryId: 5,
+      active: false
   },
   {
     id: 504,
@@ -395,8 +417,9 @@ export const COURSES = [
     description: "Discover design patterns for building large-scale systems.",
     courses: 7,
     students: "17k",
-    image: "https://example.com/image504.jpg",
-    categoryId: 5,
+    image:null,
+      categoryId: 5,
+      active: false
   },
   {
     id: 601,
@@ -404,7 +427,7 @@ export const COURSES = [
     description: "Explore the fundamentals of deep learning.",
     courses: 7,
     students: "25k",
-    image: "https://example.com/image601.jpg",
+    image:null,
     categoryId: 3,
   },
   {
@@ -413,8 +436,9 @@ export const COURSES = [
     description: "Understand the basics of NLP and its applications.",
     courses: 6,
     students: "18k",
-    image: "https://example.com/image602.jpg",
-    categoryId: 3,
+    image: null,
+      categoryId: 3,
+      active: false
   },
   {
     id: 603,
@@ -422,8 +446,9 @@ export const COURSES = [
     description: "Learn the fundamentals of reinforcement learning.",
     courses: 5,
     students: "12k",
-    image: "https://example.com/image603.jpg",
-    categoryId: 3,
+    image: null,
+      categoryId: 3,
+      active: false
   },
   {
     id: 701,
@@ -431,8 +456,9 @@ export const COURSES = [
     description: "Get started with cloud computing and architecture.",
     courses: 5,
     students: "10k",
-    image: "https://example.com/image701.jpg",
-    categoryId: 2,
+    image: null,
+      categoryId: 2,
+      active: false
   },
   {
     id: 702,
@@ -440,8 +466,9 @@ export const COURSES = [
     description: "Learn containerization and Docker for development.",
     courses: 7,
     students: "12k",
-    image: "https://example.com/image702.jpg",
-    categoryId: 2,
+    image: null,
+      categoryId: 2,
+      active: false
   },
   {
     id: 703,
@@ -449,8 +476,9 @@ export const COURSES = [
     description: "Master Kubernetes for container orchestration.",
     courses: 6,
     students: "15k",
-    image: "https://example.com/image703.jpg",
-    categoryId: 2,
+    image: null,
+      categoryId: 2,
+      active: false
   },
   {
     id: 801,
@@ -458,8 +486,9 @@ export const COURSES = [
     description: "Learn about the ethical implications of AI development.",
     courses: 5,
     students: "7k",
-    image: "https://example.com/image801.jpg",
-    categoryId: 3,
+    image: null,
+      categoryId: 3,
+      active: false
   },
   {
     id: 802,
@@ -467,8 +496,9 @@ export const COURSES = [
     description: "Understand how to deploy ML models in production.",
     courses: 6,
     students: "15k",
-    image: "https://example.com/image802.jpg",
-    categoryId: 3,
+    image: null,
+      categoryId: 3,
+      active: false
   },
 ];
 
@@ -1636,7 +1666,7 @@ __Answer :-__ __&lt;section&gt;__ is semantic, indicating a section of related c
   <p>Section content goes here.</p>
 </section>
 \`\`\`
-
+- [ ] ⚠️ **Warning**: Please note the changes.
 #### 20. What is the &lt;nav&gt; tag used for in HTML?
 __Answer :-__ The __&lt;nav&gt;__ tag contains navigation links.
 

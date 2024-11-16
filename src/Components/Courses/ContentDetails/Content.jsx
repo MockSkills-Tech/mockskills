@@ -14,7 +14,7 @@ const Content = ( {id} ) => {
     const [copied, setCopied] = useState({});
     console.log({ id });
     const {title,content } = TOPICS.find((topic) => topic.id === parseInt(id));
-
+    //const { title, content = TOPICS.find((topic) => topic.id == paraseint(id)};
     useEffect(() => {
         Prism.highlightAll();
     }, [content]);
