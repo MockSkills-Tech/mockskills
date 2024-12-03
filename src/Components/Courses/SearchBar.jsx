@@ -1,9 +1,10 @@
-const SearchBar = () => {
+const SearchBar = ({ searchQuery, setSearchQuery }) => {
   return (
     <div className="mb-4 relative">
       <input
         type="text"
         placeholder="Search Courses"
+        onChange={(e) => setSearchQuery(e.target.value)}
         className="w-96 px-4 py-2 pl-10 border rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
       />
       <span className="absolute left-3 top-2.5">

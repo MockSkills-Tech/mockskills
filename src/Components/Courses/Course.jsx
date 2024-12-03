@@ -4,8 +4,16 @@ import SearchBar from "./SearchBar";
 import FilterTags from "./FilterTags";
 import CourseBody from "./CourseBody";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Course = () => {
+    const [searchQuery, setSearchQuery] = useState(""); // State for search input
+
+    // Filter courses based on the search query
+    const filteredCourses = COURSES.filter((course) =>
+        course.title.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+
   return (
     <>
       <CourseBody />
@@ -26,12 +34,12 @@ const Course = () => {
               Explore all tailored courses for specific roles, companies, and skills.
             </p>
           </div>
-          <SearchBar />
+        <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
         </div>
 
         <FilterTags />
       </div>
-      <CourseList courses={COURSES} />
+      <CourseList courses={filteredCourses} />
     </>
   );
 };
