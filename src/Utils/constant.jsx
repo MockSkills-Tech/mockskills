@@ -38,30 +38,7 @@ export const CATEGORIES_CARDS_DATA = [
         name: "TPM",
         logo: "fas fa-cogs text-blue-500 text-3xl mb-2",
     },
-    {
-        name: "Machine Learning",
-        logo: "fas fa-robot text-blue-500 text-3xl mb-2",
-    },
-    {
-        name: "TPM",
-        logo: "fas fa-cogs text-blue-500 text-3xl mb-2",
-    },
-    {
-        name: "Machine Learning",
-        logo: "fas fa-robot text-blue-500 text-3xl mb-2",
-    },
-    {
-        name: "TPM",
-        logo: "fas fa-cogs text-blue-500 text-3xl mb-2",
-    },
-    {
-        name: "Machine Learning",
-        logo: "fas fa-robot text-blue-500 text-3xl mb-2",
-    },
-    {
-        name: "TPM",
-        logo: "fas fa-cogs text-blue-500 text-3xl mb-2",
-    },
+    
 ];
 export const MNC_DATA = [
     {
