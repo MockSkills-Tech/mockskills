@@ -9,6 +9,7 @@
 //import interviewImage from '../assets/interview_image.jpg'
 //import web_dev_img from '../assets/CoursesPic/web_dev_img.png/'
 import frontend_web_dev_img from "../assets/CoursesPic/frontend_web_dev_img.png"
+import foundation_course_img from "../assets/CoursesPic/foundation_course.jpg"
 export const CATEGORIES_CARDS_DATA = [
     {
         name: "Product Management",
@@ -189,6 +190,16 @@ export const courseItems = [
 ];
 
 export const COURSES = [
+    {
+        id: 205,
+        title: "IT Foundations: Beginner to Pro",
+        description: "Master essential IT concepts, programming languages like Java and C, and key subjects like DBMS and networking, along with interview preparation.",
+        courses: 5,
+        students: "5k",
+        image: foundation_course_img,
+        categoryId: 2,
+        active: true
+    },
     {
         id: 200,
         title: "Web Developement (Front-End)",

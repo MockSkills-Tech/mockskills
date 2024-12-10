@@ -57,11 +57,11 @@ const CourseCard = ({
           <div className="mt-4 flex justify-between items-center text-gray-700 text-sm">
             <div className="flex items-center space-x-2">
               <MdMenuBook className="text-blue-500" />
-              <p>{courses} Courses</p>
+              <p>{active?courses:0} Courses</p>
             </div>
             <div className="flex items-center space-x-2">
               <MdSchool className="text-green-500" />
-              <p>{students} Students</p>
+              <p>{active?students:0} Students</p>
             </div>
           </div>
                   <button

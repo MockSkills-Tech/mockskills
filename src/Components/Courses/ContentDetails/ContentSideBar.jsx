@@ -62,15 +62,7 @@ const ContentSideBar = () => {
     return (
         
       <div>
-      {/* Progress Bar */}
-      <div className="bg-gray-800 rounded-lg p-3 mb-6">
-        <div className="relative h-2 bg-gray-700 rounded-full overflow-hidden">
-          <div
-            className="absolute h-2 bg-blue-500 rounded-full"
-            style={{ width: "25%" }}
-          ></div>
-        </div>
-      </div>
+      
 
       {/* Header */}
       <h2 className="text-lg font-semibold mb-4 text-gray-300">
