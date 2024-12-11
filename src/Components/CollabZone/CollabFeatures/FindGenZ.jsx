@@ -108,9 +108,51 @@ const FindGenZ = () => {
                   className="rounded-full w-24 h-24 object-cover border-2 border-indigo-600"
                 />
                 <div className="ml-4 flex-grow">
-                  <h3 className="text-xl font-semibold text-indigo-700">
-                    {profile.name} <span className="font-bold text-blue-600">[{profile.id}]</span>
+                  <h3 className="text-xl font-semibold text-indigo-700 flex justify-between items-center">
+                    <span>
+                      {profile.name} <span className="font-bold text-blue-600">[{profile.id}]</span>
+                    </span>
+
+                  <div className="flex gap-6">
+                    {/* LinkedIn Icon */}
+                    <a
+                      href={profile.linkedinUrl || "#"}
+                      className="relative text-blue-700 hover:text-blue-500 transition-all duration-300 transform hover:scale-125 group"
+                    >
+                      <i className="fab fa-linkedin-in text-2xl"></i>
+                      {/* Tooltip */}
+                      <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full opacity-0 group-hover:opacity-100 bg-gray-800 text-white text-xs px-2 py-0.5 rounded-lg shadow-lg transition-opacity duration-300">
+                        LinkedIn
+                      </span>
+                    </a>
+
+                    {/* GitHub Icon */}
+                    <a
+                      href={profile.githubUrl || "#"}
+                      className="relative text-gray-800 hover:text-gray-600 transition-all duration-300 transform hover:scale-125 group"
+                    >
+                      <i className="fab fa-github text-2xl"></i>
+                      {/* Tooltip */}
+                      <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full opacity-0 group-hover:opacity-100 bg-gray-800 text-white text-xs px-2 py-0.5 rounded-lg shadow-lg transition-opacity duration-300">
+                        GitHub
+                      </span>
+                    </a>
+
+                    {/* Portfolio Link Icon */}
+                    <a
+                      href={profile.portfolioUrl || "#"}
+                      className="relative text-green-600 hover:text-green-400 transition-all duration-300 transform hover:scale-125 group"
+                    >
+                      <i className="fas fa-external-link-alt text-2xl"></i>
+                      {/* Tooltip */}
+                      <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full opacity-0 group-hover:opacity-100 bg-gray-800 text-white text-xs px-2 py-0.5 rounded-lg shadow-lg transition-opacity duration-300">
+                        Portfolio
+                      </span>
+                    </a>
+                  </div>
+
                   </h3>
+
                   <p className="flex items-center text-gray-500">
                     <FaMapMarkerAlt className="mr-1 text-gray-500" />
                     {profile.location || "Location Not Available"}
@@ -126,12 +168,6 @@ const FindGenZ = () => {
                     ))}
                   </div>
                 </div>
-                <a
-                  href="/profile-link"
-                  className="text-blue-500 text-sm hover:underline"
-                >
-                  View Profile →
-                </a>
               </div>
 
               {/* Profile Description */}
