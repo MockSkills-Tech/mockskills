@@ -1,0 +1,29 @@
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #cbd5e0;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #3b82f6;
+  opacity: 1;
+  width: 14px;
+  height: 14px;
+}
+
+.swiper-container {
+  padding-bottom: 40px;
+}
+
+.swiper-pagination {
+  bottom: 0 !important;
+}
+
+@media (max-width: 640px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+}
