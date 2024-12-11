@@ -193,7 +193,7 @@ export const COURSES = [
     {
         id: 205,
         title: "IT Foundations: Beginner to Pro",
-        description: "Master essential IT concepts, programming languages like Java and C, and key subjects like DBMS and networking, along with interview preparation.",
+        description: "Master essential IT concepts, programming languages like Java and C++, and key subjects like DBMS and networking, along with interview preparation.",
         courses: 5,
         students: "5k",
         image: foundation_course_img,
@@ -622,6 +622,31 @@ export const MODULES = [
         id: 2012,
         courseId: 204,
         title: "Database Normalization",
+    },
+    {
+        id: 2013,
+        courseId: 205,
+        title:"Programming Languages",
+    },
+    {
+        id: 2014,
+        courseId: 205,
+        title: "IT Subjects",
+    },
+    {
+        id: 2015,
+        courseId: 205,
+        title: "Coding Practice",
+    },
+    {
+        id: 2016,
+        courseId: 205,
+        title: "Technical Interview",
+    },
+    {
+        id: 2017,
+        courseId: 205,
+        title: "HR Interview",
     },
 
     // Statistics for Data Science
@@ -1110,7 +1135,36 @@ export const CHAPTERS = [
         moduleId: 2012,
         title: "Dealing with Redundancy",
     },
-
+    {
+        id: 20105,
+        moduleId: 2013,
+        title: "Introduction to C Programming",
+    },
+    {
+        id: 20106,
+        moduleId: 2013,
+        title: "Getting Started with Python",
+    },
+    {
+        id: 20107,
+        moduleId: 2013,
+        title: "Java Basics: A Beginner's Guide",
+    },
+    {
+        id: 20108,
+        moduleId: 2014,
+        title: "Introduction to Operating Systems",
+    },
+    {
+        id: 20109,
+        moduleId: 2014,
+        title: "Networking Fundamentals",
+    },
+    {
+        id: 20110,
+        moduleId: 2014,
+        title: "Database Management Systems (DBMS) Basics",
+    },
     // Descriptive Statistics (Statistics for Data Science)
     {
         id: 30001,
@@ -2467,6 +2521,80 @@ __Answer :-__ The __&lt;div&gt;__ tag is a container element used to group HTML 
     { id: 20025, chapterId: 20008, title: "Working with DOM Events" },
     { id: 20026, chapterId: 20009, title: "Handling User Inputs in JavaScript" },
     { id: 20027, chapterId: 20009, title: "Asynchronous Event Handling in JS" },
+    //C Language
+    { id: 20028, chapterId: 20105, title: "Getting Started with C" },
+    { id: 20029, chapterId: 20105, title: "Basic Syntax and Structure" },
+    { id: 20030, chapterId: 20105, title: "Data Types and Variables" },
+    { id: 20031, chapterId: 20105, title: "Operators and Expressions" },
+    { id: 20032, chapterId: 20105, title: "Control Flow in C" },
+    { id: 20033, chapterId: 20105, title: "Functions and Modular Programming" },
+    { id: 20034, chapterId: 20105, title: "Arrays and Strings" },
+    { id: 20035, chapterId: 20105, title: "Pointers in C" },
+    { id: 20036, chapterId: 20105, title: "Structures and Enumerations" },
+    { id: 20037, chapterId: 20105, title: "Debugging and Error Handling" },
+    { id: 20038, chapterId: 20105, title: " Advanced Topics and Best Practices" },
+
+    //python
+    { id: 20039, chapterId: 20106, title: "Getting Started with Python" },
+    { id: 20040, chapterId: 20106, title: "Introduction to Python" },
+    { id: 20041, chapterId: 20106, title: "Variables and Data Types" },
+    { id: 20042, chapterId: 20106, title: "Control Flow in Python" },
+    { id: 20043, chapterId: 20106, title: "Working with Functions" },
+    { id: 20044, chapterId: 20106, title: "Data Structures in Python" },
+    { id: 20045, chapterId: 20106, title: "File Handling" },
+    { id: 20046, chapterId: 20106, title: "Modules and Libraries" },
+    { id: 20047, chapterId: 20106, title: "Error and Exception Handling" },
+    { id: 20048, chapterId: 20106, title: "Introduction to Object-Oriented Programming (OOP)" },
+
+    //java
+    { id: 20049, chapterId: 20107, title: "Introduction to Java" },
+    { id: 20050, chapterId: 20107, title: "Variables and Data Types" },
+    { id: 20051, chapterId: 20107, title: "Operators in Java" },
+    { id: 20052, chapterId: 20107, title: "Control Flow Statements" },
+    { id: 20053, chapterId: 20107, title: "Arrays and Strings" },
+    { id: 20054, chapterId: 20107, title: "Object-Oriented Programming Basics" },
+    { id: 20055, chapterId: 20107, title: "Inheritance and Polymorphism" },
+    { id: 20056, chapterId: 20107, title: "Exception Handling" },
+    { id: 20057, chapterId: 20107, title: "Introduction to Java Collections" },
+
+    //operating system
+    { id: 20059, chapterId: 20108, title: "Introduction to Operating Systems" },
+    { id: 20060, chapterId: 20108, title: "What is an Operating System" },
+    { id: 20061, chapterId: 20108, title: "Types of Operating Systems" },
+    { id: 20062, chapterId: 20108, title: "Components of an Operating System" },
+    { id: 20063, chapterId: 20108, title: "Processes and Threads" },
+    { id: 20064, chapterId: 20108, title: "Memory Management Basics" },
+    { id: 20065, chapterId: 20108, title: "File System Management" },
+    { id: 20066, chapterId: 20108, title: "Device Management and I/O" },
+    { id: 20067, chapterId: 20108, title: "Security and Protection in Operating Systems" },
+    { id: 20068, chapterId: 20108, title: "Virtualization and Cloud Integration" },
+    { id: 20069, chapterId: 20108, title: "Future of Operating Systems" },
+
+    //Networking
+    { id: 20070, chapterId: 20109, title: "Introduction to Computer Networks" },
+    { id: 20071, chapterId: 20109, title: "Network Topologies and Architecture" },
+    { id: 20072, chapterId: 20109, title: "The OSI and TCP/IP Models" },
+    { id: 20073, chapterId: 20109, title: "Networking Hardware" },
+    { id: 20074, chapterId: 20109, title: "IP Addressing and Subnetting" },
+    { id: 20075, chapterId: 20109, title: "Domain Name System (DNS)" },
+    { id: 20076, chapterId: 20109, title: "Protocols and Ports" },
+    { id: 20077, chapterId: 20109, title: "Wireless Networking" },
+    { id: 20078, chapterId: 20109, title: "Network Security Basics" },
+    { id: 20079, chapterId: 20109, title: "Troubleshooting Networks" },
+
+    //DBMS
+    { id: 20080, chapterId: 20110, title: "Introduction to Databases" },
+    { id: 20081, chapterId: 20110, title: "Database Models and Architectures" },
+    { id: 20082, chapterId: 20110, title: "Entity-Relationship (ER) Model" },
+    { id: 20083, chapterId: 20110, title: "Relational Database Design" },
+    { id: 20084, chapterId: 20110, title: "Structured Query Language (SQL) Basics" },
+    { id: 20085, chapterId: 20110, title: "Advanced SQL Concepts" },
+    { id: 20086, chapterId: 20110, title: "Database Transactions" },
+    { id: 20087, chapterId: 20110, title: "Indexes and Optimization" },
+    { id: 20088, chapterId: 20110, title: "Database Security" },
+    { id: 20089, chapterId: 20110, title: "Introduction to NoSQL Databases" },
+
+
 
     { id: 2001, chapterId: 10001, title: "What is Product Management?" },
     { id: 2002, chapterId: 10001, title: "Key Roles and Responsibilities" },

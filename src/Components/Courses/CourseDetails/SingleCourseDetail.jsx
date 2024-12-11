@@ -147,7 +147,7 @@ const SingleCourseDetail = () => {
                           onClick={() => toggleChapter(ch.id)}
                         >
                           <h5 className="text-md font-semibold">
-                            Chapter:-{index + 1} {ch.title}
+                            {ch.title}
                           </h5>
                           <span>
                             {expandedId === ch.id ? (
