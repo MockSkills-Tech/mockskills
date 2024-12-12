@@ -25,12 +25,8 @@ const Body = () => {
             Get Started For Free
           </button>
         </div>
-              <img
-                  src={interviewImage}
-                  alt="Interview"
-                  className="w-full h-auto max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto rounded-md"
-              />
- </section>
+        <img src={interviewImage} alt="Interview" className="h-auto" />
+      </section>
 
       {/* Category Section */}
       <section className="flex flex-col items-center w-full my-10">
@@ -71,14 +67,12 @@ const Body = () => {
           </div>
         </div>
       </section>
-      
-      <NewFeatures/>
-{/*       <Features /> */}
-      <AboutUs/>
+
+      <NewFeatures />
+      {/*       <Features /> */}
+      <AboutUs />
     </>
   );
 };
 
 export default Body;
-
-
