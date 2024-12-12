@@ -641,13 +641,10 @@ export const MODULES = [
     {
         id: 2016,
         courseId: 205,
-        title: "Technical Interview",
+        title: "Interview Questions",
     },
-    {
-        id: 2017,
-        courseId: 205,
-        title: "HR Interview",
-    },
+    
+    
 
     // Statistics for Data Science
     {
@@ -1164,6 +1161,36 @@ export const CHAPTERS = [
         id: 20110,
         moduleId: 2014,
         title: "Database Management Systems (DBMS) Basics",
+    },
+    {
+        id: 20111,
+        moduleId: 2015,
+        title: "Top 20 C Coding Questions",
+    },
+    {
+        id: 20112,
+        moduleId: 2015,
+        title: "Top 30 Python Coding Questions",
+    },
+    {
+        id: 20113,
+        moduleId: 2015,
+        title: "Top 20 Java Coding Questions",
+    },
+    {
+        id: 20114,
+        moduleId: 2016,
+        title: "HR Questions",
+    },
+    {
+        id: 20115,
+        moduleId: 2016,
+        title: "Technical Questions",
+    },
+    {
+        id: 20116,
+        moduleId: 2016,
+        title: "MR Question",
     },
     // Descriptive Statistics (Statistics for Data Science)
     {
@@ -2594,6 +2621,30 @@ __Answer :-__ The __&lt;div&gt;__ tag is a container element used to group HTML 
     { id: 20088, chapterId: 20110, title: "Database Security" },
     { id: 20089, chapterId: 20110, title: "Introduction to NoSQL Databases" },
 
+    //HR Interview
+    {id: 20090, chapterId: 20114, title: "Personality Based" },
+    { id: 20091, chapterId: 20114, title: "Situational Questions" },
+    { id: 20092, chapterId: 20114, title: "Team Based" },
+    { id: 20093, chapterId: 20114, title: "Inclusive Questions" },
+    { id: 20094, chapterId: 20114, title: "Academics Questions" },
+
+    //Technical Interview
+    { id: 20095, chapterId: 20115, title: "Programming Fundamentals" },
+    { id: 20096, chapterId: 20115, title: "Data Structures and Algorithms" },
+    { id: 20097, chapterId: 20115, title: "Object-Oriented Programming (OOP)" },
+    { id: 20098, chapterId: 20115, title: "Database Management" },
+    { id: 20099, chapterId: 20115, title: "Operating System Concepts" },
+    { id: 20100, chapterId: 20115, title: "Networking Basics" },
+    { id: 20101, chapterId: 20115, title: "Software Development Lifecycle (SDLC)" },
+
+    //MR Interview
+    { id: 20102, chapterId: 20116, title: "Leadership and Teamwork" },
+    { id: 20103, chapterId: 20116, title: "Time Management" },
+    { id: 20104, chapterId: 20116, title: "Decision-Making Skills" },
+    { id: 20105, chapterId: 20116, title: "Problem Solving in Work Scenarios" },
+    { id: 20106, chapterId: 20116, title: "Conflict Resolution" },
+    { id: 20107, chapterId: 20116, title: "Ethical Scenarios" },
+    { id: 20108, chapterId: 20116, title: "Project Management Basics" },
 
 
     { id: 2001, chapterId: 10001, title: "What is Product Management?" },

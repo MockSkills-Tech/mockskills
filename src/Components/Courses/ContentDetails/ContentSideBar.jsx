@@ -65,8 +65,8 @@ const ContentSideBar = () => {
       
 
       {/* Header */}
-      <h2 className="text-lg font-semibold mb-4 text-gray-300">
-        List of Modules
+            <h2 className="text-lg font-semibold mb-4 text-gray-300">
+                {moduleData?.title}
       </h2>
 
       {/* Chapters */}

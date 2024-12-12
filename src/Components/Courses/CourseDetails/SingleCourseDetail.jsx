@@ -146,7 +146,7 @@ const SingleCourseDetail = () => {
                           }  p-4 transition`}
                           onClick={() => toggleChapter(ch.id)}
                         >
-                          <h5 className="text-md font-semibold">
+                                <h5 className="text-md font-semibold ">
                             {ch.title}
                           </h5>
                           <span>
