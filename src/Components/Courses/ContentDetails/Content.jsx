@@ -25,6 +25,7 @@ const Content = ({ id }) => {
         setTimeout(() => setCopied((prevState) => ({ ...prevState, [index]: false })), 2000);
     };
 
+    // Custom CodeBlock Component
     const CodeBlock = ({ node, inline, className, children, ...props }) => {
         const code = String(children).trim();
         const index = node.position.start.line;
@@ -52,12 +53,22 @@ const Content = ({ id }) => {
         );
     };
 
+    // Function to render text inside [] with custom color, keeping the brackets
+    const processText = (text) => {
+        // Replace the text inside [] with colored span, but retain the square brackets
+        return text?.replace(/\[([^\]]+)\]/g, (match, p1) => {
+            return `[<span style="color: blue;">${p1}</span>]`; // Keep the brackets around the text
+        });
+    };
+
+    const processedContent = processText(content); // Process the content to highlight text in []
+
     return (
         <div className="flex-1 w-[900px] p-6 bg-white text-gray-800 rounded-lg shadow-lg">
             <h2 className="text-2xl font-bold mb-4 text-gray-700">{title}</h2>
             <div className="prose prose-sm sm:prose lg:prose-lg xl:prose-xl text-gray-600">
                 <ReactMarkdown
-                    children={content}
+                    children={processedContent}  // Use processed content with highlighted text
                     components={{ code: CodeBlock }}
                     remarkPlugins={[remarkGfm]}
                     rehypePlugins={[rehypeRaw]}

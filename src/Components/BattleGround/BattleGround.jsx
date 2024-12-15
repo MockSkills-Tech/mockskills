@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import battleGroundImage from "D:/MockSkills_Tech_Codebase/src/Components/BattleGround/BattleGround.png";
+import battleGroundImage from "../BattleGround/BattleGround.png";
 import {
   FaCode,
   FaChalkboardTeacher,
