@@ -1743,8 +1743,46 @@ and it made me more confident about handling similar situations in the future.
 
 #### 7. Explain different types of conditional statements?
 **Answer:**
+>- **If Statement :**
+>   - Use an if statement when you need to check a single condition and execute a block of code if the condition is true.
+>   - If the condition evaluates to true, the code inside the if block runs; otherwise, it does nothing.
+>\`\`\`python
+>if age >= 18:
+>    print("You are an adult.")
+>\`\`\`
+
+>- **Ladder If Statement :**
+>   - A Ladder If (or Else If Ladder) is a programming construct used when you need to check multiple conditions sequentially. It allows you to test several conditions, and the first condition that evaluates to true will execute its corresponding block of code. If none of the conditions are true, an optional else block can execute.
 >
+>   - In a ladder if structure, you chain multiple if, elif (else if), and else statements to check for various conditions. The program moves down the ladder, evaluating each condition in order.
+>\`\`\`python
+>if age < 18:
+>    print("You are a minor.")
+>elif age >= 18 and age < 65:
+>    print("You are an adult.")
+>else:
+>    print("You are a senior.")
+>\`\`\`
+
+>- **Nested If Statement :**
+>   - A nested if statement is an if statement that is placed inside another if or else block. This allows you to evaluate a condition within the scope of a previous condition. In other words, a nested if lets you make more specific decisions by adding multiple layers of conditions.
 >
+>   - It is useful when you need to check a condition after another condition has already been evaluated as true. This allows for more complex decision-making structures.
+>\`\`\`python
+>age = 20
+>if age >= 18:
+>    if age < 65:
+>        print("You are an adult.")
+>    else:
+>        print("You are a senior.")
+>else:
+>    print("You are a minor.")
+>\`\`\`
+
+#### 8. What is the role of an exception in programming?
+**Answer:**
+>An exception in programming is an error or unexpected event that occurs during the execution of a program. The role of an exception is to handle errors in a controlled way, allowing the program to continue running or provide useful error messages instead of crashing. It helps programmers manage issues like invalid inputs, missing files, or incorrect operations by catching and responding to them without interrupting the entire program.
+
 `},
   { id: 20096, chapterId: 20115, title: "Data Structures and Algorithms" },
   { id: 20097, chapterId: 20115, title: "Object-Oriented Programming (OOP)" },
