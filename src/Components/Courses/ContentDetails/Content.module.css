@@ -222,8 +222,16 @@
         background-color: transparent; /* Ensure it inherits the container background */
         padding: 0; /* Remove extra padding if added */
     }
+
+/* Remove background and shadow from operators */
+.markdownContent pre code span {
+    background: none !important;
+    box-shadow: none !important;
+}
+
+
+
 .markdownContent copy-btn:hover {
-   
 }
 
 .markdownContent copy-btn:focus {

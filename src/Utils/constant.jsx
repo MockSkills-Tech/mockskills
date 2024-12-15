@@ -1480,7 +1480,13 @@ and it made me more confident about handling similar situations in the future.
 **Actual Answer:**
 >What makes me unique is my ability to quickly adapt to new environments and technologies. This sets me apart because I can learn new tools or concepts in a short amount of time and apply them effectively. For example, during my final-year project, I had to learn a new programming language within weeks to complete the task successfully. This adaptability helps me stay productive and confident, even in challenging situations.
 
+#### 5. How do you deal with criticism?
+**Answer:**
+>I deal with criticism by staying calm and trying to understand the feedback. I see it as an opportunity to improve myself. For example, during my internship, my supervisor pointed out that I needed to work on presenting my ideas more clearly. I took this feedback positively, practiced giving concise updates, and eventually became more confident in my communication. Constructive criticism helps me identify areas of improvement and become better at what I do.
 
+#### 4. How would you manage your stress?
+**Answer:**
+>I manage stress by staying calm and taking things one step at a time. When I feel stressed, I take short breaks and do some physical activities like stretching or going for a quick walk to refresh my mind. These help me feel more relaxed and focused. I also practice deep breathing to stay calm and make a plan to prioritize my tasks. Doing something I enjoy, like listening to music or exercising, helps me balance my stress and keep a positive mindset.
 `},
     { id: 20091, chapterId: 20114, title: "Situational Questions" },
     { id: 20092, chapterId: 20114, title: "Team Based" },
@@ -1505,5 +1511,64 @@ and it made me more confident about handling similar situations in the future.
     { id: 20107, chapterId: 20116, title: "Ethical Scenarios" },
     { id: 20108, chapterId: 20116, title: "Project Management Basics" },
 
+    // Top 20 Coding Question
+    {
+        id: 20110, chapterId: 20111, title: "2. Check if a number is Prime", content: `
+#### What is a Prime Number?
+A prime number is a number greater than 1 that has no divisors other than 1 and itself. For example, 2, 3, 5, 7, 11 are prime numbers because they cannot be divided evenly by any other numbers apart from 1 and themselves.
+
+\`\`\`c
+#include <stdio.h>
+#include <stdbool.h>
+
+bool is_prime(int number) {
+    if (number <= 1) {
+        return false; // Numbers less than or equal to 1 are not prime
+    }
+    for (int i = 2; i * i <= number; i++) { // Check divisors up to the square root of the number
+        if (number % i == 0) {
+            return false; // If divisible by any number, it's not prime
+        }
+    }
+    return true; // No divisors found, so it's prime
+}
+
+int main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if (is_prime(num)) {
+        printf("%d is a prime number.\n", num);
+    } else {
+        printf("%d is not a prime number.\n", num);
+    }
+
+    return 0;
+}
+
+\`\`\`
+    `},
+    { id: 20111, chapterId: 20111, title: "3. Check if a number is an Armstrong Number" },
+    { id: 20112, chapterId: 20111, title: "4. Check if a number is a Perfect Number" },
+    { id: 20113, chapterId: 20111, title: "5. Sum of the first N natural numbers" },
+    { id: 20114, chapterId: 20111, title: "6. Find the Sum of an Arithmetic Progression Series" },
+    { id: 20115, chapterId: 20111, title: "7. Program to find the Sum of a Geometric Progression Series" },
+    { id: 20116, chapterId: 20111, title: "8. Greatest of three numbers" },
+    { id: 20117, chapterId: 20111, title: "9. Leap Year or Not" },
+    { id: 20118, chapterId: 20111, title: "10. Reverse the digits of a number" },
+    { id: 20119, chapterId: 20111, title: "11. Find the Maximum and Minimum digit in a number" },
+    { id: 20120, chapterId: 20117, title: "12. Print Fibonacci Series up to the Nth Term" },
+    { id: 20121, chapterId: 20117, title: "13. Factorial of a number" },
+    { id: 20122, chapterId: 20117, title: "14. Find the Factors of a given number" },
+    { id: 20123, chapterId: 20117, title: "15. Print all Prime Factors of the given number" },
+    { id: 20124, chapterId: 20117, title: "16. Check if a number is a Strong Number" },
+    { id: 20125, chapterId: 20117, title: "17. GCD (Greatest Common Divisor) of two numbers" },
+    { id: 20126, chapterId: 20117, title: "18. LCM (Least Common Multiple) of two numbers" },
+    { id: 20127, chapterId: 20117, title: "19. Sum of digits of a number" },
+    { id: 20128, chapterId: 20117, title: "20. Sum of numbers in the given range" },
+    { id: 20129, chapterId: 20117, title: "21. Replace all 0s with 1s in a given integer" },
+    { id: 20130, chapterId: 20117, title: "22. Calculate the Area of a Circle" },
+    { id: 20131, chapterId: 20117, title: "23. Program to find the Roots of a Quadratic Equation" },
 
     ];
