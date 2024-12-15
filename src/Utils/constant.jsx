@@ -1484,14 +1484,134 @@ and it made me more confident about handling similar situations in the future.
 **Answer:**
 >I deal with criticism by staying calm and trying to understand the feedback. I see it as an opportunity to improve myself. For example, during my internship, my supervisor pointed out that I needed to work on presenting my ideas more clearly. I took this feedback positively, practiced giving concise updates, and eventually became more confident in my communication. Constructive criticism helps me identify areas of improvement and become better at what I do.
 
-#### 4. How would you manage your stress?
+#### 6. How would you manage your stress?
 **Answer:**
 >I manage stress by staying calm and taking things one step at a time. When I feel stressed, I take short breaks and do some physical activities like stretching or going for a quick walk to refresh my mind. These help me feel more relaxed and focused. I also practice deep breathing to stay calm and make a plan to prioritize my tasks. Doing something I enjoy, like listening to music or exercising, helps me balance my stress and keep a positive mindset.
+
+
+#### 7. What is the biggest failure in your life?
+**Answer:**
+>My biggest failure was not being selected for a college debate competition. I had prepared a lot but couldn't make it through the final round. It was disappointing because I believed I had a strong chance.
+>
+>However, this experience taught me that preparation is not enough; confidence and communication also matter. After that, I started working on my public speaking skills and participated in smaller competitions to improve myself. This failure helped me grow, and I’m now much more confident in expressing my ideas.
+
+
+#### 8. Describe yourself in one word?
+**Answer:**
+>If I had to describe myself in one word, it would be 'Dedicated'. This is because I always put my best effort into the tasks I take up, whether it’s academics, work, or personal goals. I believe dedication is the key to achieving success.
+
+
+#### 9. Give me an example of your creativity?
+**Answer:**
+>One example of my creativity was during my college fest when we had a low budget for decorations. To make the event stand out, I suggested using recycled materials like old newspapers, bottles, and cardboard to create decorative items. I worked with my team to design unique wall hangings and centerpieces.
+>
+>The decorations not only looked great but also received praise for being eco-friendly and cost-effective. This experience taught me that creativity isn’t just about being artistic; it’s about finding innovative solutions with the resources you have.
+
+
+#### 10. How quickly can you adapt new technology?
+**Answer:**
+>I can adapt to new technology quickly because I have a strong interest in learning how things work. For example, during my internship, I was asked to use a project management tool I had never seen before. I spent a day watching tutorials and practicing with it, and by the next day, I was comfortable enough to use it for my tasks.
+>
+>I believe that with curiosity and effort, I can get familiar with any new technology in a short time.
 `},
-    { id: 20091, chapterId: 20114, title: "Situational Questions" },
-    { id: 20092, chapterId: 20114, title: "Team Based" },
-    { id: 20093, chapterId: 20114, title: "Inclusive Questions" },
-    { id: 20094, chapterId: 20114, title: "Academics Questions" },
+    {
+        id: 20091, chapterId: 20114, title: "Situational Questions", content: `
+
+#### 1. What if we don't select you?
+**Answer:**
+>Thank you for letting me know. While I would be disappointed, I would take it as an opportunity to reflect on areas where I can improve. I believe every experience is a learning moment, and I will work on enhancing my skills and preparing better for future opportunities.
+>
+>I truly appreciate the chance to interview with your company, and I hope to stay in touch for any future roles where I might be a better fit.
+
+
+#### 2. Where do you see yourself in 5 years?
+**Answer:**
+>In the next five years, I see myself having gained deep expertise in software development, particularly in [mention relevant programming languages or technologies, e.g., JavaScript, React, etc.]. I plan to contribute to key projects and grow my problem-solving skills, while collaborating with experienced colleagues. I also hope to take on leadership responsibilities, such as mentoring junior developers or leading a team, and I aim to contribute to the strategic direction of the company. Ultimately, I want to be recognized as a strong, dependable team member who drives innovation and adds significant value to the organization.
+
+#### 3.What was the toughest decision you ever made?
+**Answer:**
+>The toughest decision I ever made was choosing my career path after high school. I had to decide between pursuing a degree in [mention your field, e.g., computer science] or something completely different. It was difficult because I wasn't sure if I was making the right choice. But after researching, talking to people in the field, and reflecting on my interests, I realized that [mention your field, e.g., programming] was something I truly enjoyed and wanted to pursue. It was a tough decision, but I’m glad I made it because it set me on the right path for my career.
+
+#### 4. If you get a job with a higher package, what will you do??
+**Answer:**
+>If I receive an offer with a higher package from another company, I would first assess all aspects of the job, not just the salary. I value opportunities for learning, growth, and a positive work culture. While salary is important, I would prioritize a role where I can contribute meaningfully, grow professionally, and align with the company’s values. If the higher-paying job offers better long-term prospects and aligns with my goals, I would consider it. However, if I feel this company offers a better opportunity for growth and aligns with my career aspirations, I would choose to stay here and build a long-term career.
+
+
+#### 5. Are you open for rotational/night shifts/overtime?
+**Answer:**
+>As a fresher, I am open to working rotational shifts, night shifts, or overtime if the job requires it. I understand that certain roles and projects may need flexibility in working hours, and I am willing to adapt. I believe it's important to be flexible and dedicated to my responsibilities, and I am ready to learn and contribute to the team in any way I can.
+`},
+    {
+        id: 20092, chapterId: 20114, title: "Team Based", content: `
+#### 1. Are you a team player? example?
+**Answer:**
+>Yes, I consider myself a team player. For example, during a group project in college, we had to build a website as part of a class assignment. One of the team members was struggling with coding, so I offered to help by explaining some concepts and reviewing the code together. I also made sure to listen to everyone’s ideas and contributed to brainstorming sessions.
+>In the end, we completed the project successfully, and it was a great learning experience. I believe that collaboration and supporting each other are key to achieving great results as a team.
+
+#### 2. Have you led any team before?
+**Answer:**
+>As a fresher, I haven’t had the chance to lead a team in a work setting yet. But in college, I worked on a group project where I helped organize tasks and made sure everyone was on track. I also supported my teammates when needed. While I wasn’t the official leader, I learned how important it is to communicate well and work together. I’m excited to learn more about leading a team in the future.
+
+#### 3.What was the toughest decision you ever made?
+**Answer:**
+>The toughest decision I ever made was choosing my career path after high school. I had to decide between pursuing a degree in [mention your field, e.g., computer science] or something completely different. It was difficult because I wasn't sure if I was making the right choice. But after researching, talking to people in the field, and reflecting on my interests, I realized that [mention your field, e.g., programming] was something I truly enjoyed and wanted to pursue. It was a tough decision, but I’m glad I made it because it set me on the right path for my career.
+
+#### 4. What is the difference between a team and a group?
+**Answer:**
+>A __team__ is a group of people working together with a shared goal or purpose, where each person has specific roles and responsibilities. In a team, everyone works towards the same outcome and supports each other to achieve it.
+
+>On the other hand, a __group__ is simply a collection of people who may not have a shared goal or are working together for a common purpose. People in a group might be working on their individual tasks, without much collaboration. So, the main difference is that a team works together towards a common goal, while a group may not necessarily have that same level of coordination.
+
+
+    `},
+    {
+        id: 20093, chapterId: 20114, title: "Inclusive Questions", content: `
+#### 1. Why should we hire you?
+**Answer:**
+>As a fresher, I bring a lot of enthusiasm and a willingness to learn. I have a strong foundation in [mention relevant skills or education], and I am eager to apply what I’ve learned in a real-world setting. I am hardworking, a good communicator, and I believe in working well with others to achieve goals. I am also quick to adapt to new challenges and ready to take on responsibility. I am confident that I can contribute positively to your team and grow with the company.
+
+#### 2. Why should we not hire you?
+**Answer:**
+>As a fresher, I don't have years of experience in the industry, which means I might not yet have the practical knowledge that comes with working on real-world projects. However, I am eager to learn and adapt quickly. I am highly motivated to pick up new skills, and I view challenges as opportunities for growth. I believe my ability to learn fast, my enthusiasm, and my dedication to self-improvement will make me a valuable asset to the team in the long run.
+
+#### 3. What are your salary expectations?
+**Answer:**
+>As I am just starting my career, I am more focused on gaining experience and growing within the company. I am open to a competitive salary based on the industry standards and the responsibilities of the role. From my research, I understand that the typical range for this position in this industry is between [mention a range based on your research], but I am flexible and open to further discussion based on the company's budget and growth opportunities. Ultimately, I’m looking for a role where I can contribute, learn, and grow professionally.
+
+#### 4. Tell me something that you haven't mentioned in your resume?
+**Answer:**
+>One thing I haven’t mentioned on my resume is my strong ability to quickly adapt to new environments and technologies. During my academic projects and internships, I often had to learn new tools or languages on the fly, and I found that I’m able to pick things up quickly and apply them efficiently. For example, in a recent project, I was tasked with learning a new programming language within a short time frame, and I was able to get up to speed and contribute effectively to the team. I believe this adaptability will help me thrive in a fast-paced work environment.
+
+#### 5. What is the difference between smart work and hard work?
+**Answer:**
+>__Hard work__ is about putting in long hours and putting your best effort into a task, often involving persistence and dedication. It requires a strong work ethic and a willingness to do whatever it takes to get the job done.
+>
+>__Smart work__, on the other hand, is about working efficiently and effectively. It involves using your time and resources wisely, finding ways to achieve better results with less effort, and leveraging the right tools and techniques. Smart work often involves planning, prioritizing tasks, and finding innovative solutions to problems, rather than just working harder.
+>
+>As a fresher, I believe in balancing both. I’m always ready to put in the hard work to learn and grow, but I also focus on working smart by being organized, learning from others, and using the right resources to improve productivity and results
+
+#### 6. What is the difference between smart work and hard work?
+**Answer:**
+>__Confidence__ is a positive belief in your abilities and skills, which helps you take on challenges and perform tasks effectively. It’s about being sure of what you can do, staying calm under pressure, and handling situations with a positive attitude. Confidence is important because it drives you to take initiative and trust your judgment.
+>
+>__Overconfidence__, however, is when you have an inflated sense of your abilities, often leading you to underestimate challenges, ignore feedback, or not recognize areas where you need improvement. It can make you take unnecessary risks or appear arrogant, which can be counterproductive in a professional setting.
+>
+>In my opinion, confidence is crucial for success, but it's important to stay grounded, remain open to learning, and recognize that there’s always room for improvement. I aim to strike a balance by being confident in my abilities while being humble and willing to learn from others.
+    `},
+    {
+        id: 20094, chapterId: 20114, title: "Academics Questions", content: `
+#### 1. Why did you score low in your academics?
+**Answer:**
+>I understand that my academic performance wasn’t as high as I expected. At that time, I faced challenges like balancing different responsibilities and adjusting to new learning methods. Since then, I’ve worked on improving my time management and focusing on areas I struggled with. I’ve learned from these experiences and am now more focused and determined to perform better in the future.
+
+#### 2. What did you do in past year to improve your knowledge/skills?
+**Answer:**
+>In the past year, I focused on improving my skills by taking online courses related to my field, such as [mention a relevant course or topic]. I also worked on personal projects to apply what I learned and gain hands-on experience. Additionally, I followed industry blogs and joined online communities to stay updated with the latest trends and best practices. These efforts have helped me improve both my technical skills and my understanding of the industry.
+
+#### 3. Are you planning on pursuing higher degree?
+**Answer:**
+>At the moment, I’m focused on gaining practical experience and developing my skills in the workforce. While I’m not ruling out the possibility of pursuing a higher degree in the future, I believe that hands-on experience and learning on the job will be more beneficial for my career right now. I’m open to further education if it aligns with my long-term goals and the growth opportunities within my career.
+    `},
 
     //Technical Interview
     { id: 20095, chapterId: 20115, title: "Programming Fundamentals" },
