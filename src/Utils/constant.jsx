@@ -1,4 +1,4 @@
-﻿import {
+import {
   FaChartBar,
   FaClipboardList,
   FaCode,
@@ -1527,15 +1527,14 @@ and it made me more confident about handling similar situations in the future.
 **Answer:**
 >I deal with criticism by staying calm and trying to understand the feedback. I see it as an opportunity to improve myself. For example, during my internship, my supervisor pointed out that I needed to work on presenting my ideas more clearly. I took this feedback positively, practiced giving concise updates, and eventually became more confident in my communication. Constructive criticism helps me identify areas of improvement and become better at what I do.
 
-#### 4. How would you manage your stress?
+#### 6. How would you manage your stress?
 **Answer:**
 >I manage stress by staying calm and taking things one step at a time. When I feel stressed, I take short breaks and do some physical activities like stretching or going for a quick walk to refresh my mind. These help me feel more relaxed and focused. I also practice deep breathing to stay calm and make a plan to prioritize my tasks. Doing something I enjoy, like listening to music or exercising, helps me balance my stress and keep a positive mindset.
-`,
-  },
-  { id: 20091, chapterId: 20114, title: "Situational Questions" },
-  { id: 20092, chapterId: 20114, title: "Team Based" },
-  { id: 20093, chapterId: 20114, title: "Inclusive Questions" },
-  { id: 20094, chapterId: 20114, title: "Academics Questions" },
+`},
+    { id: 20091, chapterId: 20114, title: "Situational Questions" },
+    { id: 20092, chapterId: 20114, title: "Team Based" },
+    { id: 20093, chapterId: 20114, title: "Inclusive Questions" },
+    { id: 20094, chapterId: 20114, title: "Academics Questions" },
 
   //Technical Interview
   { id: 20095, chapterId: 20115, title: "Programming Fundamentals" },
