@@ -1614,7 +1614,98 @@ and it made me more confident about handling similar situations in the future.
     `},
 
     //Technical Interview
-    { id: 20095, chapterId: 20115, title: "Programming Fundamentals" },
+    {
+        id: 20095, chapterId: 20115, title: "Programming Fundamentals", content: `
+#### 1. What is the difference between a compiler and an interpreter?
+**Answer:**
+>A __compiler__ translates the entire source code of a program into machine code (or an intermediate form) in one go before execution. This means the program is compiled all at once, and errors are shown after the entire code is compiled. Once compiled, the program can run multiple times without needing to be compiled again.
+>
+>An __interpreter__, on the other hand, translates the code line-by-line during execution. It reads and executes the program one instruction at a time, showing errors immediately after executing a line of code. Unlike compilers, interpreters do not produce a separate machine code file; they run the program directly.
+>
+>In summary, a compiler translates the whole program before execution, while an interpreter translates and executes the program line by line.
+
+#### 2. What is a function in programming, and why is it important?
+**Answer:**
+>A function in programming is a block of reusable code that performs a specific task. Functions allow you to organize your code, make it more readable, and avoid repeating the same code in multiple places. You can define a function once and call it whenever needed, which makes the program more modular and easier to maintain.
+>Functions are important because they help in:
+>  - **Reusability**: Write a function once and use it multiple times.
+>  - **Organization**: Break down complex tasks into smaller, manageable pieces.
+>  - **Debugging**: Easier to find and fix errors in a smaller, specific part of the program.
+>\`\`\`python
+>def add_numbers(a, b):   # Function definition
+>   return a + b          # Function body
+>
+># Calling the function
+>result = add_numbers(3, 5)
+>print(result)  # Output: 8
+>\`\`\`
+
+#### 3. What is the purpose of an algorithm in programming?
+**Answer:**
+>An algorithm in programming is a step-by-step procedure or set of rules used to solve a problem or complete a task. It is important because it provides a clear and efficient way to perform operations, ensuring that the task is done correctly and in the least amount of time possible.
+
+#### 4. What is the concept of recursion? Can you give an example?
+**Answer:**
+>Recursion is a programming concept where a function calls itself in order to solve a problem. The idea is to break down a problem into smaller, simpler subproblems and solve them step by step.
+>Recursion typically involves two parts:
+>   - __Base case:__ The condition under which the function stops calling itself.
+>   - __Recursive case:__ The part where the function calls itself with modified inputs.
+>\`\`\`python
+>def factorial(n):
+>    # Base case: factorial of 0 or 1 is 1
+>    if n == 0 or n == 1:
+>        return 1
+>    # Recursive case: n * factorial of (n-1)
+>    else:
+>        return n * factorial(n - 1)
+>
+># Calling the function
+>result = factorial(5)
+>print(result)  # Output: 120
+>\`\`\`
+
+#### 5. What are loops in programming?
+**Answer:**
+>A loop in programming is used to repeat a block of code multiple times based on a certain condition. Loops help in automating repetitive tasks, reducing the need for writing the same code over and over again.
+>
+> There are three main types of loops in most programming languages:
+>
+> - **For Loop :**
+>    A for loop is used when the number of iterations is known beforehand. It runs a block of code for a specific number of times.
+>\`\`\`python
+>for i in range(5):  # Loop runs 5 times, with i taking values from 0 to 4
+>    print(i)
+>\`\`\`
+> - **While Loop :**
+>    A while loop runs as long as a specified condition is true. The number of iterations is not fixed and depends on the condition being met.
+>\`\`\`python
+>i = 0
+>while i < 5:  # Loop runs as long as i is less than 5
+>    print(i)
+>    i += 1
+>\`\`\`
+> - **Do-While Loop :**
+>    A do-while loop is similar to a while loop, but the condition is checked after the loop runs, ensuring the loop runs at least once.
+>When rendered,
+>\`\`\`python
+>i = 0
+>while True:
+>    print(i)
+>    i += 1
+>    if i == 5:
+>        break  # Break the loop after 5 iterations
+>\`\`\`
+
+
+#### 6. What are conditional statements in programming?
+**Answer:**
+>Conditional statements in programming are used to execute different blocks of code based on whether a condition is true or false. They allow the program to make decisions and follow different paths depending on the outcome of conditions.
+
+#### 7. Explain different types of conditional statements?
+**Answer:**
+>
+>
+`},
     { id: 20096, chapterId: 20115, title: "Data Structures and Algorithms" },
     { id: 20097, chapterId: 20115, title: "Object-Oriented Programming (OOP)" },
     { id: 20098, chapterId: 20115, title: "Database Management" },
