@@ -1784,8 +1784,145 @@ and it made me more confident about handling similar situations in the future.
 >An exception in programming is an error or unexpected event that occurs during the execution of a program. The role of an exception is to handle errors in a controlled way, allowing the program to continue running or provide useful error messages instead of crashing. It helps programmers manage issues like invalid inputs, missing files, or incorrect operations by catching and responding to them without interrupting the entire program.
 
 `},
-  { id: 20096, chapterId: 20115, title: "Data Structures and Algorithms" },
-  { id: 20097, chapterId: 20115, title: "Object-Oriented Programming (OOP)" },
+    {
+        id: 20096, chapterId: 20115, title: "Data Structures and Algorithms", content: `
+#### 1. What is a Data Structure?
+**Answer:**
+>A data structure is a way to organize, manage, and store data in a computer so that it can be accessed and used efficiently. It determines how data is arranged in memory and how operations like insertion, deletion, searching, and updating are performed.
+>
+>__Note :__ Data structures are essential for building efficient algorithms and optimizing the performance of programs.
+
+#### 2.  What is the difference between linear and non-linear data structures?
+**Answer:**
+>- Linear :
+>   - Data is arranged in a sequence (one after another).
+>   - Traversed in a single, straight path.
+>   - Uses continuous memory locations.
+>   - Example : Arrays, Linked Lists, Stacks, Queues.
+>- Non-Linear :
+>   - Data is arranged in  hierarchial format.
+>   - Traversed in multiple paths based on connections.
+>   - Uses scattered memory locations.
+>   - Example : Trees, Graphs.
+
+#### 3. What is the difference between an array and a linked list?
+**Answer:**
+>- Array :
+>   - A collection of elements stored in contiguous memory locations.
+>   - Fixed size, needs to be defined at the time of creation.
+>   - Direct access using index.
+>   - Example : int arr[5] = {1, 2, 3, 4, 5};
+>- Linked-list :
+>   - A collection of nodes where each node contains data and a reference (or pointer) to the next node.
+>   - Dynamic size; can grow or shrink during runtime.
+>   - Sequential access; slower to find an element.
+>   - Example : A node structure with pointers connecting nodes.
+
+
+#### 4. What is a stack, and where is it used?
+**Answer:**
+>A stack is a linear data structure that follows the LIFO (Last In, First Out) principle, meaning the last element added to the stack is the first one to be removed. It is like a stack of plates where you can only add or remove the top plate.
+>
+>__Uses Of Stack :__
+>   - Undo Operations: In text editors to undo recent actions.
+>   - Function Calls: Used in programming to manage function call sequences (call stack).
+>   - Expression Evaluation: For evaluating and converting expressions like infix to postfix.
+>   - Backtracking: Used in algorithms like maze solving or game moves.
+>   - Browser History: To navigate back and forth between web pages.
+
+#### 5. What is a queue also tell me type of Queue?
+**Answer:**
+>A queue is a linear data structure that follows the FIFO (First In, First Out) principle, meaning the first element added to the queue is the first one to be removed. It is like a line of people where the first person in line is served first.
+>
+>**Types of Queue :**
+>- Simple Queue:
+>A queue that follows the FIFO (First In, First Out) principle, where elements are added at the rear and removed from the front.
+>
+>- Circular Queue:
+>A queue where the last position is connected back to the first, forming a circle to efficiently utilize memory.
+>
+>- Priority Queue:
+>A queue where each element has a priority, and elements with higher priority are dequeued before those with lower priority.
+>
+>- Deque (Double-Ended Queue):
+>A queue where elements can be added or removed from both the front and rear ends.
+
+#### 6. Difference Between Queue and Stack?
+**Answer:**
+>- Queue :
+>   - Follows FIFO (First In, First Out), where the first element added is the first to be removed.
+>   - Elements are added at the rear (enqueue) and removed from the front (dequeue).
+>   - Used for task scheduling, request handling, and managing resources.
+>- Stack :
+>   - Follows LIFO (Last In, First Out), where the last element added is the first to be removed.
+>   - Elements are added (push) and removed (pop) only from the top.
+>   - Used for undo operations, function call tracking, and expression evaluation.
+
+#### 7. What is a binary search tree (BST)?
+**Answer:**
+>A binary tree is a hierarchical data structure in which each node has at most two child nodes, referred to as the left and right child. It is used to represent hierarchical relationships, such as the structure of a family tree or the organization of a file system.
+
+#### 8. What is a binary search tree (BST)?
+**Answer:**
+>A BST is a binary tree where the left child of a node contains values smaller than the node, and the right child contains values larger.
+
+#### 8. What is a Graph?
+**Answer:**
+>A graph is a data structure made up of nodes (also called vertices) and edges (connections between nodes). It is used to represent relationships or connections between different items.
+>- Example : In a social network, each person can be a node, and the connections (friendships) between them are the edges.
+
+#### 8. What is a hash table?
+**Answer:**
+>A hash table stores data in key-value pairs and uses a hash function to map keys to indices in an array for quick access.
+ 
+` },
+    {
+        id: 20097, chapterId: 20115, title: "Object-Oriented Programming (OOP)", content: `
+#### 1. What is Object-Oriented Programming (OOP)?
+**Answer:**
+>OOP is a programming paradigm that organizes software design around objects, rather than functions and logic. It focuses on using objects and classes.
+
+#### 2.  What are the four pillars of OOP?
+**Answer:**
+>- Encapsulation: Bundling data and methods into a single unit (class).
+>- Abstraction: Hiding the complex implementation and showing only the necessary details.
+>- Inheritance: A mechanism where one class inherits properties and behaviors from another.
+>- Polymorphism: The ability to take many forms, i.e., using the same method name with different implementations.
+
+#### 3. What is a class in OOP?
+**Answer:**
+>A class is a blueprint for creating objects. It defines the properties (attributes) and behaviors (methods) that the objects created from the class will have.
+
+#### 4. What is an object in OOP?
+**Answer:**
+>A class is a blueprint for creating objects. It defines the properties (attributes) and behaviors (methods) that the objects created from the class will have.
+
+#### 5. What is encapsulation?
+**Answer:**
+>Encapsulation is the practice of keeping fields (attributes) private and providing access to them via public methods. It hides the internal state of an object from the outside.
+
+#### 6. What is abstraction?
+**Answer:**
+>Abstraction is the concept of hiding the complex implementation details and exposing only the essential features of an object.
+
+#### 7. What is inheritance?
+**Answer:**
+>Inheritance is a fundamental concept in Object-Oriented Programming (OOP) where one class (called the child class or subclass) can inherit properties and behaviors (methods) from another class (called the parent class or superclass). It allows for code reuse and helps in creating a hierarchical relationship between classes.
+
+#### 8. What is a binary search tree (BST)?
+**Answer:**
+>A BST is a binary tree where the left child of a node contains values smaller than the node, and the right child contains values larger.
+
+#### 8. What is a Graph?
+**Answer:**
+>A graph is a data structure made up of nodes (also called vertices) and edges (connections between nodes). It is used to represent relationships or connections between different items.
+>- Example : In a social network, each person can be a node, and the connections (friendships) between them are the edges.
+
+#### 8. What is a hash table?
+**Answer:**
+>A hash table stores data in key-value pairs and uses a hash function to map keys to indices in an array for quick access.
+ 
+` },
   { id: 20098, chapterId: 20115, title: "Database Management" },
   { id: 20099, chapterId: 20115, title: "Operating System Concepts" },
   { id: 20100, chapterId: 20115, title: "Networking Basics" },
