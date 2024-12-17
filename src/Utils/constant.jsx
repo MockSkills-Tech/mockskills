@@ -1909,21 +1909,172 @@ and it made me more confident about handling similar situations in the future.
 **Answer:**
 >Inheritance is a fundamental concept in Object-Oriented Programming (OOP) where one class (called the child class or subclass) can inherit properties and behaviors (methods) from another class (called the parent class or superclass). It allows for code reuse and helps in creating a hierarchical relationship between classes.
 
-#### 8. What is a binary search tree (BST)?
+#### 8. Give the type of Inheritance?
 **Answer:**
->A BST is a binary tree where the left child of a node contains values smaller than the node, and the right child contains values larger.
+> __1. Single Inheritance :-__ When a class inherits another class, it is known as a single inheritance.
+>
+>Example: Dog class inherits the Animal class, so there is the single inheritance.
+>\`\`\`python
+># Parent class
+>class Animal:
+>    def speak(self):
+>        print("Animal speaks")
+>
+># Child class inheriting from Animal
+>class Dog(Animal):
+>    def bark(self):
+>        print("Dog barks")
+>\`\`\`
+> __2. Multilevel Inheritance :-__ When there is a chain of inheritance, it is known as multilevel inheritance.
+>
+>Example: BabyDog class inherits the Dog class which again inherits the Animal class, so there is a multilevel inheritance.
+>\`\`\`python
+># Parent class
+>class Animal:
+>    def speak(self):
+>        print("Animal speaks")
+>
+># Child class inheriting from Animal
+>class Dog(Animal):
+>    def bark(self):
+>        print("Dog barks")
+>
+># Grandchild class inheriting from Dog
+>class BabyDog(Dog):
+>    def weep(self):
+>        print("BabyDog weeps")
+>\`\`\`
+> __3. Hierarchical Inheritance :-__ When two or more classes inherits a single class, it is known as hierarchical inheritance.
+>
+>Example:
+>Dog and Cat classes inherits the Animal class, so there is hierarchical inheritance.
+>\`\`\`python
+># Parent class
+>class Animal:
+>    def speak(self):
+>       print("Animal speaks")
+>
+># Child class 1 inheriting from Animal
+>class Dog(Animal):
+>    def bark(self):
+>        print("Dog barks")
+>
+># Child class 2 inheriting from Animal
+>class Cat(Animal):
+>    def meow(self):
+>        print("Cat meows")
+>\`\`\`
+> __4. Multiple Inheritance :-__ Multiple Inheritance is the concept of the Inheritance in C++ that allows a child class to inherit properties or behaviour from multiple base classes.
+>
+>Example:
+>\`\`\`python
+># Parent class 1
+>class Teacher:
+>    def teach(self):
+>        print("Teaching students")
+>
+># Parent class 2
+>class Doctor:
+>    def treat(self):
+>        print("Treating patients")
+>
+># Child class inheriting from both Teacher and Doctor
+>class Person(Teacher, Doctor):
+>    def work(self):
+>        print("Balancing multiple roles")
+>\`\`\`
 
-#### 8. What is a Graph?
+#### 9. What is polymorphism??
 **Answer:**
->A graph is a data structure made up of nodes (also called vertices) and edges (connections between nodes). It is used to represent relationships or connections between different items.
->- Example : In a social network, each person can be a node, and the connections (friendships) between them are the edges.
+>Polymorphism in programming means "many forms". It allows objects, methods, or functions to behave differently based on the context. Polymorphism enables the same action or method to perform different tasks, providing flexibility and reusability in code.
 
-#### 8. What is a hash table?
+#### 10.What are the difference Between Function Overriding and Function Overloading?
 **Answer:**
->A hash table stores data in key-value pairs and uses a hash function to map keys to indices in an array for quick access.
- 
+>**1. Function Overriding:**
+>   - when a child class redefines a method from the parent class with the same method signature (name and parameters) known as Function Overriding.
+>   - It allows a child class to provide a specific implementation of a method that is already defined in the parent class.
+>   - It is the part of run-time-polymorphism.
+>\`\`\`python
+>class Animal:
+>    def sound(self):
+>        print("Animal makes a sound")
+>
+>class Dog(Animal):
+>    def sound(self):   #same Method as in above
+>        print("Dog barks")
+>\`\`\`
+>**2. Function Overloading:**
+>   - Function overloading allows you to define multiple methods with the same name but different parameters (number, type, or order) in the same class.
+>   - It enables a function to perform different tasks based on the input parameters.
+>   - It is the part of compile-time polymorphism.
+>\`\`\`python
+>class Calculator:
+>    def add(self, a, b):
+>        return a + b
+>
+>    def add(self, a, b, c):
+>        return a + b + c
+>\`\`\`
+#### 11. What is a constructor?
+**Answer:**
+>A constructor is a special method used to initialize objects of a class. It is called automatically when an object is created.
+
+#### 12. What is the difference between a constructor and a method?
+**Answer:**
+>A constructor is used to initialize an object when it is created, while a method is used to perform operations on the object.
+
+#### 13. What is a Encapsulation?
+**Answer:**
+>Binding (or wrapping) code and data together into a single unit are known as encapsulation.
+>
+>For example, a capsule, it is wrapped with different medicines.
 ` },
-  { id: 20098, chapterId: 20115, title: "Database Management" },
+    {
+        id: 20098, chapterId: 20115, title: "Database Management", content: `
+#### 1. What is a database?
+**Answer:**
+>A database is an organized collection of data that is stored and managed in a way that allows for easy retrieval, modification, and management. Databases can be used to store a wide variety of information, such as customer data, financial records, or inventory.
+
+#### 2. What are the types of databases?
+**Answer:**
+>Relational Database (RDBMS), NoSQL Database, Hierarchical Database, Object-oriented Database, Network Database
+
+#### 3. What is DBMS (Database Management System)?
+**Answer:**
+>A DBMS is software that manages and organizes data in a database. It provides functions such as data storage, retrieval, security, and backup.
+
+#### 4. What is the difference between DBMS and RDBMS?
+**Answer:**
+>DBMS: it Manages data in any form (flat files, XML, etc.).
+>
+>RDBMS: A type of DBMS that stores data in tables (using rows and columns) and supports relationships between tables.
+
+#### 5. What is SQL?
+**Answer:**
+>SQL (Structured Query Language) is a standard programming language used for managing and manipulating relational databases.
+
+#### 6. What is a primary key?
+**Answer:**
+>A primary key is a unique identifier for a record in a database table. It ensures that no two rows have the same value for the primary key column(s).
+
+#### 7. What is a foreign key?
+**Answer:**
+>A foreign key is a field (or a combination of fields) in one table that links to the primary key in another table, establishing a relationship between the two.
+
+#### 8. What are joins in SQL?
+**Answer:**
+>Joins are used to combine data from multiple tables based on a related column. Common types of joins are INNER JOIN, LEFT JOIN, RIGHT JOIN, and FULL OUTER JOIN.
+
+#### 9. What is normalization?
+**Answer:**
+>Normalization is the process of organizing data in a database to reduce redundancy and improve data integrity. It involves dividing a database into smaller tables and establishing relationships between them.
+
+#### 10. What is ACID in database management?
+**Answer:**
+>ACID stands for Atomicity, Consistency, Isolation, and Durability. These properties ensure that database transactions are processed reliably.
+
+
+` },
   { id: 20099, chapterId: 20115, title: "Operating System Concepts" },
   { id: 20100, chapterId: 20115, title: "Networking Basics" },
   {
