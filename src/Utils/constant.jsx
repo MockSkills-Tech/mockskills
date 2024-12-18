@@ -2075,13 +2075,235 @@ and it made me more confident about handling similar situations in the future.
 
 
 ` },
-  { id: 20099, chapterId: 20115, title: "Operating System Concepts" },
-  { id: 20100, chapterId: 20115, title: "Networking Basics" },
-  {
-    id: 20101,
-    chapterId: 20115,
-    title: "Software Development Lifecycle (SDLC)",
-  },
+    {
+        id: 20099, chapterId: 20115, title: "Operating System Concepts", content: `
+
+#### 1. What is an Operating System?
+
+**Answer:**
+
+>An Operating System (OS) is software that acts as a bridge between the computer's hardware and the user. It manages all the computer's resources, like memory, processing power, and storage, and makes sure everything runs smoothly.
+
+#### 2. What are the main functions of an Operating System?
+
+**Answer:**
+
+>1. Process Management
+>2. Memory Management
+>3. File System Management
+>4. Device Management
+
+#### 3. What is a process and a program?
+
+**Answer:**
+
+>A program is like a recipe or a set of instructions written down to do something (like a game or a word processor).
+>
+>A process is when the computer is actually following those instructions. So, when you open a program, it becomes a process because the computer is actively running it.
+>
+>In short:
+>- A program is a file you can open.
+>- A process is a program that's currently running on your computer.
+
+#### 4. What are the different types of operating systems?
+
+**Answer:**
+
+>**1. Batch Operating System:**
+>This OS groups tasks together into batches and runs them one after another without user interaction.
+>
+>**2. Time-Sharing Operating System:**
+>In this OS, multiple users can use the computer at the same time by sharing its resources (like the CPU).
+>
+>**3. Real-Time Operating System:**
+>This OS is used for tasks that must be done on time without delay, like controlling machines or equipment.
+>
+>**4. Distributed Operating System:**
+>This OS manages multiple computers connected to work together as one system. It makes sure all computers can share data and resources, even though they are spread out.
+>
+>**5. Network Operating System:**
+>This OS helps computers connected in a network to share resources like printers or files.
+>
+>**6. Multitasking Operating System:**
+>This OS lets you run multiple programs at the same time. It switches between tasks quickly, so you can work on one thing while another is loading in the background. Example: Windows, macOS, Linux.
+>
+#### 5. What is process scheduling?
+
+**Answer:**
+>
+>Process scheduling is the way an operating system manages the execution of processes (programs) on the CPU. Since a CPU can only handle one task at a time, the OS decides which process to run and when, by switching between them quickly.
+>
+#### 6. What are the different types of process scheduling algorithms?
+
+**Answer:**
+
+>**1. First-Come, First-Served (FCFS):**
+>- This is the simplest scheduling algorithm. The process that arrives first gets to use the CPU first. It’s like a queue where the first person in line is the first one served.
+>- __Drawback:__ It can cause long waiting times, especially if a short task comes after a long task.
+>
+>**2. Shortest Job First (SJF):**
+>- This algorithm selects the process that has the shortest burst time (the shortest amount of time it needs to complete). The idea is to complete shorter tasks quickly to minimize waiting time for others.
+>- __Drawback:__ It’s hard to know the burst time in advance, and it can cause "starvation," where longer processes never get a chance to run.
+>
+>**3. Round Robin (RR):**
+>- In Round Robin, each process gets a small amount of time to use the CPU (called a time slice or quantum). After each slice, the process is put at the end of the line, and the next process gets a turn. It’s like everyone gets a chance in a circle.
+>- __Drawback:__ If the time slice is too long, it can become similar to FCFS; if it’s too short, the system might waste time switching between processes.
+>
+>**4. Priority Scheduling:**
+>- In this algorithm, each process is given a priority. The process with the highest priority (lowest number) gets to run first. If two processes have the same priority, FCFS is used as a tiebreaker.
+>- __Drawback:__ Low-priority processes can get stuck waiting forever, a problem called starvation.
+>
+#### 7. What is a deadlock?
+
+**Answer:**
+
+>A deadlock is a situation in a computer system where two or more processes are stuck and cannot continue because they are each waiting for the other to release resources they need. This creates a cycle of dependency where no process can move forward.
+
+#### 8. What are the different types of memory management techniques?
+
+**Answer:**
+
+>**1. Contiguous Memory Allocation:**
+>- In this technique, each process is allocated a single continuous block of memory. It’s simple but can lead to memory fragmentation (unused gaps of memory).
+>
+>**2. Paging:**
+>- Memory is divided into fixed-size blocks called "pages," and processes are divided into the same size blocks. These pages can be stored in any available memory location, helping to avoid fragmentation.
+>
+>**3. Segmentation:**
+>- Memory is divided into variable-sized segments based on the logical divisions of a program, like code, data, or stack. It helps with organizing memory but can still cause fragmentation.
+>
+>**4. Virtual Memory:**
+>- This technique allows programs to use more memory than is physically available by swapping data between the RAM and a storage device (like a hard drive) as needed. It uses paging or segmentation to manage the illusion of having more memory.
+
+#### 9. What is the difference between a thread and a process?
+
+**Answer:**
+
+>__Thread:__ A thread is the smallest unit of execution within a process. A process can have multiple threads running at the same time, sharing the same memory and resources.
+>
+>__Process:__ A process is a program that is currently running. It has its own memory space, resources (like CPU and I/O), and execution environment.
+`},
+    {
+        id: 20100, chapterId: 20115, title: "Networking Basics", content: `
+
+#### 1. What is a network?
+
+**Answer:**
+
+>A network is a collection of interconnected devices, such as computers, servers, routers, and switches, that communicate with each other to share data and resources.
+
+#### 2. What is the difference between LAN, MAN, and WAN?
+
+**Answer:**
+
+>- LAN (Local Area Network): Covers a small geographical area like a home, school, or office.
+>- MAN (Metropolitan Area Network): Covers a city or large campus.
+>- WAN (Wide Area Network): Covers large geographical areas, often globally, like the Internet.
+
+
+#### 3. What is an IP address?
+
+**Answer:**
+
+>An IP address (Internet Protocol address) is a unique identifier for a device on a network. It helps devices communicate with each other.
+>
+>Example: IPv4 (e.g., 192.168.1.1), IPv6 (e.g., 2001:0db8:85a3:0000:0000:8a2e:0370:7334).
+
+#### 4. What is the difference between IPv4 and IPv6?
+**Answer:**
+
+>__1.IPv4:-__ 32-bit address, written in decimal format, divided into 4 octets (e.g., 192.168.1.1).
+>
+>__1.IPv6:-__ 128-bit address, written in hexadecimal format, divided into 8 blocks separated by colons (e.g., 2001:0db8:85a3:0000:0000:8a2e:0370:7334).
+
+#### 5. What is a MAC address?
+
+**Answer:**
+>
+>A MAC address (Media Access Control address) is a unique identifier assigned to a network interface card (NIC) for communication at the data link layer.
+
+#### 6. What is the OSI model?
+**Answer:**
+>The OSI (Open Systems Interconnection) model is a framework to understand how different networking protocols interact. It has 7 layers:
+>
+>- Physical (cables, signals)
+>- Data Link (MAC addresses, switches)
+>- Network (IP addresses, routers)
+>- Transport (TCP/UDP)
+>- Session (manages sessions)
+>- Presentation (data formatting, encryption)
+>- Application (end-user applications like browsers).
+>
+#### 7.  What is the difference between TCP and UDP?
+
+**Answer:**
+
+>__TCP (Transmission Control Protocol):__ Reliable, connection-oriented, used for file transfer (e.g., HTTP, FTP).
+>
+>__UDP (User Datagram Protocol):__ Unreliable, connectionless, used for real-time data (e.g., video streaming, DNS).
+
+#### 8. What is DNS?
+
+**Answer:**
+
+>DNS (Domain Name System) is like the phonebook of the Internet. It helps convert human-readable domain names (e.g., www.google.com) into IP addresses (e.g., 142.250.190.14) that computers use to identify each other on the network.
+
+#### 9. What do you understand by default gateway?
+
+**Answer:**
+
+>The default gateway is a router or networking device that connects a local network to other networks or the Internet.
+
+
+#### 10. What do you understand by NAT?
+
+**Answer:**
+
+>NAT (Network Address Translation) is a method used by routers to allow multiple devices in a private network (like your home Wi-Fi) to share a single public IP address to access the Internet.
+
+#### 11. What is a firewall?
+
+**Answer:**
+
+>A firewall is a security device or software that monitors and controls incoming and outgoing network traffic based on predefined security rules.
+
+#### 12.  What is a VPN?
+
+**Answer:**
+
+>A VPN (Virtual Private Network) creates a secure, encrypted connection over a public network (e.g., the Internet) to provide privacy and secure data transfer.
+
+#### 13. What do you understand by default gateway?
+
+**Answer:**
+
+>The default gateway is a router or networking device that connects a local network to other networks or the Internet.
+
+#### 14. What are the different types of network topologies?
+**Answer:**
+>- __Bus:__ All devices are connected to a single communication line.
+>- __Star:__ All devices are connected to a central hub.
+>- __Ring:__ Devices are connected in a circular manner.
+>- __Mesh:__ Every device connects to every other device.
+>- __Hybrid:__ Combination of two or more topologies.
+
+#### 15. What is DHCP?
+
+**Answer:**
+
+>DHCP (Dynamic Host Configuration Protocol) automatically assigns IP addresses to devices on a network.
+
+#### 16. What is the difference between HTTP and HTTPS??
+
+**Answer:**
+
+>- __HTTP (HyperText Transfer Protocol):__ No encryption, used for general websites.
+>- __HTTPS (HTTP Secure):__ Encrypted with SSL/TLS for secure communication.
+
+
+
+`  },
+  
 
   //MR Interview
   { id: 20102, chapterId: 20116, title: "Leadership and Teamwork" },
