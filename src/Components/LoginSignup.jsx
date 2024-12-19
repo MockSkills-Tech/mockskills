@@ -174,8 +174,8 @@ const LoginSignup = () => {
             )}
           </div>
         </div>
-         {/* Forgot Password (Login Only) */}
-         {isLoginForm && (
+        {/* Forgot Password (Login Only) */}
+        {isLoginForm && (
           <div className="text-right mb-4">
             <a href="#" className="text-gray-500 hover:underline text-sm">
               Forgot Password?
