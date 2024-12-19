@@ -97,13 +97,6 @@ const LoginSignup = () => {
         </button>
       </div>
 
-      {/* OR divider */}
-      <div className="flex items-center mb-6">
-        <hr className="flex-grow border-t border-gray-400" />
-        <span className="px-4 text-center text-gray-400">or</span>
-        <hr className="flex-grow border-t border-gray-400" />
-      </div>
-
       <form onSubmit={handleSubmit}>
         {/* Name Field (SignUp Only) */}
         {!isLoginForm && (
@@ -174,14 +167,6 @@ const LoginSignup = () => {
             )}
           </div>
         </div>
-        {/* Forgot Password (Login Only) */}
-        {isLoginForm && (
-          <div className="text-right mb-4">
-            <a href="#" className="text-gray-500 hover:underline text-sm">
-              Forgot Password?
-            </a>
-          </div>
-        )}
 
         {/* Confirm Password Field (SignUp Only) */}
         {!isLoginForm && (

@@ -1,21 +1,28 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getAuth, GoogleAuthProvider, GithubAuthProvider } from "firebase/auth";
 
 // Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyBNsf0gShCNX2_JjFgMnUDpN-DaNrVfVGA",
-  authDomain: "mockskills-5a39c.firebaseapp.com",
-  projectId: "mockskills-5a39c",
-  storageBucket: "mockskills-5a39c.appspot.com",
-  messagingSenderId: "29905684803",
-  appId: "1:29905684803:web:480c8b85643079b0bc87f6",
-  measurementId: "G-0WFGNRCPXG"
+  apiKey: "AIzaSyCGGC3JyW32x_XdFR_gjtHgBCrbhp_RuD8",
+  authDomain: "authentication-a8290.firebaseapp.com",
+  projectId: "authentication-a8290",
+  storageBucket: "authentication-a8290.firebasestorage.app",
+  messagingSenderId: "154415137630",
+  appId: "1:154415137630:web:13f2ec1b37a92a855205cf",
+  measurementId: "G-K27TWVLTRY"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+
+// Initialize Firebase Authentication and get a reference to the service
+const auth = getAuth(app);
+
+// Initialize the Google and GitHub providers
+const googleProvider = new GoogleAuthProvider();
+const githubProvider = new GithubAuthProvider();
+
+export { auth, googleProvider, githubProvider };
