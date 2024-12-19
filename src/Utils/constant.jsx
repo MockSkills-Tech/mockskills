@@ -2306,13 +2306,128 @@ and it made me more confident about handling similar situations in the future.
   
 
   //MR Interview
-  { id: 20102, chapterId: 20116, title: "Leadership and Teamwork" },
-  { id: 20103, chapterId: 20116, title: "Time Management" },
-  { id: 20104, chapterId: 20116, title: "Decision-Making Skills" },
-  { id: 20105, chapterId: 20116, title: "Problem Solving in Work Scenarios" },
-  { id: 20106, chapterId: 20116, title: "Conflict Resolution" },
-  { id: 20107, chapterId: 20116, title: "Ethical Scenarios" },
-  { id: 20108, chapterId: 20116, title: "Project Management Basics" },
+    {
+        id: 20102, chapterId: 20116, title: "Leadership and Teamwork", content: `
+
+#### 1. Can you describe a time when you worked as part of a team?
+
+**Answer:**
+
+>In college, I worked on a group project where my role was to manage research. I ensured regular communication with the team and helped compile our findings into the final presentation, which was well-received by our professor.
+
+#### 2. How do you handle conflicts in a team?
+
+**Answer:**
+
+>In a college project, there was a disagreement about task assignments. I encouraged open communication, listened to everyone’s concerns, and suggested dividing tasks based on each member’s strengths, which resolved the conflict.
+
+#### 3. How do you handle conflicts in a team?
+
+**Answer:**
+
+>I’m flexible in a team. I can lead when needed, but I’m equally comfortable supporting others. For instance, in a coding competition, I took the lead in planning, but I also helped debug issues when others needed support.
+
+#### 4. How would you motivate your team if you were the leader?
+**Answer:**
+
+>I would motivate my team by setting clear goals, appreciating their efforts, and ensuring open communication. For example, during a volunteer event, I kept the team motivated by dividing tasks evenly and celebrating small achievements.
+
+#### 5. What would you do if a team member wasn’t contributing effectively?
+
+**Answer:**
+>I would talk to the team member privately to understand their difficulties. If they needed help, I’d offer guidance or adjust tasks to suit their strengths. In a group assignment, this approach helped a teammate catch up and deliver their part successfully.
+
+`  },
+    {
+        id: 20103, chapterId: 20116, title: "Time Management", content: `
+
+#### 1. How do you prioritize your tasks when you have multiple deadlines?
+
+**Answer:**
+
+>I make a list of tasks and prioritize them based on deadlines and importance. I focus on urgent tasks first, while keeping track of less urgent ones to avoid last-minute stress.
+
+#### 2. How do you ensure that you complete your work on time?
+
+**Answer:**
+
+>I break tasks into smaller steps and set personal deadlines before the actual due date. This gives me extra time to review my work or handle unexpected delays.
+
+#### 3. Can you describe a situation where you managed your time effectively?
+
+**Answer:**
+
+>During college, I managed coursework, a part-time job, and an extracurricular club. I created a weekly schedule to allocate specific time slots for each activity, which helped me stay organized and meet all deadlines.
+
+#### 4. What do you do if you realize you won’t meet a deadline?
+**Answer:**
+
+>If I feel I might miss a deadline, I immediately inform my supervisor or team, explain the reason, and request an extension if needed. I also reprioritize tasks or seek help to complete the work as soon as possible.
+
+#### 5. How do you avoid procrastination?
+
+**Answer:**
+>I avoid procrastination by breaking big tasks into smaller, manageable parts. I also set strict time limits for each step and avoid distractions like social media while working.
+
+`  },
+    {
+        id: 20104, chapterId: 20116, title: "Decision-Making Skills", content: `
+
+#### 1. Can you describe a time when you had to make a difficult decision?
+
+**Answer:**
+
+>During a group project, two teammates proposed different approaches to complete the task. After analyzing both ideas and discussing them with the team, I supported the one that aligned best with our goals and timeline, which led to a successful outcome.
+
+#### 2. How do you approach making decisions under pressure?
+
+**Answer:**
+
+>When working on a tight deadline, I focus on the most critical factors and avoid overthinking. For example, during an exam preparation, I prioritized studying key topics based on past papers, ensuring I covered the most important material first.
+
+#### 3. What steps do you take before making an important decision?
+
+**Answer:**
+
+>I first identify the goal, gather relevant facts, and list all possible options. Then, I evaluate the pros and cons of each option before choosing the one that aligns best with the desired outcome.
+
+#### 4. Have you ever made a decision that turned out to be wrong? What did you learn from it?
+**Answer:**
+
+>I once chose to focus more on one assignment, which caused me to rush another. I realized the importance of time allocation and now create a clear plan to balance tasks effectively.
+
+#### 5.  How do you involve others in the decision-making process?
+
+**Answer:**
+>In group projects, I always encourage team members to share their ideas. For example, during a presentation, I discussed the topic with the team and combined everyone’s suggestions to create a stronger final plan.
+
+`  },
+    {
+        id: 20107, chapterId: 20116, title: "Ethical Scenarios", content: `
+
+#### 1. What would you do if you saw a team member behaving unethically?
+
+**Answer:**
+
+>I would first ensure I fully understand the situation. If I confirmed it was unethical, I’d talk to the person privately to understand their perspective. If the behavior continued or was serious, I’d report it to a manager or supervisor.
+
+#### 2. How would you handle being asked to do something you believe is unethical?
+
+**Answer:**
+
+>I would express my concerns respectfully and explain why I feel it’s unethical. If necessary, I would discuss the issue with a senior team member or manager to find an alternative solution.
+
+#### 3. What would you do if you accidentally made a mistake that could negatively affect your team?
+
+**Answer:**
+
+>I would admit my mistake immediately and inform my team. I’d also suggest or work on a solution to fix the issue to minimize any negative impact.
+
+#### 4. If you discovered confidential information being shared inappropriately, what action would you take?
+**Answer:**
+
+>I would inform the person sharing the information that it’s against company policy. If it continued or was serious, I would escalate it to the appropriate authority.
+`  },
 
   // Top 20 Coding Question
   {
