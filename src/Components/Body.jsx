@@ -67,14 +67,12 @@ const Body = () => {
           </div>
         </div>
       </section>
-      
-      <NewFeatures/>
-{/*       <Features /> */}
-      <AboutUs/>
+
+      <NewFeatures />
+      {/*       <Features /> */}
+      <AboutUs />
     </>
   );
 };
 
 export default Body;
-
-

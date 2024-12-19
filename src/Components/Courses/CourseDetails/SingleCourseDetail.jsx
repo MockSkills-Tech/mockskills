@@ -53,7 +53,7 @@ const SingleCourseDetail = () => {
             </ul>
             <div className="flex justify-center md:justify-start items-center space-x-4">
               <button className="bg-indigo-600 text-white px-6 py-3 rounded-md text-lg hover:bg-indigo-500 transition">
-                Get all access for $12 / month
+                Get all access for Free
               </button>
             </div>
           </div>
@@ -146,8 +146,8 @@ const SingleCourseDetail = () => {
                           }  p-4 transition`}
                           onClick={() => toggleChapter(ch.id)}
                         >
-                          <h5 className="text-md font-semibold">
-                            Chapter:-{index + 1} {ch.title}
+                                <h5 className="text-md font-semibold ">
+                            {ch.title}
                           </h5>
                           <span>
                             {expandedId === ch.id ? (
