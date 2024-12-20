@@ -37,6 +37,8 @@ const Content = ({ id }) => {
 
         return (
             <div className="relative bg-gray-800 text-white rounded-xl">
+                
+
                 <pre className={`language-${className}`} style={{ overflowX: 'auto' }}>
                     <code className={className} {...props}>
                         {code}

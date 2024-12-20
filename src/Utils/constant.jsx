@@ -2434,12 +2434,12 @@ and it made me more confident about handling similar situations in the future.
     id: 20109,
     chapterId: 20111,
     title: "1. Check if a Number is a Palindrome",
-    content: `
+      content:
+          
+      `
+    
   ### Problem Statement:
-A palindrome is a number that reads the same backward as forward. For example, \`121\` or \`12321\`.
-  
-  ---
-  
+A palindrome is a number that reads the same backward as forward. For example, __'121'__ or __'12321'__.
   ### Solution in C:
   \`\`\`c
   #include <stdio.h>
@@ -2448,7 +2448,6 @@ A palindrome is a number that reads the same backward as forward. For example, \
       int num, reversed = 0, remainder, original;
       printf("Enter a number: ");
       scanf("%d", &num);
-  
       original = num;
   
       // Reverse the number
@@ -2460,9 +2459,9 @@ A palindrome is a number that reads the same backward as forward. For example, \
   
       // Check if the original and reversed numbers are the same
       if (original == reversed) {
-          printf("%d is a palindrome.\n", original);
+          printf("%d is a palindrome.\\n", original);
       } else {
-          printf("%d is not a palindrome.\n", original);
+          printf("%d is not a palindrome.\\n", original);
       }
   
       return 0;
@@ -2481,13 +2480,11 @@ A palindrome is a number that reads the same backward as forward. For example, \
   ### Explanation:
   A prime number is a number greater than 1 that has no divisors other than 1 and itself. For example, 2, 3, 5, 7, 11 are prime numbers because they cannot be divided evenly by any other numbers apart from 1 and themselves.
   
-  ---
   
   ### Solution in C:
   \`\`\`c
   #include <stdio.h>
   #include <stdbool.h>
-  
   bool is_prime(int number) {
       if (number <= 1) {
           return false; // Numbers less than or equal to 1 are not prime
@@ -2499,21 +2496,18 @@ A palindrome is a number that reads the same backward as forward. For example, \
       }
       return true; // No divisors found, so it's prime
   }
-  
   int main() {
       int num;
-      
       // Input the number
       printf("Enter a number: ");
       scanf("%d", &num);
   
       // Check if it's prime
       if (is_prime(num)) {
-          printf("%d is a prime number.\n", num);
+          printf("%d is a prime number.\\n", num);
       } else {
-          printf("%d is not a prime number.\n", num);
+          printf("%d is not a prime number.\\n", num);
       }
-  
       return 0;
   }
   \`\`\`
@@ -2526,46 +2520,36 @@ A palindrome is a number that reads the same backward as forward. For example, \
     content: `
   ### Explanation:
   An **Armstrong Number**, also known as a Narcissistic Number, is a number that equals the sum of its own digits raised to the power of the number of digits. For instance:
-  - \`153\` is an Armstrong Number because \(1^3 + 5^3 + 3^3 = 153\).
-  - \`9474\` is an Armstrong Number because \(9^4 + 4^4 + 7^4 + 4^4 = 9474\).
-  
-  ---
+  - __153__ is an Armstrong Number because (1^3 + 5^3 + 3^3 = 153).
+  - __9474__ is an Armstrong Number because (9^4 + 4^4 + 7^4 + 4^4 = 9474).
   
   ### Solution in C:
   \`\`\`c
   #include <stdio.h>
   #include <math.h>
-  
   int main() {
       int num, original, remainder, result = 0, n = 0;
-  
       printf("Enter a number: ");
       scanf("%d", &num);
-  
       original = num;
-  
       // Calculate the number of digits
       while (original != 0) {
           original /= 10;
           n++;
       }
-  
       original = num;
-  
       // Calculate the sum of digits raised to the power of n
       while (original != 0) {
           remainder = original % 10;
           result += pow(remainder, n);
           original /= 10;
       }
-  
       // Check if the number is an Armstrong Number
       if (result == num) {
-          printf("%d is an Armstrong Number.\n", num);
+          printf("%d is an Armstrong Number.\\n", num);
       } else {
-          printf("%d is not an Armstrong Number.\n", num);
+          printf("%d is not an Armstrong Number.\\n", num);
       }
-  
       return 0;
   }
   \`\`\`
@@ -2575,40 +2559,33 @@ A palindrome is a number that reads the same backward as forward. For example, \
     id: 20112,
     chapterId: 20111,
     title: "4. Check if a number is a Perfect Number",
-    content: `
+      content: `
   ### Explanation:
   A **Perfect Number** is a positive integer that equals the sum of its proper divisors, excluding the number itself. For example:
-  - \`6\` is a perfect number because \(1 + 2 + 3 = 6\).
-  - \`28\` is another perfect number because \(1 + 2 + 4 + 7 + 14 = 28\).
+  - __6__ is a perfect number because (1 + 2 + 3 = 6).
+  - __28__ is another perfect number because (1 + 2 + 4 + 7 + 14 = 28).
   
   A key step in determining if a number is perfect is to find all its divisors (excluding itself) and then check if their sum equals the original number.
-  
-  ---
   
   ### Solution in C:
   \`\`\`c
   #include <stdio.h>
-  
   int main() {
       int num, sum = 0;
-  
       printf("Enter a number: ");
       scanf("%d", &num);
-  
       // Find the sum of proper divisors
       for (int i = 1; i <= num / 2; i++) {
           if (num % i == 0) {
               sum += i;
           }
       }
-  
       // Check if the number is a Perfect Number
       if (sum == num && num != 0) {
           printf("%d is a perfect number.\n", num);
       } else {
           printf("%d is not a perfect number.\n", num);
       }
-  
       return 0;
   }
   \`\`\`
@@ -2620,34 +2597,23 @@ A palindrome is a number that reads the same backward as forward. For example, \
     title: "5. Sum of the first N natural numbers",
     content: `
   ### Explanation:
-  The sum of the first \(N\) natural numbers can be calculated using the formula:
-  \[
-  \text{Sum} = \frac{N \times (N + 1)}{2}
-  \]
-  For example:
-  - The sum of the first 5 natural numbers is \(1 + 2 + 3 + 4 + 5 = 15\).
-  - The sum of the first 10 natural numbers is \(1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 = 55\).
+  The sum of the first (N) natural numbers can be calculated using the formula:__N * (N + 1) / 2;__\n
+  **For example:**
+  - The sum of the first 5 natural numbers is (1 + 2 + 3 + 4 + 5 = 15).
+  - The sum of the first 10 natural numbers is (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 = 55).
   
   This formula provides an efficient way to calculate the sum without having to manually add each number up to \(N\).
-  
-  ---
-  
   ### Solution in C:
   \`\`\`c
   #include <stdio.h>
-  
   int main() {
       int N;
       long sum;
-  
       printf("Enter the value of N: ");
       scanf("%d", &N);
-  
       // Calculate the sum using the formula
       sum = N * (N + 1) / 2;
-  
       printf("The sum of the first %d natural numbers is: %ld\n", N, sum);
-  
       return 0;
   }
   \`\`\`
@@ -2659,45 +2625,30 @@ A palindrome is a number that reads the same backward as forward. For example, \
     title: "6. Find the Sum of an Arithmetic Progression Series",
     content: `
   ### Explanation:
-  An **Arithmetic Progression (AP)** is a sequence of numbers in which the difference between consecutive terms is constant. The sum of the first \(N\) terms of an AP can be calculated using the formula:
-  \[
-  \text{Sum} = \frac{N}{2} \times (2a + (N-1) \times d)
-  \]
-  where:
-  - \(a\) is the first term of the AP.
-  - \(d\) is the common difference.
-  - \(N\) is the number of terms.
-  
-  For example:
-  - For an AP with the first term \`2\`, common difference \`3\`, and \(N = 5\):
-    \[
-    \text{Sum} = \frac{5}{2} \times (2 \times 2 + (5-1) \times 3) = \frac{5}{2} \times (4 + 12) = \frac{5}{2} \times 16 = 40
-    \]
-  
-  ---
+  An **Arithmetic Progression (AP)** is a sequence of numbers in which the difference between consecutive terms is constant. The sum of the first (N) terms of an AP can be calculated using the formula:__N / 2 * (2 * a + (N - 1) * d);__
+  \nwhere:
+  - (a) is the first term of the AP.
+  - (d) is the common difference.
+  - (N) is the number of terms.
+  \n**For example:**
+  - For an AP with the first term __2__, common difference __3__, and __N = 5__:
+  - __5 / 2 * (2 * 2 + (5 - 1) * 3)__
   
   ### Solution in C:
   \`\`\`c
   #include <stdio.h>
-  
   int main() {
       int a, d, N;
       long sum;
-  
       printf("Enter the first term (a): ");
       scanf("%d", &a);
-  
       printf("Enter the common difference (d): ");
       scanf("%d", &d);
-  
       printf("Enter the number of terms (N): ");
       scanf("%d", &N);
-  
       // Calculate the sum using the formula
       sum = N / 2 * (2 * a + (N - 1) * d);
-  
-      printf("The sum of the first %d terms of the AP is: %ld\n", N, sum);
-  
+      printf("The sum of the first %d terms of the AP is: %ld\\n", N, sum);
       return 0;
   }
   \`\`\`
@@ -2709,45 +2660,30 @@ A palindrome is a number that reads the same backward as forward. For example, \
     title: "7. Program to find the Sum of a Geometric Progression Series",
     content: `
   ### Explanation:
-  A **Geometric Progression (GP)** is a sequence of numbers where each term after the first is found by multiplying the previous one by a fixed, non-zero number called the common ratio. The sum of the first \(N\) terms of a GP can be calculated using the formula:
-  \[
-  \text{Sum} = a \times \frac{(1 - r^N)}{(1 - r)}
-  \]
-  where:
-  - \(a\) is the first term of the GP.
-  - \(r\) is the common ratio.
-  - \(N\) is the number of terms.
-  
+  A **Geometric Progression (GP)** is a sequence of numbers where each term after the first is found by multiplying the previous one by a fixed, non-zero number called the common ratio. The sum of the first (N) terms of a GP can be calculated using the formula: __a * (1 - r^N) / (1 - r)__;
+  \nwhere:
+  - (a) is the first term of the GP.
+  - (r) is the common ratio.
+  - (N) is the number of terms.
+  \n
   For example:
-  - For a GP with the first term \`2\`, common ratio \`3\`, and \(N = 5\):
-    \[
-    \text{Sum} = 2 \times \frac{(1 - 3^5)}{(1 - 3)} = 2 \times \frac{(-242)}{(-2)} = 242
-    \]
-  
-  ---
+  - For a GP with the first term __2__, common ratio __3__, and __N = 5__:  __2 * (1 - pow(3, 5)) / (1 - 3)__;
   
   ### Solution in C:
   \`\`\`c
   #include <stdio.h>
-  
   int main() {
       int a, r, N;
       long sum;
-  
       printf("Enter the first term (a): ");
       scanf("%d", &a);
-  
       printf("Enter the common ratio (r): ");
       scanf("%d", &r);
-  
       printf("Enter the number of terms (N): ");
       scanf("%d", &N);
-  
       // Calculate the sum using the formula
       sum = a * (1 - pow(r, N)) / (1 - r);
-  
-      printf("The sum of the first %d terms of the GP is: %ld\n", N, sum);
-  
+      printf("The sum of the first %d terms of the GP is: %ld\\n", N, sum);
       return 0;
   }
   \`\`\`
@@ -2760,31 +2696,25 @@ A palindrome is a number that reads the same backward as forward. For example, \
     content: `
   ### Explanation:
   To find the greatest of three numbers, we need to compare each number and determine which one is larger. This can be done using simple conditional statements. Given three numbers, \(a\), \(b\), and \(c\):
-  1. If \(a\) is greater than \(b\) and \(a\) is also greater than \(c\), then \(a\) is the largest.
-  2. If \(b\) is greater than \(a\) and \(b\) is also greater than \(c\), then \(b\) is the largest.
-  3. If both \(a\) and \(b\) are smaller than \(c\), then \(c\) is the largest.
-  
-  ---
-  
+  1. If __a__ is greater than __b__ and __a__ is also greater than __c__, then __a__ is the largest.
+  2. If __b__ is greater than __a__ and __b__ is also greater than __c__, then __b__ is the largest.
+  3. If both __a__ and __b__ are smaller than __c__, then __c__ is the largest.
+
   ### Solution in C:
   \`\`\`c
   #include <stdio.h>
-  
   int main() {
       int a, b, c;
-  
       printf("Enter three numbers: ");
       scanf("%d %d %d", &a, &b, &c);
-  
       // Determine the largest number
       if (a > b && a > c) {
-          printf("%d is the greatest.\n", a);
+          printf("%d is the greatest.\\n", a);
       } else if (b > a && b > c) {
-          printf("%d is the greatest.\n", b);
+          printf("%d is the greatest.\\n", b);
       } else {
-          printf("%d is the greatest.\n", c);
+          printf("%d is the greatest.\\n", c);
       }
-  
       return 0;
   }
   \`\`\`
@@ -2809,20 +2739,16 @@ A palindrome is a number that reads the same backward as forward. For example, \
   ### Solution in C:
   \`\`\`c
   #include <stdio.h>
-  
   int main() {
       int year;
-  
       printf("Enter a year: ");
       scanf("%d", &year);
-  
       // Check if the year is a leap year
       if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
-          printf("%d is a leap year.\n", year);
+          printf("%d is a leap year.\\n", year);
       } else {
-          printf("%d is not a leap year.\n", year);
+          printf("%d is not a leap year.\\n", year);
       }
-  
       return 0;
   }
   \`\`\`
@@ -2835,31 +2761,24 @@ A palindrome is a number that reads the same backward as forward. For example, \
     content: `
   ### Explanation:
   To reverse the digits of a number:
-  1. Extract each digit from the number starting from the last digit using the modulus operator (\`%\`).
+  1. Extract each digit from the number starting from the last digit using the modulus operator __%__.
   2. Build the reversed number by multiplying the current reversed number by 10 and adding the extracted digit.
   3. Repeat until the number becomes zero.
-  
-  ---
   
   ### Solution in C:
   \`\`\`c
   #include <stdio.h>
-  
   int main() {
       int num, reversed = 0, remainder;
-  
       printf("Enter a number: ");
       scanf("%d", &num);
-  
       // Reverse the number
       while (num != 0) {
           remainder = num % 10;        // Extract the last digit
           reversed = reversed * 10 + remainder; // Build the reversed number
           num /= 10;                  // Remove the last digit
       }
-  
-      printf("The reversed number is: %d\n", reversed);
-  
+      printf("The reversed number is: %d\\n", reversed);
       return 0;
   }
   \`\`\`
@@ -2872,27 +2791,21 @@ A palindrome is a number that reads the same backward as forward. For example, \
     content: `
   ### Explanation:
   To find the maximum and minimum digit in a number:
-  1. Extract each digit using the modulus operator (\`%\`) and integer division (\`/\`).
+  1. Extract each digit using the modulus operator __%__ and integer division __/__.
   2. Compare the digit with the current max and min values, updating them as needed.
   3. Continue until all digits are processed.
-  
-  ---
   
   ### Solution in C:
   \`\`\`c
   #include <stdio.h>
-  
   int main() {
       int num, digit, max = 0, min = 9;
-  
       printf("Enter a number: ");
       scanf("%d", &num);
-  
       // Handle negative numbers
       if (num < 0) {
           num = -num;
       }
-  
       // Find maximum and minimum digits
       while (num > 0) {
           digit = num % 10; // Get the last digit
@@ -2904,10 +2817,8 @@ A palindrome is a number that reads the same backward as forward. For example, \
           }
           num /= 10; // Remove the last digit
       }
-  
-      printf("Maximum digit: %d\n", max);
-      printf("Minimum digit: %d\n", min);
-  
+      printf("Maximum digit: %d\\n", max);
+      printf("Minimum digit: %d\\n", min);
       return 0;
   }
   \`\`\`
@@ -2919,18 +2830,14 @@ A palindrome is a number that reads the same backward as forward. For example, \
     title: "12. Print Fibonacci Series up to the Nth Term",
     content: `
   ### Explanation:
-  The Fibonacci series is a sequence of numbers where each number is the sum of the two preceding ones. It starts with 0 and 1, and the next number is the sum of the previous two. For example, the first few numbers in the Fibonacci series are: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...
-  
-  ---
-  
+  The Fibonacci series is a sequence of numbers where each number is the sum of the two preceding ones. It starts with 0 and 1, and the next number is the sum of the previous two. \n__For example:- __the first few numbers in the Fibonacci series are: __0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...__
+
   ### Solution in C:
   \`\`\`c
   #include <stdio.h>
-  
   void printFibonacci(int n) {
       int a = 0, b = 1, next;
       printf("Fibonacci Series up to %d terms: ", n);
-  
       for (int i = 1; i <= n; ++i) {
           printf("%d ", a);
           next = a + b;
@@ -2939,17 +2846,13 @@ A palindrome is a number that reads the same backward as forward. For example, \
       }
       printf("\n");
   }
-  
   int main() {
       int num;
-  
       // Input the number of terms
       printf("Enter the number of terms: ");
       scanf("%d", &num);
-  
       // Print Fibonacci series
       printFibonacci(num);
-  
       return 0;
   }
   \`\`\`
@@ -2961,41 +2864,33 @@ A palindrome is a number that reads the same backward as forward. For example, \
     title: "13. Factorial of a Number",
     content: `
   ### Explanation:
-  The factorial of a number \( n \) (denoted as \( n! \)) is the product of all positive integers up to \( n \). For example, the factorial of 5 is \( 5! = 5 \times 4 \times 3 \times 2 \times 1 = 120 \).
-  
-  ---
-  
+  The factorial of a number __n__ (denoted as __n!__) is the product of all positive integers up to __n__. \n__For example__, the factorial of 5 is ( 5! = 5 * 4 * 3 * 2 * 1 = 120 ).
+
   ### Solution in C:
   \`\`\`c
   #include <stdio.h>
-  
   long int factorial(int n) {
       if (n < 0) {
-          printf("Factorial is not defined for negative numbers.\n");
+          printf("Factorial is not defined for negative numbers.\\n");
           return 0;
       }
-      
       long int fact = 1;
       for (int i = 1; i <= n; i++) {
           fact *= i;
       }
       return fact;
   }
-  
   int main() {
       int num;
-      
       // Input the number
       printf("Enter a number: ");
       scanf("%d", &num);
-      
       // Compute factorial
       if (num == 0) {
-          printf("Factorial of %d is: 1\n", num); // Special case for 0
+          printf("Factorial of %d is: 1\\n", num); // Special case for 0
       } else {
-          printf("Factorial of %d is: %ld\n", num, factorial(num));
+          printf("Factorial of %d is: %ld\\n", num, factorial(num));
       }
-      
       return 0;
   }
   \`\`\`
@@ -3008,34 +2903,26 @@ A palindrome is a number that reads the same backward as forward. For example, \
     content: `
   ### Explanation:
   This program finds all the factors of a given number. A factor of a number is any number that divides the given number without leaving a remainder.
-  
-  ---
-  
+
   ### Solution in C:
   \`\`\`c
   #include <stdio.h>
-  
   void findFactors(int n) {
       printf("Factors of %d are: ", n);
-  
       for (int i = 1; i <= n; i++) {
           if (n % i == 0) {
               printf("%d ", i);
           }
       }
-      printf("\n");
+      printf("\\n");
   }
-  
   int main() {
       int num;
-  
       // Input the number
       printf("Enter a number: ");
       scanf("%d", &num);
-  
       // Find and print factors
       findFactors(num);
-  
       return 0;
   }
   \`\`\`
@@ -3047,21 +2934,15 @@ A palindrome is a number that reads the same backward as forward. For example, \
     title: "15. Print All Prime Factors of the Given Number",
     content: `
   ### Explanation:
-  This program finds and prints all the prime factors of a given number. A prime factor is a factor that is a prime number. For example, the prime factors of 60 are 2, 3, and 5.
-  
-  ---
-  
+  This program finds and prints all the prime factors of a given number. A prime factor is a factor that is a prime number. For example, the prime factors of __60__ are __2__, __3__, and __5__.
   ### Solution in C:
   \`\`\`c
-  #include <stdio.h>
-  
   void printPrimeFactors(int n) {
       // Print the number of 2s that divide n
       while (n % 2 == 0) {
           printf("%d ", 2);
           n /= 2;
       }
-  
       // n must be odd at this point, so we can skip even numbers
       for (int i = 3; i * i <= n; i += 2) {
           // While i divides n, print i and divide n
@@ -3070,24 +2951,19 @@ A palindrome is a number that reads the same backward as forward. For example, \
               n /= i;
           }
       }
-  
       // If n is a prime number greater than 2
       if (n > 2) {
           printf("%d ", n);
       }
   }
-  
   int main() {
       int num;
-  
       // Input the number
       printf("Enter a number: ");
       scanf("%d", &num);
-  
       // Print prime factors
       printf("Prime factors of %d are: ", num);
       printPrimeFactors(num);
-  
       return 0;
   }
   \`\`\`
@@ -3099,14 +2975,11 @@ A palindrome is a number that reads the same backward as forward. For example, \
     title: "16. Check if a Number is a Strong Number",
     content: `
   ### Explanation:
-  A Strong Number is a number in which the sum of the factorials of its digits is equal to the number itself. For instance, the number 145 is a strong number because \`1! + 4! + 5! = 145\`.
-  
-  ---
-  
+  A Strong Number is a number in which the sum of the factorials of its digits is equal to the number itself. \n For instance, the number __145__ is a strong number because 1! + 4! + 5! = 145.
+
   ### Solution in C:
   \`\`\`c
   #include <stdio.h>
-  
   int factorial(int n) {
       int fact = 1;
       for (int i = 1; i <= n; i++) {
@@ -3114,30 +2987,24 @@ A palindrome is a number that reads the same backward as forward. For example, \
       }
       return fact;
   }
-  
   int main() {
       int num, original, sum = 0, remainder;
-  
       // Input the number
       printf("Enter a number: ");
       scanf("%d", &num);
-  
       original = num;
-  
       // Calculate the sum of factorials of digits
       while (num > 0) {
           remainder = num % 10;
           sum += factorial(remainder);
           num /= 10;
       }
-  
       // Check if the number is a Strong Number
       if (sum == original) {
-          printf("%d is a Strong Number.\n", original);
+          printf("%d is a Strong Number.\\n", original);
       } else {
-          printf("%d is not a Strong Number.\n", original);
+          printf("%d is not a Strong Number.\\n", original);
       }
-  
       return 0;
   }
   \`\`\`
@@ -3150,13 +3017,10 @@ A palindrome is a number that reads the same backward as forward. For example, \
     content: `
   ### Explanation:
   This program computes the Greatest Common Divisor (GCD) of two numbers. The GCD of two integers is the largest positive integer that divides both numbers without leaving a remainder.
-  
-  ---
-  
+
   ### Solution in C:
   \`\`\`c
   #include <stdio.h>
-  
   int gcd(int a, int b) {
       while (b != 0) {
           int temp = b;
@@ -3165,22 +3029,17 @@ A palindrome is a number that reads the same backward as forward. For example, \
       }
       return a;
   }
-  
   int main() {
       int num1, num2, gcd_result;
-  
       // Input two numbers
       printf("Enter the first number: ");
       scanf("%d", &num1);
       printf("Enter the second number: ");
       scanf("%d", &num2);
-  
       // Calculate GCD
       gcd_result = gcd(num1, num2);
-  
       // Output the result
-      printf("The GCD of %d and %d is: %d\n", num1, num2, gcd_result);
-  
+      printf("The GCD of %d and %d is: %d\\n", num1, num2, gcd_result);
       return 0;
   }
   \`\`\`
@@ -3193,25 +3052,19 @@ A palindrome is a number that reads the same backward as forward. For example, \
     content: `
   ### Explanation:
   The program calculates the Least Common Multiple (LCM) of two numbers. The LCM of two integers is the smallest positive integer that is divisible by both numbers.
-  
-  ---
-  
+
   ### Solution in C:
   \`\`\`c
   #include <stdio.h>
-  
   int main() {
       int num1, num2, max, lcm;
-  
       // Input two numbers
       printf("Enter the first number: ");
       scanf("%d", &num1);
       printf("Enter the second number: ");
       scanf("%d", &num2);
-  
       // Determine the greater of the two numbers
       max = (num1 > num2) ? num1 : num2;
-  
       // Find LCM by checking divisibility starting from the larger number
       while (1) {
           if (max % num1 == 0 && max % num2 == 0) {
@@ -3220,10 +3073,8 @@ A palindrome is a number that reads the same backward as forward. For example, \
           }
           max++;
       }
-  
       // Output the result
-      printf("The LCM of %d and %d is: %d\n", num1, num2, lcm);
-  
+      printf("The LCM of %d and %d is: %d\\n", num1, num2, lcm);
       return 0;
   }
   \`\`\`
@@ -3236,35 +3087,27 @@ A palindrome is a number that reads the same backward as forward. For example, \
     content: `
   ### Explanation:
   This program calculates the sum of all digits of a given number by repeatedly extracting the last digit and adding it to a running total.
-  
-  ---
-  
+
   ### Solution in C:
   \`\`\`c
   #include <stdio.h>
-  
   int main() {
       int num, sum = 0, digit;
-  
       // Input the number
       printf("Enter a number: ");
       scanf("%d", &num);
-  
       // Handle negative numbers
       if (num < 0) {
           num = -num;
       }
-  
       // Calculate the sum of digits
       while (num > 0) {
           digit = num % 10;  // Extract the last digit
           sum += digit;      // Add the digit to the sum
           num /= 10;         // Remove the last digit
       }
-  
       // Output the result
-      printf("The sum of the digits is: %d\n", sum);
-  
+      printf("The sum of the digits is: %d\\n", sum);
       return 0;
   }
   \`\`\`
@@ -3276,38 +3119,30 @@ A palindrome is a number that reads the same backward as forward. For example, \
     title: "20. Sum of Numbers in the Given Range",
     content: `
   ### Explanation:
-  This program calculates the sum of all integers within a specified range \`[start, end]\`, including both boundaries. It handles cases where \`start > end\` by swapping the values to ensure a valid range.
-  
-  ---
+  This program calculates the sum of all integers within a specified range __[start, end]__, including both boundaries. It handles cases where __start > end__ by swapping the values to ensure a valid range.
   
   ### Solution in C:
   \`\`\`c
   #include <stdio.h>
-  
   int main() {
       int start, end, sum = 0;
-  
       // Input the range
       printf("Enter the starting number: ");
       scanf("%d", &start);
       printf("Enter the ending number: ");
       scanf("%d", &end);
-  
       // Ensure start is less than or equal to end
       if (start > end) {
           int temp = start;
           start = end;
           end = temp;
       }
-  
       // Calculate the sum of numbers in the range
       for (int i = start; i <= end; i++) {
           sum += i;
       }
-  
       // Output the result
-      printf("The sum of numbers from %d to %d is: %d\n", start, end, sum);
-  
+      printf("The sum of numbers from %d to %d is: %d\\n", start, end, sum);
       return 0;
   }
   \`\`\`
@@ -3319,28 +3154,22 @@ A palindrome is a number that reads the same backward as forward. For example, \
     title: "21. Replace all 0s with 1s in a Given Integer",
     content: `
   ### Explanation:
-  This program replaces every occurrence of the digit \`0\` in a given integer with the digit \`1\`. The algorithm processes each digit of the number, reconstructs the modified number, and handles both positive and negative inputs.
-  
-  ---
-  
+  This program replaces every occurrence of the digit __0__ in a given integer with the digit __1__. The algorithm processes each digit of the number, reconstructs the modified number, and handles both positive and negative inputs.
+
   ### Solution in C:
   \`\`\`c
   #include <stdio.h>
-  
   int main() {
       int num, digit, result = 0, place = 1;
-  
       // Input the number
       printf("Enter an integer: ");
       scanf("%d", &num);
-  
       // Handle negative numbers
       int isNegative = 0;
       if (num < 0) {
           isNegative = 1;
           num = -num;
       }
-  
       // Process each digit and replace 0 with 1
       while (num > 0) {
           digit = num % 10; // Extract the last digit
@@ -3351,31 +3180,25 @@ A palindrome is a number that reads the same backward as forward. For example, \
           place *= 10; // Move to the next digit place
           num /= 10; // Remove the last digit
       }
-  
       // Handle the case where the input is 0
       if (result == 0) {
           result = 1;
       }
-  
       // Restore the negative sign if necessary
       if (isNegative) {
           result = -result;
       }
-  
       // Output the result
-      printf("The modified number is: %d\n", result);
-  
+      printf("The modified number is: %d\\n", result);
       return 0;
   }
   \`\`\`
-  
   ### Key Points:
-  1. **Digit Replacement**: Replaces all occurrences of \`0\` with \`1\`.
+  1. **Digit Replacement**: Replaces all occurrences of __0__ with __1__.
   2. **Negative Numbers**: Handles negative integers by preserving their sign.
-  3. **Edge Case**: Handles the special case where the input is \`0\` and outputs \`1\`.
+  3. **Edge Case**: Handles the special case where the input is __0__ and outputs __1__.
   4. **Efficient Logic**: Processes the number digit by digit and reconstructs the result.
-  
-  ---
+
   `,
   },
   {
@@ -3385,50 +3208,37 @@ A palindrome is a number that reads the same backward as forward. For example, \
     content: `
   ### Explanation:
   The area of a circle is calculated using the formula:
-  
-  \`\`\`
+
   Area = π * r²
-  \`\`\`
-  
-  Where:
-  - \`r\` is the radius of the circle.
-  - \`π\` is a mathematical constant (approximately 3.14159 or use \`M_PI\` from the math library in C).
-  
-  ---
-  
+  \nWhere:
+  - __r__ is the radius of the circle.
+  - __π__ is a mathematical constant (approximately 3.14159 or use M_PI from the math library in C).
+
   ### Solution in C:
   \`\`\`c
   #include <stdio.h>
   #define PI 3.14159
-  
   int main() {
       float radius, area;
-  
       // Input the radius
       printf("Enter the radius of the circle: ");
       scanf("%f", &radius);
-  
       if (radius < 0) {
-          printf("Radius cannot be negative.\n");
+          printf("Radius cannot be negative.\\n");
           return 0;
       }
-  
       // Calculate the area
       area = PI * radius * radius;
-  
       // Output the area
-      printf("The area of the circle with radius %.2f is %.2f\n", radius, area);
-  
+      printf("The area of the circle with radius %.2f is %.2f\\n", radius, area);
       return 0;
   }
   \`\`\`
   
   ### Key Points:
-  1. **Formula**: Uses the formula \`Area = π * r²\`.
+  1. **Formula**: Uses the formula Area = π * r².
   2. **Input Validation**: Includes a check to ensure the radius is not negative.
   3. **Precision**: Outputs the result with two decimal places for clarity.
-  
-  ---
   `,
   },
   {
@@ -3438,71 +3248,55 @@ A palindrome is a number that reads the same backward as forward. For example, \
     content: `
   ### Explanation:
   A quadratic equation is of the form:
+  \n__ax² + bx + c = 0__
+  \n
+  __x = (-b ± sqrt(b² - 4ac)) / 2a__
+  \n
   
-  \`\`\`
-  ax² + bx + c = 0
-  \`\`\`
-  
-  The roots of the equation can be calculated using the **quadratic formula**:
-  
-  \`\`\`
-  x = (-b ± sqrt(b² - 4ac)) / 2a
-  \`\`\`
-  
-  The discriminant (\`D\`) determines the nature of the roots:
+  The discriminant __D__ determines the nature of the roots:
   1. **D > 0**: Two distinct real roots.
   2. **D == 0**: One real root (repeated root).
   3. **D < 0**: No real roots (complex roots).
-  
-  ---
-  
+
   ### Solution in C:
   \`\`\`c
   #include <stdio.h>
   #include <math.h>
-  
   int main() {
       float a, b, c, discriminant, root1, root2, realPart, imagPart;
-  
       // Input coefficients
       printf("Enter coefficients a, b, and c: ");
       scanf("%f %f %f", &a, &b, &c);
-  
       // Check if it's a quadratic equation
       if (a == 0) {
-          printf("This is not a quadratic equation.\n");
+          printf("This is not a quadratic equation.\\n");
           return 0;
       }
-  
       // Calculate the discriminant
       discriminant = b * b - 4 * a * c;
-  
       if (discriminant > 0) {
           // Two distinct real roots
           root1 = (-b + sqrt(discriminant)) / (2 * a);
           root2 = (-b - sqrt(discriminant)) / (2 * a);
-          printf("Roots are real and distinct: %.2f and %.2f\n", root1, root2);
+          printf("Roots are real and distinct: %.2f and %.2f\\n", root1, root2);
       } else if (discriminant == 0) {
           // One real root
           root1 = -b / (2 * a);
-          printf("Root is real and repeated: %.2f\n", root1);
+          printf("Root is real and repeated: %.2f\\n", root1);
       } else {
           // Complex roots
           realPart = -b / (2 * a);
           imagPart = sqrt(-discriminant) / (2 * a);
-          printf("Roots are complex: %.2f + %.2fi and %.2f - %.2fi\n", realPart, imagPart, realPart, imagPart);
+          printf("Roots are complex: %.2f + %.2fi and %.2f - %.2fi\\n", realPart, imagPart, realPart, imagPart);
       }
-  
       return 0;
   }
   \`\`\`
-  
   ### Key Points to Remember:
-  1. **Input Validation**: Ensure \`a\` is not zero to confirm it is a quadratic equation.
+  1. **Input Validation**: Ensure __a__ is not zero to confirm it is a quadratic equation.
   2. **Discriminant Check**: Use the discriminant to determine the nature of the roots.
-  3. **Math Library**: Include \`<math.h>\` to use \`sqrt()\`.
+  3. **Math Library**: Include __<math.h>__ to use __sqrt()__.
   
-  ---
   `,
   },
   // Coding Practice with Strings
