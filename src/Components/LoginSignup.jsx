@@ -1,14 +1,13 @@
 import React, { useState } from "react";
-import {
-  FaGoogle,
-  FaLinkedin,
-  FaEnvelope,
-  FaLock,
-  FaUser,
-  FaGithub,
-} from "react-icons/fa";
+import { FaGoogle, FaGithub, FaEnvelope, FaLock, FaUser } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleForm } from "../Utils/loginSlice";
+import { auth, googleProvider, githubProvider } from "../Utils/firebase";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  signInWithPopup,
+} from "firebase/auth";
 
 const LoginSignup = () => {
   const isLoginForm = useSelector((store) => store.login.isLogin);
@@ -32,12 +31,10 @@ const LoginSignup = () => {
   const validate = () => {
     const errors = {};
 
-    // Name validation (letters only)
     if (!isLoginForm && !/^[A-Za-z\s]+$/.test(formData.name.trim())) {
       errors.name = "Name should contain letters only.";
     }
 
-    // Email validation
     if (!formData.email.trim()) {
       errors.email = "Email is required.";
     } else if (
@@ -46,19 +43,10 @@ const LoginSignup = () => {
       errors.email = "Enter a valid email address.";
     }
 
-    // Password validation (uppercase, lowercase, number, and special characters)
     if (!formData.password.trim()) {
       errors.password = "Password is required.";
-    } else if (
-      !/^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[@$!%?&])[A-Za-z\d@$!%?&]{8,}$/.test(
-        formData.password
-      )
-    ) {
-      errors.password =
-        "Password must be at least 8 characters, include uppercase, lowercase, a number, and a special character.";
     }
 
-    // Confirm Password Validation
     if (!isLoginForm && formData.password !== formData.confirmPassword) {
       errors.confirmPassword = "Passwords do not match.";
     }
@@ -67,16 +55,47 @@ const LoginSignup = () => {
     return Object.keys(errors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (validate()) {
-      console.log("Form submitted:", formData);
+      if (isLoginForm) {
+        try {
+          await signInWithEmailAndPassword(
+            auth,
+            formData.email,
+            formData.password
+          );
+          console.log("User logged in:", formData.email);
+        } catch (error) {
+          console.error("Error logging in:", error.message);
+        }
+      } else {
+        try {
+          await createUserWithEmailAndPassword(
+            auth,
+            formData.email,
+            formData.password
+          );
+          console.log("User signed up:", formData.email);
+        } catch (error) {
+          console.error("Error signing up:", error.message);
+        }
+      }
     }
   };
 
   const handleClick = () => {
     dispatch(toggleForm(!isLoginForm));
     setFormErrors({});
+  };
+
+  const handleSocialLogin = async (provider) => {
+    try {
+      await signInWithPopup(auth, provider);
+      console.log("User logged in with social provider");
+    } catch (error) {
+      console.error("Error with social login:", error.message);
+    }
   };
 
   return (
@@ -87,18 +106,30 @@ const LoginSignup = () => {
 
       {/* Social Login Buttons */}
       <div className="mb-4">
-        <button className="w-full flex items-center justify-center bg-gradient-to-r from-red-500 to-red-600 text-white rounded-md py-2 mb-2 text-sm shadow hover:shadow-md transition">
+        <button
+          className="w-full flex items-center justify-center bg-gradient-to-r from-red-500 to-red-600 text-white rounded-md py-2 mb-2 text-sm shadow hover:shadow-md transition"
+          onClick={() => handleSocialLogin(googleProvider)}
+        >
           <FaGoogle className="mr-2" />
           {isLoginForm ? "Login with Google" : "SignUp with Google"}
         </button>
-        <button className="w-full flex items-center justify-center bg-gradient-to-r from-gray-800 to-black text-white rounded-md py-2 text-sm shadow hover:shadow-md transition">
+        <button
+          className="w-full flex items-center justify-center bg-gradient-to-r from-gray-800 to-black text-white rounded-md py-2 text-sm shadow hover:shadow-md transition"
+          onClick={() => handleSocialLogin(githubProvider)}
+        >
           <FaGithub className="mr-2" />
           {isLoginForm ? "Login with GitHub" : "SignUp with GitHub"}
         </button>
       </div>
 
+      {/* OR divider */}
+      <div className="flex items-center mb-6">
+        <hr className="flex-grow border-t border-gray-400" />
+        <span className="px-4 text-center text-gray-400">or</span>
+        <hr className="flex-grow border-t border-gray-400" />
+      </div>
+
       <form onSubmit={handleSubmit}>
-        {/* Name Field (SignUp Only) */}
         {!isLoginForm && (
           <div className="mb-3">
             <div className="relative">
@@ -122,7 +153,6 @@ const LoginSignup = () => {
           </div>
         )}
 
-        {/* Email Field */}
         <div className="mb-3">
           <div className="relative">
             <FaEnvelope className="absolute left-3 top-3 text-gray-400" />
@@ -144,7 +174,6 @@ const LoginSignup = () => {
           </div>
         </div>
 
-        {/* Password Field */}
         <div className="mb-3">
           <div className="relative">
             <FaLock className="absolute left-3 top-3 text-gray-400" />
@@ -168,7 +197,14 @@ const LoginSignup = () => {
           </div>
         </div>
 
-        {/* Confirm Password Field (SignUp Only) */}
+        {isLoginForm && (
+          <div className="text-right mb-4">
+            <a href="#" className="text-gray-500 hover:underline text-sm">
+              Forgot Password?
+            </a>
+          </div>
+        )}
+
         {!isLoginForm && (
           <div className="mb-4">
             <div className="relative">
