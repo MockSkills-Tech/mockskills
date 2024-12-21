@@ -17,6 +17,8 @@ import Opportunities from "./Components/CollabZone/CollabFeatures/Opportunities"
 import LiveFeed from "./Components/CollabZone/CollabFeatures/LiveFeed";
 import CollabzoneMain from "./Components/CollabZone/CollabzoneMain";
 
+import AboutUsTeam from "./Components/AboutUsTeam";
+
 const App = () => {
   return (
     <>
@@ -74,6 +76,10 @@ const App = () => {
                 path:"/BattleGround",
                 element:<BattleGround/>,
               },
+              {
+                path: "/AboutUsTeam",
+                element: <AboutUsTeam />,
+              }
             ],
           },
         ])}

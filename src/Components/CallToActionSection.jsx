@@ -14,7 +14,7 @@ const AdvancedCallToActionSection = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-8">
           {/* Still Have Questions Section */}
-          <div className="flex flex-col items-center justify-center py-12 px-8 bg-white border border-gray-200 rounded-lg shadow-lg transform transition-transform hover:scale-105 w-full md:w-1/2">
+          <div className="flex flex-col items-center justify-center py-12 px-8 bg-white border border-gray-200 rounded-lg shadow-lg transform transition-transform hover:scale-100 w-full md:w-1/2">
             {/* Profile Avatars */}
             <div className="flex -space-x-2 mb-6">
               <img
@@ -33,9 +33,12 @@ const AdvancedCallToActionSection = () => {
                 alt="User 3"
               />
             </div>
-            <h2 className="text-2xl font-extrabold text-gray-800 mb-4">Still have questions?</h2>
+            <h2 className="text-2xl font-extrabold text-gray-800 mb-4">
+              Still have questions?
+            </h2>
             <p className="text-gray-600 text-center max-w-lg mb-8">
-              Can't find the answer you're looking for? Let our friendly team help you with any questions.
+              Can't find the answer you're looking for? Let our friendly team
+              help you with any questions.
             </p>
             <button
               className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-full shadow-md transform hover:scale-105 transition-all duration-300"
@@ -56,13 +59,14 @@ const AdvancedCallToActionSection = () => {
           </div>
 
           {/* People Signed Up Section */}
-          <div className="flex flex-col items-center justify-center py-16 px-8 bg-white border border-gray-200 rounded-lg shadow-lg transform transition-transform hover:scale-105 w-full md:w-1/2">
+          <div className="flex flex-col items-center justify-center py-16 px-8 bg-white border border-gray-200 rounded-lg shadow-lg transform transition-transform hover:scale-100 w-full md:w-1/2">
             <FaUsers className="text-blue-500 mb-3" size={48} />
             <h2 className="text-4xl font-extrabold text-gray-800 mb-1">
               300,000+
             </h2>
             <p className="text-gray-600 text-center max-w-xl mb-8">
-              Join the growing global community of learners who are elevating their skills and achieving their dreams with us.
+              Join the growing global community of learners who are elevating
+              their skills and achieving their dreams with us.
             </p>
             <button className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-8 rounded-full shadow-md transform hover:scale-105 transition-all duration-300">
               Get Started Now
@@ -100,17 +104,17 @@ const AdvancedCallToActionSection = () => {
                 Drop Your Question or Query
               </h2>
               <p className="text-gray-600 mb-6">
-                at <span className="text-red-500 font-bold">support@mockskills.com</span>
+                at{" "}
+                <span className="text-red-500 font-bold">
+                  support@mockskills.com
+                </span>
               </p>
-              <p className="text-gray-600">
-                We will get back to you soon.
-              </p>
+              <p className="text-gray-600">We will get back to you soon.</p>
             </div>
           </div>
         </div>
       )}
     </div>
-
   );
 };
 
