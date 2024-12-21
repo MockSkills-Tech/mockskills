@@ -67,7 +67,7 @@ const AboutUsPage = () => {
                 </div>
             </section>
 
-            {/* Meet the Team Section */}
+            {/* Meet the Team Section
             <section className="text-center rounded-lg p-8">
                 <h2 className="text-4xl font-bold mb-4 text-gray-800">Meet the Team</h2>
                 <p className="text-gray-600 max-w-xl mx-auto mb-8">
@@ -87,7 +87,7 @@ const AboutUsPage = () => {
                         bio="Hi, I'm Mithalesh Kumar. I'm passionate about creating impactful learning experiences in tech. I'm excited to contribute to MockSkills and help others succeed in their careers."
                     />
                 </div>
-            </section>
+            </section>*/}
         </div>
     );
 };
