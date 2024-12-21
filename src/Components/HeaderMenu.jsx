@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { courseItems } from "../Utils/constant";
+import { FaBattleNet } from "react-icons/fa";
 import {
   FaAngleDown,
   FaBook,
@@ -138,6 +139,18 @@ const HeaderMenu = ({ mobile }) => {
           <FaHandsHelping className="mr-1 text-orange-600" />{" "}
           {/* Colorful icon for CollabZone */}
           <span className="font-semibold">CollabZone</span>
+        </div>
+      </Link>
+      {/* Battleground Button */}
+      <Link to="/BattleGround">
+        <div
+          className={`flex items-center justify-center py-2 px-4 rounded-md bg-white transition duration-200 cursor-pointer ${
+            mobile ? "text-lg" : "text-base"
+          } hover:bg-gray-100`}
+        >
+          <FaBattleNet className="mr-2 text-orange-600" />{" "}
+          {/* Icon updated for Battleground */}
+          <span className="font-semibold">BattleGround</span>
         </div>
       </Link>
     </nav>

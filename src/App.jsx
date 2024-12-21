@@ -8,6 +8,7 @@ import CourseDetail from "./Components/Courses/CourseDetails/CourseDetail";
 import SingleCourseDetail from "./Components/Courses/CourseDetails/SingleCourseDetail";
 import CollabZone from "./Components/CollabZone/CollabZone";
 import Partners from "./Components/Partners/Partners";
+import BattleGround from "./Components/BattleGround/Battleground"; 
 import GlobalProtection from "./GlobalProtection"; // Apply GlobalProtection globally
 import ContentBody from "./Components/Courses/ContentDetails/ContentBody";
 import FindGenZ from "./Components/CollabZone/CollabFeatures/FindGenZ";
@@ -16,10 +17,12 @@ import Opportunities from "./Components/CollabZone/CollabFeatures/Opportunities"
 import LiveFeed from "./Components/CollabZone/CollabFeatures/LiveFeed";
 import CollabzoneMain from "./Components/CollabZone/CollabzoneMain";
 
+import AboutUsTeam from "./Components/AboutUsTeam";
+import ContactPage from "./Components/ContactPage";
 const App = () => {
   return (
     <>
-      <GlobalProtection /> {/* Ensure this is inside the return block to apply protections globally */}
+         
       <RouterProvider
         router={createBrowserRouter([
           {
@@ -69,6 +72,18 @@ const App = () => {
                 path: "/partners",
                 element: <Partners />,
               },
+              {
+                path:"/BattleGround",
+                element:<BattleGround/>,
+              },
+              {
+                path: "/AboutUsTeam",
+                element: <AboutUsTeam />,
+              },
+              {
+                  path: "/ContactPage",
+                   element: <ContactPage />,
+               }
             ],
           },
         ])}

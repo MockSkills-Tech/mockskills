@@ -6,6 +6,8 @@ import CommunityCard from "./CommunityCard";
 import Features from "./Features";
 import NewFeatures from "./NewFeatures";
 import AboutUs from "./AboutUs";
+import FAQSection from "./FAQSection";
+import CallToActionSection from"./CallToActionSection"
 
 const Body = () => {
   return (
@@ -67,14 +69,15 @@ const Body = () => {
           </div>
         </div>
       </section>
-      
-      <NewFeatures/>
-{/*       <Features /> */}
-      <AboutUs/>
+
+      <NewFeatures />
+      {/*       <Features /> */}
+      <AboutUs />
+      <FAQSection/>
+<CallToActionSection/>
+
     </>
   );
 };
 
 export default Body;
-
-
