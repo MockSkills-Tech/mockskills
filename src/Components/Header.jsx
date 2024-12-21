@@ -6,13 +6,47 @@ import { toggleForm } from "../Utils/loginSlice";
 import LoginSignup from "./LoginSignup";
 import HeaderMenu from "./HeaderMenu";
 import { Link } from "react-router-dom";
-
+import { onAuthStateChanged, signOut } from 'firebase/auth';
+import { auth } from '../utils/firebase';
+import { addUser, removeUser } from '../utils/userSlice';
+import { useNavigate } from 'react-router-dom'
+import UserProfile from "./UserProfile";
 const Header = () => {
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     const [showModal, setShowModal] = useState(false);
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [showBanner, setShowBanner] = useState(true);
     const isLoginForm = useSelector((store) => store.login.isLogin);
+    const selectUserFromRedux = useSelector(store => store.user);
+
+    const handleSignOut = () => {
+        signOut(auth).then(() => { })
+            .catch((error) => {
+                // An error happened.
+            });
+
+    }
+
+    useEffect(() => {
+        const unsubscribeCallback = onAuthStateChanged(auth, (user) => {
+            if (user) {
+                // User is signed in, see docs for a list of available properties
+                // https://firebase.google.com/docs/reference/js/auth.user
+                const { uid, displayName, email } = user;
+                dispatch(addUser({ uid: uid, displayName: displayName, email: email }));
+                setShowModal(false);
+                navigate('/courses')
+
+            } else {
+                // User is signed out
+                dispatch(removeUser());
+                navigate('/')
+            }
+        });
+
+        return () => unsubscribeCallback();
+    }, [])
 
     const handleLoginForm = () => {
         dispatch(toggleForm(true));
@@ -75,11 +109,19 @@ const Header = () => {
                 {/* Auth Buttons and Search */}
                 <div className="flex items-center space-x-2">
                     <SearchBar />
+                    {selectUserFromRedux ? <>
+                        <UserProfile user={selectUserFromRedux} handleSignOut={handleSignOut} />
+                        <span className='text-gradient font-bold'>{selectUserFromRedux?.displayName}</span>
+
+                        </>
+                        
+                    :
                     <AuthButtons
                         isLoginForm={isLoginForm}
                         handleLoginForm={handleLoginForm}
                         handleSignupForm={handleSignupForm}
-                    />
+                    />}
+                        
                 </div>
 
                 {/* Mobile Menu Toggle */}

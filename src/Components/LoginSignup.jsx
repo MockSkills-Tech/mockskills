@@ -1,17 +1,20 @@
-import React, { useState } from "react";
+import{ useState } from "react";
 import { FaGoogle, FaGithub, FaEnvelope, FaLock, FaUser } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleForm } from "../Utils/loginSlice";
+import { addUser } from "../Utils/userSlice";
 import { auth, googleProvider, githubProvider } from "../Utils/firebase";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-  signInWithPopup,
+    signInWithPopup,
+    updateProfile,
 } from "firebase/auth";
 
 const LoginSignup = () => {
   const isLoginForm = useSelector((store) => store.login.isLogin);
   const dispatch = useDispatch();
+
 
   const [formData, setFormData] = useState({
     name: "",
@@ -60,22 +63,38 @@ const LoginSignup = () => {
     if (validate()) {
       if (isLoginForm) {
         try {
-          await signInWithEmailAndPassword(
+          signInWithEmailAndPassword(
             auth,
             formData.email,
             formData.password
-          );
+          ).then((userCredential) => {
+              // Signed in 
+              const user = userCredential.user;
+              //const { uid, displayName, email } = user;
+              //dispatch(addUser({ uid: uid, displayName: displayName, email: email }));
+
+          })
           console.log("User logged in:", formData.email);
         } catch (error) {
           console.error("Error logging in:", error.message);
         }
       } else {
         try {
-          await createUserWithEmailAndPassword(
-            auth,
-            formData.email,
-            formData.password
-          );
+            createUserWithEmailAndPassword(auth, formData.email, formData.password)
+                .then((userCredential) => {
+                // Signed up 
+                const user = userCredential.user;
+                    updateProfile(user, {
+                        displayName: formData.name
+                })
+                .then(() => {
+                    const { uid, displayName, email } = auth.currentUser;
+                    dispatch(addUser({ uid: uid, displayName: displayName, email: email }));
+                    // ...
+                }).catch((error) => {
+                    setFormErrors(error.message)
+                });
+            })
           console.log("User signed up:", formData.email);
         } catch (error) {
           console.error("Error signing up:", error.message);
