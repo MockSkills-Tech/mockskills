@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <div>
       <footer className="bg-black text-white py-20">
-        {" "}
         {/* Changed background to solid black */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-16">
@@ -45,12 +46,12 @@ const Footer = () => {
               </h2>
               <ul className="space-y-4 text-gray-400">
                 <li>
-                  <a
-                    href="AboutUsTeam"
+                  <Link
+                    to="/AboutUsTeam"
                     className="flex items-center text-gray-400 hover:text-white transition-all duration-300"
                   >
                     <i className="fas fa-info-circle mr-2"></i> About Us
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a
@@ -78,12 +79,12 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="/ContactPage"
                     className="flex items-center text-gray-400 hover:text-white transition-all duration-300"
                   >
                     <i className="fas fa-phone-alt mr-2"></i> Contact
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -103,12 +104,12 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="/ContactPage"
                     className="flex items-center text-gray-400 hover:text-white transition-all duration-300"
                   >
                     <i className="fas fa-headset mr-2"></i> Support
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a
@@ -128,12 +129,12 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="/ContactPage"
                     className="flex items-center text-gray-400 hover:text-white transition-all duration-300"
                   >
                     <i className="fas fa-life-ring mr-2"></i> Help
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

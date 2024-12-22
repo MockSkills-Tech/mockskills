@@ -18,7 +18,7 @@ import LiveFeed from "./Components/CollabZone/CollabFeatures/LiveFeed";
 import CollabzoneMain from "./Components/CollabZone/CollabzoneMain";
 
 import AboutUsTeam from "./Components/AboutUsTeam";
-
+import ContactPage from "./Components/ContactPage";
 const App = () => {
   return (
     <>
@@ -79,7 +79,11 @@ const App = () => {
               {
                 path: "/AboutUsTeam",
                 element: <AboutUsTeam />,
-              }
+              },
+              {
+                  path: "/ContactPage",
+                   element: <ContactPage />,
+               }
             ],
           },
         ])}
