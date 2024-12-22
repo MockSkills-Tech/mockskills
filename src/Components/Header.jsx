@@ -36,7 +36,7 @@ const Header = () => {
                 const { uid, displayName, email } = user;
                 dispatch(addUser({ uid: uid, displayName: displayName, email: email }));
                 setShowModal(false);
-                navigate('/courses')
+                navigate('/')
 
             } else {
                 // User is signed out

@@ -29,14 +29,13 @@ const Body = () => {
         </div>
         <img src={interviewImage} alt="Interview" className="h-auto" />
       </section>
-
       {/* Category Section */}
       <section className="flex flex-col items-center w-full my-10">
         <div className="w-[960px] mb-10">
           <CategoryCard />
         </div>
-      </section>
-
+          </section>
+          
       {/* MNC Section */}
       <section className="w-full text-center p-6 mb-10">
         <h1 className="font-bold text-3xl mb-4">

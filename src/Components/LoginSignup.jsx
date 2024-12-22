@@ -9,7 +9,10 @@ import {
   signInWithEmailAndPassword,
     signInWithPopup,
     updateProfile,
+    sendPasswordResetEmail
 } from "firebase/auth";
+import { WelcomeEmail } from "./EmailService/WelcomeEmail";
+//import { WelcomeEmail } from "./EmailService/WelcomeEmail";
 
 const LoginSignup = () => {
   const isLoginForm = useSelector((store) => store.login.isLogin);
@@ -23,9 +26,9 @@ const LoginSignup = () => {
     confirmPassword: "",
   });
 
-  const [formErrors, setFormErrors] = useState({});
-
-  const handleChange = (e) => {
+    const [formErrors, setFormErrors] = useState({});
+    const [authError, setAuthError] = useState("");
+    const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
     setFormErrors((prev) => ({ ...prev, [name]: "" }));
@@ -56,69 +59,161 @@ const LoginSignup = () => {
 
     setFormErrors(errors);
     return Object.keys(errors).length === 0;
-  };
+    };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (validate()) {
-      if (isLoginForm) {
-        try {
-          signInWithEmailAndPassword(
-            auth,
-            formData.email,
-            formData.password
-          ).then((userCredential) => {
-              // Signed in 
-              const user = userCredential.user;
-              //const { uid, displayName, email } = user;
-              //dispatch(addUser({ uid: uid, displayName: displayName, email: email }));
+    
 
-          })
-          console.log("User logged in:", formData.email);
-        } catch (error) {
-          console.error("Error logging in:", error.message);
-        }
-      } else {
-        try {
-            createUserWithEmailAndPassword(auth, formData.email, formData.password)
-                .then((userCredential) => {
-                // Signed up 
-                const user = userCredential.user;
-                    updateProfile(user, {
-                        displayName: formData.name
-                })
-                .then(() => {
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        if (validate()) {
+            if (isLoginForm) {
+                // Login Logic
+                try {
+                    const userCredential = await signInWithEmailAndPassword(
+                        auth,
+                        formData.email,
+                        formData.password
+                    );
+                    const user = userCredential.user;
+                    console.log("User logged in:", user.email);
+                    // Dispatch or handle successful login
+                } catch (error) {
+                    if (error.code === "auth/invalid-credential") {
+                        setAuthError("Invalid Email Or Password.");
+                    } else {
+                        setAuthError("An error occurred. Please try again.");
+                    }
+                    console.error("Login error:", error.message);
+                }
+            } else {
+                // Signup Logic
+                try {
+                    const userCredential = await createUserWithEmailAndPassword(
+                        auth,
+                        formData.email,
+                        formData.password
+                    );
+                    const user = userCredential.user;
+                    await updateProfile(user, {
+                        displayName: formData.name,
+                    });
+
+                    console.log("User signed up:", user.email);
                     const { uid, displayName, email } = auth.currentUser;
-                    dispatch(addUser({ uid: uid, displayName: displayName, email: email }));
-                    // ...
-                }).catch((error) => {
-                    setFormErrors(error.message)
-                });
-            })
-          console.log("User signed up:", formData.email);
-        } catch (error) {
-          console.error("Error signing up:", error.message);
+                    //Welcome Email send
+                   // WelcomeEmail(email, displayName); 
+
+                    dispatch(addUser({ uid, displayName, email }));
+                    
+                } catch (error) {
+                    if (error.code === "auth/email-already-in-use") {
+                        setAuthError("This email is already registered.");
+                    } else {
+                        setAuthError("An error occurred during signup. Please try again.");
+                    }
+                    console.error("Signup error:", error.message);
+                }
+            }
         }
-      }
-    }
-  };
+    };
+
+
+    const [isResetPassword, setIsResetPassword] = useState(false);
+    const [resetEmail, setResetEmail] = useState("");
+    const handleResetPassword = async (e) => {
+        e.preventDefault();
+        if (!resetEmail.trim()) {
+            setFormErrors({ resetEmail: "Email is required." });
+            return;
+        }
+        sendPasswordResetEmail(auth, resetEmail)
+            .then(() => {
+                alert("Forget Password Link Has Been Sent to Your Registered Email.");
+                setIsResetPassword(false);
+                setResetEmail("");
+            })
+            .catch((err) => {
+                if (err.code === "auth/user-not-found") {
+                    alert("No account found with this email.");
+                } else {
+                    alert(err.message);
+                }
+            });
+
+        
+    };
 
   const handleClick = () => {
     dispatch(toggleForm(!isLoginForm));
     setFormErrors({});
   };
 
-  const handleSocialLogin = async (provider) => {
-    try {
-      await signInWithPopup(auth, provider);
-      console.log("User logged in with social provider");
-    } catch (error) {
-      console.error("Error with social login:", error.message);
-    }
-  };
+    const handleSocialLogin = async (provider) => {
+        signInWithPopup(auth, provider)
+            .then((result) => {
+                const user = result.user;
+                const isNewUser = result?._tokenResponse?.isNewUser; // Checking if user is new
+
+                if (isNewUser) {
+                    // Send Welcome Email
+                    WelcomeEmail(user?.email, user?.displayName)
+                }
+            })
+            .catch((error) => {
+                console.error(error.message);
+            });
+    };
+
+
+
 
   return (
-    <div className="max-w-md mx-auto shadow-md rounded-md p-6 bg-white">
+      <div className="max-w-md mx-auto shadow-md rounded-md p-6 bg-white">
+          {isResetPassword ?
+        <>
+            <h2 className="text-xl font-bold mb-4 text-center text-gradient">
+                Reset Password
+            </h2>
+            <form onSubmit={handleResetPassword}>
+                <div className="mb-4">
+                    <div className="relative">
+                        <FaEnvelope className="absolute left-3 top-3 text-gray-400" />
+                        <input
+                            type="email"
+                            value={resetEmail}
+                            onChange={(e) => setResetEmail(e.target.value)}
+                            placeholder="Your email address"
+                            className={`w-full pl-10 pr-4 py-2 border ${formErrors.resetEmail
+                                    ? "border-red-500"
+                                    : "border-gray-300"
+                                } rounded-md focus:outline-none focus:ring ${formErrors.resetEmail
+                                    ? "focus:ring-red-200"
+                                    : "focus:ring-blue-200"
+                                } text-sm`}
+                        />
+                        {formErrors.resetEmail && (
+                            <p className="text-red-500 text-xs mt-1">
+                                {formErrors.resetEmail}
+                            </p>
+                        )}
+                    </div>
+                </div>
+                <button
+                    type="submit"
+                    className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-md py-2 text-sm shadow hover:shadow-md transition"
+                >
+                    Send Reset Email
+                </button>
+            </form>
+            <button
+                className="w-full text-gray-500 hover:underline text-sm mt-4"
+                onClick={() => setIsResetPassword(false)}
+            >
+                Back to Login
+            </button>
+        </>
+      :
+       <>  
       <h2 className="text-xl font-bold mb-4 text-center text-gradient">
         {isLoginForm ? "Login" : "SignUp"} for MockSkills
       </h2>
@@ -218,7 +313,9 @@ const LoginSignup = () => {
 
         {isLoginForm && (
           <div className="text-right mb-4">
-            <a href="#" className="text-gray-500 hover:underline text-sm">
+            <a href="#" className="text-gray-500 hover:underline text-sm"
+                onClick={() => setIsResetPassword(true)}
+            >
               Forgot Password?
             </a>
           </div>
@@ -251,8 +348,9 @@ const LoginSignup = () => {
               )}
             </div>
           </div>
-        )}
+          )}
 
+        <span className="text-red-500">{authError}</span>
         <button
           type="submit"
           className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white rounded-md py-2 text-sm shadow hover:shadow-md transition"
@@ -270,9 +368,12 @@ const LoginSignup = () => {
         >
           {isLoginForm ? "SignUp" : "Login"} here
         </a>
-      </p>
+          </p>
+          </>}
     </div>
   );
 };
+
+
 
 export default LoginSignup;
