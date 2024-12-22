@@ -49,9 +49,24 @@ const LoginSignup = () => {
       errors.email = "Enter a valid email address.";
     }
 
-    if (!formData.password.trim()) {
-      errors.password = "Password is required.";
-    }
+      if (!formData.password.trim()) {
+          errors.password = "Password is required.";
+      } else {
+          if (formData.password.length < 6) {
+              errors.password = "Password must be at least 6 characters long.";
+          } else if (formData.password.length > 16) {
+              errors.password = "Password must not exceed 16 characters.";
+          } else if (!/[a-zA-Z]/.test(formData.password)) {
+              errors.password = "Password must contain at least one letter (a-z or A-Z).";
+          } else if (!/[0-9]/.test(formData.password)) {
+              errors.password = "Password must contain at least one number (0-9).";
+          } else if (!/[!@#$%^&*]/.test(formData.password)) {
+              errors.password = "Password must contain at least one special character (!@#$%^&*).";
+          } else if (/[^a-zA-Z0-9!@#$%^&*]/.test(formData.password)) {
+              errors.password = "Password contains invalid characters.";
+          }
+      }
+
 
     if (!isLoginForm && formData.password !== formData.confirmPassword) {
       errors.confirmPassword = "Passwords do not match.";
@@ -101,7 +116,7 @@ const LoginSignup = () => {
                     console.log("User signed up:", user.email);
                     const { uid, displayName, email } = auth.currentUser;
                     //Welcome Email send
-                   // WelcomeEmail(email, displayName); 
+                    WelcomeEmail(email, displayName); 
 
                     dispatch(addUser({ uid, displayName, email }));
                     
