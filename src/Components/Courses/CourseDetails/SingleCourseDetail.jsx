@@ -16,8 +16,8 @@ const SingleCourseDetail = () => {
   const [expandedId, setExpandedId] = useState(null);
   const { id } = location.state || {};
 
-  const course = COURSES.find((course) => course.id === parseInt(id));
-  const modules = MODULES.filter((module) => module.courseId === course.id); // Should be filter, not find
+  const course = COURSES.find((course) => course?.id === parseInt(id));
+  const modules = MODULES.filter((module) => module?.courseId === course?.id); // Should be filter, not find
 
   const toggleChapter = (id) => {
     setExpandedId(expandedId === id ? null : id);
@@ -36,12 +36,12 @@ const SingleCourseDetail = () => {
           <div className="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
             <h2 className="text-sm text-gray-500 mb-2">
               <Link to={"/courses"}>Courses</Link> &gt;{" "}
-              <span className="font-semibold">{course.title}</span>
+              <span className="font-semibold">{course?.title}</span>
             </h2>
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              {course.title}
+              {course?.title}
             </h1>
-            <p className="text-lg text-gray-700 mb-6">{course.description}</p>
+            <p className="text-lg text-gray-700 mb-6">{course?.description}</p>
             <ul className="space-y-2 mb-8">
               <li className="text-lg">
                 📖 <strong>Earn Certificate</strong> of completion
@@ -171,7 +171,7 @@ const SingleCourseDetail = () => {
                           ).map((topic) => (
                             <Link
                               key={topic.id}
-                              to={`/courses/${category}/${courseTitle}/${topic.id}`}
+                              to={`${topic.id}`}
                             >
                               <p className="text-gray-600 text-left  py-2 pl-6 pr-4  border border-t-0 border-gray-200">
                                 {topic.title}

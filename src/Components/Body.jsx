@@ -1,5 +1,6 @@
 import interviewImage from "../assets/Compushomepic.png";
-
+import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from "react-redux";
 import CategoryCard from "./CategoryCard";
 import MncCard from "./MncCard";
 import CommunityCard from "./CommunityCard";
@@ -8,10 +9,19 @@ import NewFeatures from "./NewFeatures";
 import AboutUs from "./AboutUs";
 import FAQSection from "./FAQSection";
 import CallToActionSection from"./CallToActionSection"
+import { openLoginModal } from "../Utils/modalSlice";
+import TriggerLoginModal from "./TriggerLoginModal";
 
 const Body = () => {
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const user = useSelector(store => store.user);
+    const handleGetStarted = () => {
+        user?navigate("/courses") : dispatch(openLoginModal());
+    }
   return (
-    <>
+      <>
+          
       {/* Hero Section */}
       <section className="flex justify-evenly h-96 mt-10">
         <div className="flex flex-col items-start">
@@ -23,7 +33,7 @@ const Body = () => {
             Level up your career and land your next role with courses, mock
             interviews, and community support.
           </p>
-          <button className="mt-10 px-6 py-3 rounded-2xl bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:scale-105 hover:shadow-lg transition-transform">
+                  <button onClick={handleGetStarted} className="mt-10 px-6 py-3 rounded-2xl bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:scale-105 hover:shadow-lg transition-transform">
             Get Started For Free
           </button>
         </div>

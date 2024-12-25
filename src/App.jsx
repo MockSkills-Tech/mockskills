@@ -19,6 +19,7 @@ import CollabzoneMain from "./Components/CollabZone/CollabzoneMain";
 
 import AboutUsTeam from "./Components/AboutUsTeam";
 import ContactPage from "./Components/ContactPage";
+import ProtectedRoute from "./Components/ProtectedRoute";
 const App = () => {
   return (
     <>
@@ -39,7 +40,7 @@ const App = () => {
               },
               {
                 path: "/courses/:name",
-                element: <CourseDetail />,
+                  element: <CourseDetail />,
               },
               {
                 path: "/courses/:name/:title",
@@ -74,7 +75,7 @@ const App = () => {
               },
               {
                 path:"/BattleGround",
-                element:<BattleGround/>,
+                  element: <ProtectedRoute ><BattleGround /></ProtectedRoute >,
               },
               {
                 path: "/AboutUsTeam",

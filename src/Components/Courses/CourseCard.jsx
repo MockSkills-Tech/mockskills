@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { MdMenuBook, MdSchool, MdHourglassEmpty } from "react-icons/md";
 import INTERVIEW_IMAGE from "../../assets/interview_image.jpg";
 import { courseItems } from "../../Utils/constant";
+import { useDispatch, useSelector } from "react-redux";
+import { openLoginModal } from "../../Utils/modalSlice";
 
 const CourseCard = ({
   title,
@@ -14,24 +16,28 @@ const CourseCard = ({
     categoryId,
   active
 }) => {
-  const navigate = useNavigate();
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
   const categoryName = courseItems.find(
     (courseItem) => courseItem.id === categoryId
-  ).name;
+    ).name;
+
+    const user = useSelector(store => store.user);
 
   const handleStartLearning = () => {
     const formattedTitle = title.toLowerCase().replace(/\s+/g, "-");
     const formattedCategoryName = categoryName
       .toLowerCase()
       .replace(/\s+/g, "-");
-    navigate(`/courses/${formattedCategoryName}/${formattedTitle}`, {
-      state: { id },
-    });
+      user? navigate(`/courses/${formattedCategoryName}/${formattedTitle}`, {
+          state: { id },
+      }) : dispatch(openLoginModal())
   };
 
   return (
     <div className="container mx-auto px-2">
-      {" "}
+          
+
       {/* Decreased px for tighter spacing */}
           <div className="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow duration-300 max-w-lg mx-4">
               {image ? (

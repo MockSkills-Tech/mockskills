@@ -9,21 +9,25 @@ import { Link } from "react-router-dom";
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { auth } from '../utils/firebase';
 import { addUser, removeUser } from '../utils/userSlice';
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 import UserProfile from "./UserProfile";
+import {closeModal, openLoginModal,openSignupModal} from "../Utils/modalSlice"
+import TriggerLoginModal from "./TriggerLoginModal";
 const Header = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    const location = useLocation();
     const [showModal, setShowModal] = useState(false);
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [showBanner, setShowBanner] = useState(true);
-    const isLoginForm = useSelector((store) => store.login.isLogin);
+    const isLoginForm = useSelector((store) => store.modal.isLoginForm);
     const selectUserFromRedux = useSelector(store => store.user);
-
+    const previousPath = useSelector((store) => store.modal.previousPath);
+    
     const handleSignOut = () => {
-        signOut(auth).then(() => { })
+        signOut(auth).then(() => dispatch(closeModal()))
             .catch((error) => {
-                // An error happened.
+                
             });
 
     }
@@ -35,8 +39,8 @@ const Header = () => {
                 // https://firebase.google.com/docs/reference/js/auth.user
                 const { uid, displayName, email } = user;
                 dispatch(addUser({ uid: uid, displayName: displayName, email: email }));
-                setShowModal(false);
-                navigate('/')
+                dispatch(closeModal())
+                navigate("/")
 
             } else {
                 // User is signed out
@@ -49,14 +53,15 @@ const Header = () => {
     }, [])
 
     const handleLoginForm = () => {
-        dispatch(toggleForm(true));
-        setShowModal(true);
+        dispatch(openLoginModal(location.pathname));
+        //dispatch(toggleForm(!isLoginForm))
+
     };
 
     const handleSignupForm = () => {
-        dispatch(toggleForm(false));
-        setShowModal(true);
-    };
+        dispatch(openSignupModal(location.pathname));
+        //dispatch(toggleForm(!isLoginForm))
+    };  
 
     useEffect(() => {
         if (showModal) {
@@ -68,6 +73,7 @@ const Header = () => {
 
     return (
         <>
+            {!selectUserFromRedux && <TriggerLoginModal />}
             {/* Banner Section */}
             {showBanner && (
                 <div className="bg-gradient-to-r from-orange-400 to-yellow-500 text-white shadow-lg flex flex-col md:flex-row justify-between items-center py-2 px-3 md:px-6 rounded-md text-xs sm:text-sm md:text-base">
@@ -113,15 +119,13 @@ const Header = () => {
                         <UserProfile user={selectUserFromRedux} handleSignOut={handleSignOut} />
                         <span className='text-gradient font-bold'>{selectUserFromRedux?.displayName}</span>
 
-                        </>
-                        
+                        </>  
                     :
                     <AuthButtons
                         isLoginForm={isLoginForm}
                         handleLoginForm={handleLoginForm}
                         handleSignupForm={handleSignupForm}
                     />}
-                        
                 </div>
 
                 {/* Mobile Menu Toggle */}
@@ -146,20 +150,7 @@ const Header = () => {
             )}
 
             {/* Modal for Login/Signup */}
-            {showModal && (
-                <div className="fixed inset-0 bg-gray-600 bg-opacity-40 flex justify-center items-center z-40">
-                    <div className="bg-white w-11/12 sm:w-full max-w-md rounded-md shadow-lg relative">
-                        <button
-                            className="absolute top-2 right-2 text-gray-500 hover:text-gray-800"
-                            onClick={() => setShowModal(false)}
-                            aria-label="Close login/signup modal"
-                        >
-                            <FaTimes size={20} />
-                        </button>
-                        <LoginSignup showModal={showModal} />
-                    </div>
-                </div>
-            )}
+            
         </>
     );
 };
@@ -181,7 +172,7 @@ const SearchBar = () => (
 );
 
 const AuthButtons = ({ isLoginForm, handleLoginForm, handleSignupForm }) => (
-    <>
+    <>  
         <button
             className={`px-4 py-2 text-sm md:text-base rounded-md transition duration-200 ${isLoginForm
                     ? "bg-gradient text-white"
@@ -190,8 +181,10 @@ const AuthButtons = ({ isLoginForm, handleLoginForm, handleSignupForm }) => (
             onClick={handleLoginForm}
             aria-label="Login"
         >
-            Login
+           Login
         </button>
+    
+        
         <button
             className={`px-4 py-2 text-sm md:text-base rounded-md transition duration-200 ${!isLoginForm
                     ? "bg-gradient text-white"
@@ -201,7 +194,8 @@ const AuthButtons = ({ isLoginForm, handleLoginForm, handleSignupForm }) => (
             aria-label="Sign Up"
         >
             Sign Up
-        </button>
+            </button>
+        
     </>
 );
 

@@ -1,9 +1,10 @@
 import{ useState } from "react";
 import { FaGoogle, FaGithub, FaEnvelope, FaLock, FaUser } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleForm } from "../Utils/loginSlice";
+import { toggleForm } from "../Utils/modalSlice";
 import { addUser } from "../Utils/userSlice";
 import { auth, googleProvider, githubProvider } from "../Utils/firebase";
+
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -15,8 +16,9 @@ import { WelcomeEmail } from "./EmailService/WelcomeEmail";
 //import { WelcomeEmail } from "./EmailService/WelcomeEmail";
 
 const LoginSignup = () => {
-  const isLoginForm = useSelector((store) => store.login.isLogin);
-  const dispatch = useDispatch();
+  const isLoginForm = useSelector((store) => store.modal.isLoginForm);
+    const dispatch = useDispatch();
+    
 
 
   const [formData, setFormData] = useState({
@@ -328,7 +330,7 @@ const LoginSignup = () => {
 
         {isLoginForm && (
           <div className="text-right mb-4">
-            <a href="#" className="text-gray-500 hover:underline text-sm"
+            <a  className="text-gray-500 hover:underline text-sm cursor-pointer"
                 onClick={() => setIsResetPassword(true)}
             >
               Forgot Password?
@@ -377,11 +379,12 @@ const LoginSignup = () => {
       <p className="text-center text-gray-500 mt-3 text-sm">
         {isLoginForm ? "Don't" : "Already"} have an account?{" "}
         <a
-          href="#"
-          className="text-gradient hover:underline font-semibold"
+          
+          className="text-gradient hover:underline font-semibold cursor-pointer"
           onClick={handleClick}
         >
           {isLoginForm ? "SignUp" : "Login"} here
+
         </a>
           </p>
           </>}

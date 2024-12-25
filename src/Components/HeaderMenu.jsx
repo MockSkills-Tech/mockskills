@@ -10,14 +10,24 @@ import {
   FaUsers,
   FaHandsHelping,
 } from "react-icons/fa"; // Add your desired icons
+import { useDispatch, useSelector } from "react-redux";
+import { openLoginModal } from "../Utils/modalSlice";
+import { useNavigate } from 'react-router-dom';
 
 const HeaderMenu = ({ mobile }) => {
   const [activeDropdown, setActiveDropdown] = useState(null);
+    const user = useSelector(store => store.user);
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
 
   const toggleDropdown = (dropdown) => {
     setActiveDropdown((prev) => (prev === dropdown ? null : dropdown));
   };
 
+
+    const handleBattleGround = () => {
+        user ? navigate('/BattleGround'): dispatch(openLoginModal())
+    }
   return (
     <nav className={`flex ${mobile ? "flex-col space-y-2" : "space-x-6"}`}>
       {/* Courses Menu */}
@@ -141,18 +151,18 @@ const HeaderMenu = ({ mobile }) => {
           <span className="font-semibold">CollabZone</span>
         </div>
       </Link>
-      {/* Battleground Button */}
-      <Link to="/BattleGround">
+          {/* Battleground Button */}
+          
         <div
-          className={`flex items-center justify-center py-2 px-4 rounded-md bg-white transition duration-200 cursor-pointer ${
-            mobile ? "text-lg" : "text-base"
-          } hover:bg-gray-100`}
+              className={`flex items-center justify-center py-2 px-4 rounded-md bg-white transition duration-200 cursor-pointer ${mobile ? "text-lg" : "text-base"
+                  } hover:bg-gray-100`}
+              onClick={handleBattleGround }
         >
           <FaBattleNet className="mr-2 text-orange-600" />{" "}
           {/* Icon updated for Battleground */}
           <span className="font-semibold">BattleGround</span>
         </div>
-      </Link>
+      
     </nav>
   );
 };
