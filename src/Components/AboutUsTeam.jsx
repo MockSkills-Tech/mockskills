@@ -1,4 +1,5 @@
-import React from "react";
+
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaLinkedin, FaMicrophone, FaGraduationCap, FaRobot, FaNetworkWired, FaShieldAlt } from "react-icons/fa";
 
@@ -11,6 +12,9 @@ const teamMembers = [
 ];
 
 const AboutUsTeam = () => {
+      useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
   return (
     <div className="container mx-auto px-4 py-12">
       <motion.h1
