@@ -21,76 +21,40 @@ import AboutUsTeam from "./Components/AboutUsTeam";
 import ContactPage from "./Components/ContactPage";
 import ProtectedRoute from "./Components/ProtectedRoute";
 const App = () => {
-  return (
-    <>
-         
-      <RouterProvider
-        router={createBrowserRouter([
-          {
+    const router = createBrowserRouter([
+        {
             path: "/",
             element: <MainLayout />,
             children: [
-              {
-                path: "/",
-                element: <Body />,
-              },
-              {
-                path: "/courses",
-                element: <Course />,
-              },
-              {
-                path: "/courses/:name",
-                  element: <CourseDetail />,
-              },
-              {
-                path: "/courses/:name/:title",
-                element: <SingleCourseDetail />,
-              },
-              {
-                path: "/courses/:name/:title/:id",
-                element: <ContentBody />,
-              },
-              {
-                path: "/question/csharp",
-                element: <CSharpPage />,
-              },
-              {
-                path: "/question/java",
-                element: <JavaPage />,
-              },
-              {
-                path: "/collabzone",
-                element: <CollabzoneMain />,
-                children: [
-                  { path: "/collabzone", element: <CollabZone /> },
-                  { path: "/collabzone/join-us", element: <JoinUs /> },
-                  { path: "/collabzone/opportunities", element: <Opportunities /> },
-                  { path: "/collabzone/find-genz", element: <FindGenZ /> },
-                  { path: "/collabzone/live-feed", element: <LiveFeed /> },
-                ],
-              },
-              {
-                path: "/partners",
-                element: <Partners />,
-              },
-              {
-                path:"/BattleGround",
-                  element: <ProtectedRoute ><BattleGround /></ProtectedRoute >,
-              },
-              {
-                path: "/AboutUsTeam",
-                element: <AboutUsTeam />,
-              },
-              {
-                  path: "/ContactPage",
-                   element: <ContactPage />,
-               }
+                { path: "/", element: <Body /> },
+                { path: "/courses", element: <Course /> },
+                { path: "/courses/:name", element: <CourseDetail /> },
+                { path: "/courses/:name/:title", element: <SingleCourseDetail /> },
+                { path: "/courses/:name/:title/:id", element: <ContentBody /> },
+                { path: "/question/csharp", element: <CSharpPage /> },
+                { path: "/question/java", element: <JavaPage /> },
+                {
+                    path: "/collabzone",
+                    element: <CollabzoneMain />,
+                    children: [
+                        { path: "/collabzone", element: <CollabZone /> },
+                        { path: "/collabzone/join-us", element: <JoinUs /> },
+                        { path: "/collabzone/opportunities", element: <Opportunities /> },
+                        { path: "/collabzone/find-genz", element: <FindGenZ /> },
+                        { path: "/collabzone/live-feed", element: <LiveFeed /> },
+                    ],
+                },
+                { path: "/partners", element: <Partners /> },
+                { path: "/BattleGround", element: <ProtectedRoute><BattleGround /></ProtectedRoute> },
+                { path: "/AboutUsTeam", element: <AboutUsTeam /> },
+                { path: "/ContactPage", element: <ContactPage /> },
             ],
-          },
-        ])}
-      />
-    </>
-  );
+        },
+    ]);
+
+    return (
+        <RouterProvider router={router}></RouterProvider>
+    );
 };
 
 export default App;

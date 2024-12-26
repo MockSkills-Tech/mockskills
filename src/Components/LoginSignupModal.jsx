@@ -1,37 +1,46 @@
-import { useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { closeModal } from "../utils/modalSlice";
-import { FaTimes } from "react-icons/fa";
-import LoginSignup from "./LoginSignup";
+import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { closeModal } from '../utils/modalSlice';
+import { Dialog, DialogActions, DialogContent, DialogTitle, Button, Slide, Fade } from '@mui/material';
+import { FaTimes } from 'react-icons/fa';
+import LoginSignup from './LoginSignup';
+
+const Transition = React.forwardRef(function Transition(props, ref) {
+    return <Slide direction="up" ref={ref} {...props} />;
+});
 
 const LoginSignupModal = () => {
     const dispatch = useDispatch();
-    const navigate = useNavigate();
     const { isOpen, isLoginForm } = useSelector((state) => state.modal);
     const previousPath = useSelector((state) => state.modal.previousPath);
 
-    if (!isOpen) return null; // Do not render if the modal is closed
-
     const handleCloseModal = () => {
         dispatch(closeModal());
-        //navigate(-1); // Navigate back to the previous page
     };
-    return (
-        <div className="fixed inset-0 bg-gray-600 bg-opacity-40 flex justify-center items-center z-50">
-            <div className="bg-white w-11/12 sm:w-full max-w-md rounded-md shadow-lg relative">
-                {/* Close Button */}
-                <button
-                    className="absolute top-2 right-2 text-gray-500 hover:text-gray-800"
-                    onClick={handleCloseModal}
-                    aria-label="Close login/signup modal"
-                >
-                    <FaTimes size={20} />
-                </button>
 
-                {/* LoginSignup Component */}
-                <LoginSignup isLoginForm={isLoginForm} />
-            </div>
-        </div>
+    return (
+        <Dialog
+            open={isOpen}
+            onClose={handleCloseModal}
+            TransitionComponent={Transition}
+            transitionDuration={500}
+            maxWidth="sm"
+            PaperProps={{
+                sx: {
+                    borderRadius: '10px',
+                    boxShadow: 24,
+                    transform: 'scale(0.95)',
+                    transition: 'transform 0.3s ease-out',
+                    '&:hover': {
+                        transform: 'scale(1)', // Zoom effect when the modal is hovered
+                    },
+                },
+            }}
+        >
+           <LoginSignup isLoginForm={isLoginForm} />
+            
+
+        </Dialog>
     );
 };
 
