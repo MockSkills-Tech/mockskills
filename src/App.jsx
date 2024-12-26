@@ -20,6 +20,7 @@ import CollabzoneMain from "./Components/CollabZone/CollabzoneMain";
 import AboutUsTeam from "./Components/AboutUsTeam";
 import ContactPage from "./Components/ContactPage";
 import ProtectedRoute from "./Components/ProtectedRoute";
+import NumberSequenceGame  from "./Components/Game/NumberSequenceGame";
 const App = () => {
     const router = createBrowserRouter([
         {
@@ -49,7 +50,12 @@ const App = () => {
                 { path: "/AboutUsTeam", element: <AboutUsTeam /> },
                 { path: "/ContactPage", element: <ContactPage /> },
             ],
+            
         },
+        {
+            path: "*",
+            element: <NumberSequenceGame />
+        }
     ]);
 
     return (
