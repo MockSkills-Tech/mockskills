@@ -16,7 +16,7 @@ const TriggerLoginModal = () => {
             if (!user) {
                 dispatch(openLoginModal());
             }
-        }, 20000); // 20000ms = 20 seconds
+        }, 2000000); // 20000ms = 20 seconds
 
         // Clear the interval when the user logs in
         return () => {

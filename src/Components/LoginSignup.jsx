@@ -185,7 +185,7 @@ const LoginSignup = () => {
 
 
   return (
-      <div className="max-w-md mx-auto shadow-md rounded-md p-6 bg-white">
+      <div className="w-[28rem] mx-auto shadow-md rounded-md p-6 bg-white">
           {isResetPassword ?
         <>
             <h2 className="text-xl font-bold mb-4 text-center text-gradient">

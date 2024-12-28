@@ -4,14 +4,14 @@ import { IoSearch } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleForm } from "../Utils/loginSlice";
 import LoginSignup from "./LoginSignup";
-import HeaderMenu from "./HeaderMenu";
+import HeaderMenu, { SearchBar } from "./HeaderMenu";
 import { Link } from "react-router-dom";
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { auth } from '../utils/firebase';
 import { addUser, removeUser } from '../utils/userSlice';
 import { useNavigate, useLocation } from 'react-router-dom'
 import UserProfile from "./UserProfile";
-import {closeModal, openLoginModal,openSignupModal} from "../Utils/modalSlice"
+import { closeModal, openLoginModal, openSignupModal } from "../Utils/modalSlice"
 import TriggerLoginModal from "./TriggerLoginModal";
 const Header = () => {
     const dispatch = useDispatch();
@@ -23,11 +23,11 @@ const Header = () => {
     const isLoginForm = useSelector((store) => store.modal.isLoginForm);
     const selectUserFromRedux = useSelector(store => store.user);
     const previousPath = useSelector((store) => store.modal.previousPath);
-    
+
     const handleSignOut = () => {
         signOut(auth).then(() => dispatch(closeModal()))
             .catch((error) => {
-                
+
             });
 
     }
@@ -61,7 +61,7 @@ const Header = () => {
     const handleSignupForm = () => {
         dispatch(openSignupModal(location.pathname));
         //dispatch(toggleForm(!isLoginForm))
-    };  
+    };
 
     useEffect(() => {
         if (showModal) {
@@ -114,18 +114,17 @@ const Header = () => {
 
                 {/* Auth Buttons and Search */}
                 <div className="flex items-center space-x-2">
-                    <SearchBar />
                     {selectUserFromRedux ? <>
                         <UserProfile user={selectUserFromRedux} handleSignOut={handleSignOut} />
                         <span className='text-gradient font-bold'>{selectUserFromRedux?.displayName}</span>
 
-                        </>  
-                    :
-                    <AuthButtons
-                        isLoginForm={isLoginForm}
-                        handleLoginForm={handleLoginForm}
-                        handleSignupForm={handleSignupForm}
-                    />}
+                    </>
+                        :
+                        <AuthButtons
+                            isLoginForm={isLoginForm}
+                            handleLoginForm={handleLoginForm}
+                            handleSignupForm={handleSignupForm}
+                        />}
                 </div>
 
                 {/* Mobile Menu Toggle */}
@@ -150,52 +149,38 @@ const Header = () => {
             )}
 
             {/* Modal for Login/Signup */}
-            
+
         </>
     );
 };
 
-const SearchBar = () => (
-    <div className="flex items-center border border-gray-300 rounded-full overflow-hidden shadow-sm hover:shadow-md transition duration-200">
-        <input
-            className="py-2 px-4 h-8 md:h-9 rounded-l-full focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-150 text-sm md:text-base"
-            placeholder="Search"
-            aria-label="Search"
-        />
-        <button
-            className="h-8 md:h-9 bg-gradient px-4 flex items-center justify-center rounded-r-full transition duration-200 hover:bg-blue-600"
-            aria-label="Search button"
-        >
-            <IoSearch className="text-white" />
-        </button>
-    </div>
-);
+
 
 const AuthButtons = ({ isLoginForm, handleLoginForm, handleSignupForm }) => (
-    <>  
+    <>
         <button
             className={`px-4 py-2 text-sm md:text-base rounded-md transition duration-200 ${isLoginForm
-                    ? "bg-gradient text-white"
-                    : "bg-gray-100 text-gray-800 font-semibold hover:bg-gray-200"
+                ? "bg-gradient text-white"
+                : "bg-gray-100 text-gray-800 font-semibold hover:bg-gray-200"
                 }`}
             onClick={handleLoginForm}
             aria-label="Login"
         >
-           Login
+            Login
         </button>
-    
-        
+
+
         <button
             className={`px-4 py-2 text-sm md:text-base rounded-md transition duration-200 ${!isLoginForm
-                    ? "bg-gradient text-white"
-                    : "bg-gray-100 text-gray-800 font-semibold hover:bg-gray-200"
+                ? "bg-gradient text-white"
+                : "bg-gray-100 text-gray-800 font-semibold hover:bg-gray-200"
                 }`}
             onClick={handleSignupForm}
             aria-label="Sign Up"
         >
             Sign Up
-            </button>
-        
+        </button>
+
     </>
 );
 
