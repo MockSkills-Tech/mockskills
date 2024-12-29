@@ -73,7 +73,7 @@ const Body = () => {
             </section>
 
             {/* Additional Sections */}
-
+            <NewFeatures />
             <AboutUs />
             <FAQSection />
             <CallToActionSection />

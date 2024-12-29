@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { FaChevronDown, FaTimes, FaGraduationCap } from "react-icons/fa";
-import { IoSearch } from "react-icons/io5";
+import { IoReorderThreeOutline, IoSearch } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleForm } from "../Utils/loginSlice";
 import LoginSignup from "./LoginSignup";
@@ -98,6 +98,15 @@ const Header = () => {
             <header className="flex justify-between items-center p-4 bg-white shadow-md sticky top-0 z-50 transition duration-300">
                 {/* Logo */}
                 <div className="flex items-center">
+                    {/* Mobile Menu Toggle */}
+                    <button
+                        className="md:hidden mr-1"
+                        onClick={() => setMobileMenuOpen((prev) => !prev)}
+
+                    >
+                        <HeaderMenu mobile isopen={isMobileMenuOpen} />
+
+                    </button>
                     <FaGraduationCap className="text-blue-500 text-2xl md:text-3xl mr-2" />
                     <span className="text-xl md:text-2xl font-bold">
                         <Link to="/">
@@ -125,30 +134,14 @@ const Header = () => {
                             handleLoginForm={handleLoginForm}
                             handleSignupForm={handleSignupForm}
                         />}
+
+
                 </div>
 
-                {/* Mobile Menu Toggle */}
-                <button
-                    className="md:hidden p-2"
-                    onClick={() => setMobileMenuOpen((prev) => !prev)}
-                    aria-label="Toggle mobile menu"
-                    aria-expanded={isMobileMenuOpen}
-                >
-                    <FaChevronDown
-                        className={`transform transition-transform duration-300 ${isMobileMenuOpen ? "rotate-180" : ""
-                            }`}
-                    />
-                </button>
+
             </header>
 
             {/* Mobile Menu */}
-            {isMobileMenuOpen && (
-                <div className="md:hidden bg-white shadow-lg p-4 absolute w-full">
-                    <HeaderMenu mobile />
-                </div>
-            )}
-
-            {/* Modal for Login/Signup */}
 
         </>
     );
