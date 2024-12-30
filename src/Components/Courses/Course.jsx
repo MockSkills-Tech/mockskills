@@ -19,12 +19,12 @@ const Course = () => {
         return matchesQuery && matchesCategory;
     });
 
-    
+
     return (
         <>
             <CourseBody />
             <div className="mx-5 my-4 p-6">
-                <div className="flex justify-between items-center mb-4">
+                <div className="flex flex-col md:flex-row items-start justify-between  mb-4">
                     <div>
                         <nav className="flex items-center text-gray-500 text-sm space-x-2">
                             <Link to="/" className="hover:text-blue-600 transition duration-200">
@@ -35,7 +35,7 @@ const Course = () => {
                                 Course
                             </Link>
                         </nav>
-                        <h1 className="text-3xl font-bold text-gray-800 mb-2">Course Library</h1>
+                        <h1 className="text-xl md:3xl font-bold text-gray-800 mb-2">Course Library</h1>
                         <p className="text-gray-600 mb-4">
                             Explore all tailored courses for specific roles, companies, and skills.
                         </p>
