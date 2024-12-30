@@ -66,7 +66,7 @@ const Content = ({ id }) => {
     const processedContent = processText(content);
 
     return (
-        <div className="flex-1 w-[900px] p-6 bg-white text-gray-800 rounded-lg shadow-lg">
+        <div className="flex-1 w-full p-6 bg-white text-gray-800 rounded-lg shadow-lg">
             <h2 className="text-2xl font-bold mb-4 text-gray-700">{title}</h2>
             <div className="prose prose-sm sm:prose lg:prose-lg xl:prose-xl text-gray-600">
                 <ReactMarkdown
