@@ -13,6 +13,7 @@ const ContentBody = () => {
 
     return (
         <div className="flex w-full h-screen">
+
             <div
                 className={`fixed h-full w-64 bg-gray-900 text-white py-4 shadow-xl overflow-y-auto z-40 transform transition-transform duration-300 ease-in-out ${
                     isSidebarVisible ? "translate-x-0" : "-translate-x-full"
