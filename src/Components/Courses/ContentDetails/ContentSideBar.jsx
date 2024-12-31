@@ -66,7 +66,7 @@ const ContentSideBar = () => {
     return (
         <div>
             {/* Header */}
-            <h2 className="text-lg font-semibold mb-4 text-gray-300">
+            <h2 className="text-lg font-semibold mb-4 pl-2 text-gray-300">
                 {moduleData?.title}
             </h2>
 
