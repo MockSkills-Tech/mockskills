@@ -22,7 +22,7 @@ const Body = () => {
     return (
         <div className="px-4">
             {/* Hero Section */}
-            <section className="flex flex-col  md:flex-row justify-between  lg:px-8 xl:px-16 space-y-6 md:space-y-0 ">
+            <section className="flex flex-col  md:flex-row justify-between  lg:px-8 xl:px-16 space-y-6 md:space-y-0  mt-5">
                 <div className="flex flex-col   items-start text-left md:text-left md:w-[44%]">
                     <h1 className="font-bold  text-3xl md:text-4xl lg:text-5xl mt-6 md:mt-10 mb-2 md:mb-4 leading-tight">
                         Everything you need to
