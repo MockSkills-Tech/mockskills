@@ -1,15 +1,26 @@
 import React from 'react';
 import teamZone from "../../assets/FeaturesPic/team.png"; // Update with the actual path
-import aditya from "../../assets/CommunityPic/aditya.jpeg"; // Update with the actual path
-import amar from "../../assets/CommunityPic/amar.jpeg"; // Update with the actual path
-import keshav5 from "../../assets/CommunityPic/keshav5.jpeg"; // Update with the actual path
-import mithalesh9 from "../../assets/CommunityPic/mithalesh9.jpeg"; // Update with the actual path
-import sumit from "../../assets/CommunityPic/sumit.jpeg"; // Update with the actual path
-import vishal12 from "../../assets/CommunityPic/vishal12.jpeg"; // Update with the actual path
-import kundan1 from "../../assets/CommunityPic/kundan1.jpeg"; // Update with the actual path
-
-
-
+import aditya from "../../assets/CommunityPic/aditya.jpeg";
+import amar from "../../assets/CommunityPic/amar.jpeg";
+import keshav5 from "../../assets/CommunityPic/keshav5.jpeg";
+import mithalesh9 from "../../assets/CommunityPic/mithalesh9.jpeg";
+import sumit from "../../assets/CommunityPic/sumit.jpeg";
+import vishal12 from "../../assets/CommunityPic/vishal12.jpeg";
+import kundan1 from "../../assets/CommunityPic/kundan1.jpeg";
+import manish from "../../assets/CommunityPic/manish2.jpeg";
+import sonam from "../../assets/CommunityPic/Sonam.jpeg";
+import ananya from "../../assets/CommunityPic/Ananya3.jpeg";
+import amrita from "../../assets/CommunityPic/amrita.jpeg";
+import astha from "../../assets/CommunityPic/astha11.jpeg";
+import byuti from "../../assets/CommunityPic/byuti.jpeg";
+import chanda from "../../assets/CommunityPic/chanda.jpeg";
+import dilip from "../../assets/CommunityPic/dilip8.jpeg";
+import indrajeet from "../../assets/CommunityPic/indrajeet.jpeg";
+import karandeep from "../../assets/CommunityPic/Karandeep4.jpeg";
+import samardni from "../../assets/CommunityPic/samardni.jpeg";
+import usha from "../../assets/CommunityPic/usha7.jpeg";
+import kajal from "../../assets/CommunityPic/kajal6.jpeg";
+import neha from "../../assets/CommunityPic/neha.jpeg";
 
 const CollabZone = () => {
   const features = [
@@ -19,143 +30,139 @@ const CollabZone = () => {
     { text: "Share ideas and get feedback from the community", icon: "💡" },
   ];
 
-  const userImages1 = [
-    { src: aditya, alt: "User 1" },
-    { src: amar, alt: "User 2" },
-    { src: keshav5, alt: "User 3" },
-    { src: mithalesh9, alt: "User 4" },
-    { src: sumit, alt: "User 5" },
-    { src: vishal12, alt: "User 6" },
-
+  const userImages = [
+    { src: sonam, alt: "Sonam" },
+    { src: aditya, alt: "Aditya" },
+    { src: ananya, alt: "Ananya" },
+    { src: amar, alt: "Amar" },
+    { src: amrita, alt: "Amrita" },
+    { src: keshav5, alt: "Keshav" },
+    { src: astha, alt: "Astha" },
+    { src: sumit, alt: "Sumit" },
+    { src: chanda, alt: "Chanda" },
+    { src: karandeep, alt: "Karandeep" },
+    { src: vishal12, alt: "Vishal" },
+    { src: byuti, alt: "Byuti" },
+    { src: kundan1, alt: "Kundan" },
+    { src: samardni, alt: "Samardni" },
+    { src: kajal, alt: "Kajal" },
+    { src: manish, alt: "Manish" },
+    { src: usha, alt: "Usha" },
+    { src: mithalesh9, alt: "Mithalesh" },
+    { src: neha, alt: "Neha" },
+    { src: dilip, alt: "Dilip" },
+    { src: indrajeet, alt: "Indrajeet" }
   ];
-    const userImages2 = [
-
-      { src: amar, alt: "User 2" },
-      { src: keshav5, alt: "User 3" },
-      { src: mithalesh9, alt: "User 4" },
-
-      { src: vishal12, alt: "User 6" },
-      { src: kundan1, alt: "User 7" },
-    ];
 
   return (
-    <>
+    <div className="bg-gray-50 min-h-screen p-8">
       {/* Main Section: Two-Column Layout */}
-      <section className="flex flex-col md:flex-row justify-between items-start h-auto mt-6 mx-4 md:mx-8 bg-white rounded-lg p-8 shadow-md">
+      <section className="flex flex-col md:flex-row justify-between items-start bg-white rounded-lg shadow-lg p-8 mx-auto max-w-7xl">
         {/* Left Section: Introduction */}
-        <div className="flex flex-col items-start md:w-1/2 mb-8">
-          <h1 className="font-bold text-4xl md:text-5xl mb-4 text-gray-800">
+        <div className="flex flex-col items-start md:w-1/2 space-y-4">
+          <h1 className="text-5xl font-extrabold text-gray-800 mb-4">
             Welcome to <span className="text-blue-500">CollabZone</span>
           </h1>
-          <p className="text-lg text-gray-700 mb-6 max-w-lg">
-            Join our vibrant community of{" "}
-            <span className="text-blue-500 font-bold">GenZ coders</span> to find
+          <p className="text-lg text-gray-700 leading-relaxed">
+            Join our vibrant community of <span className="font-bold text-blue-500">GenZ coders</span> to find
             your <span className="text-green-500 font-bold">co-founder</span>,{" "}
             <span className="text-green-500 font-bold">CTO</span>, and all the
-            essential skills needed to launch and grow your startup.
-            Collaborate, learn, and innovate together to turn your ideas into{" "}
-            <span className="text-purple-500 font-bold">
-              successful projects!
-            </span>{" "}
-            Plus, get support from the community to help you secure{" "}
+            essential skills needed to launch and grow your startup. Plus, secure{" "}
             <span className="text-red-500 font-bold">internships</span> and job
             opportunities!
           </p>
-          <ul className="list-disc list-inside text-gray-600 mb-6">
+          <ul className="list-disc pl-5 space-y-2">
             {features.map((item, index) => (
-              <li key={index} className="flex items-center mb-2">
-                <span className="h-5 w-5 text-blue-500 mr-3">{item.icon}</span>
-                <span className="font-bold">{item.text}</span>
+              <li key={index} className="flex items-center space-x-2 text-gray-600">
+                <span className="text-blue-500">{item.icon}</span>
+                <span className="font-medium">{item.text}</span>
               </li>
             ))}
           </ul>
-          <button
-            className="mt-6 px-6 py-3 rounded-md bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold transition duration-200 ease-in-out hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-blue-300"
-            aria-label="Join the CollabZone community"
-          >
+          <button className="mt-6 px-8 py-3 rounded-md bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold transition-all hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-300">
             Join Now!
           </button>
         </div>
 
         {/* Right Section: Image */}
-        <div className="flex items-center justify-center mb-8 md:w-1/2">
+        <div className="md:w-1/2 flex justify-center mt-8 md:mt-0">
           <img
             src={teamZone}
             alt="Open Source Collaboration"
-            className="object-cover rounded-lg max-h-full shadow-md"
-            loading="lazy"
-            onError={(e) => {
-              e.target.onerror = null;
-              e.target.src = "fallback-image.jpg"; // Update with a fallback image path
-            }}
+            className="rounded-lg shadow-md max-h-full w-full object-cover"
+            onError={(e) => { e.target.onerror = null; e.target.src = "fallback-image.jpg"; }} // fallback image path
           />
         </div>
       </section>
-<section className="w-full text-center mt-8 p-6 rounded-lg">
-  <p className="text-5xl font-extrabold text-black mb-2">
-    <span className="text-yellow-300">Our</span> GenZ Community
-  </p>
-  <p className="text-lg text-gray-700 opacity-90 mb-4">Join us to connect, collaborate, and innovate!</p>
-</section>
 
-
-
+      {/* GenZ Community Section */}
+      <section className="text-center mt-12">
+        <p className="text-5xl font-extrabold text-gray-800">
+          <span className="bg-gradient-to-r from-yellow-300 to-orange-500 text-transparent bg-clip-text">Our</span> GenZ Community
+        </p>
+        <p className="text-lg text-gray-700 mt-2">
+          Join us to connect, collaborate, and innovate!
+        </p>
+      </section>
 
       {/* User Images Section */}
-      <section className="w-full max-w-7xl mx-auto mt-2 ">
-        {/* User Images in a single row with increased spacing */}
-        <div className="flex justify-center space-x-28"> {/* Updated spacing here */}
-          {userImages1.map((user, index) => (
-            <img
-              key={index}
-              src={user.src}
-              alt={user.alt}
-              className="h-20 w-20 rounded-lg shadow-md border border-gray-400 object-cover" // Thinner border added
-            />
-          ))}
-        </div>
-      </section>
-
-
-   <section className="w-full max-w-7xl mx-auto ">
-        {/* User Images in a single row with increased spacing */}
-        <div className="flex justify-center space-x-28"> {/* Updated spacing here */}
-          {userImages2.map((user, index) => (
-            <img
-              key={index}
-              src={user.src}
-              alt={user.alt}
-              className="h-20 w-20 rounded-lg shadow-md border border-gray-400 object-cover" // Thinner border added
-            />
-          ))}
-        </div>
-      </section>
-
-
-          <section className="w-full max-w-7xl mx-auto ">
-              {/* User Images in a single row with increased spacing */}
-              <div className="flex justify-center space-x-28"> {/* Updated spacing here */}
-                {userImages1.map((user, index) => (
-                  <img
-                    key={index}
-                    src={user.src}
-                    alt={user.alt}
-                    className="h-20 w-20 rounded-lg shadow-md border border-gray-400 object-cover" // Thinner border added
-                  />
-                ))}
+      <div className="mt-8">
+        {/* First Row with 7 Images */}
+        <div className="grid grid-cols-7 gap-6 justify-items-center">
+          {userImages.slice(0, 7).map((user, index) => (
+            <div key={index} className="relative group">
+              <img
+                src={user.src}
+                alt={user.alt}
+                className="h-20 w-20 rounded-lg shadow-md border border-gray-300 object-cover transition-transform duration-300 ease-in-out transform group-hover:scale-110 group-hover:shadow-xl"
+              />
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 bg-black bg-opacity-50 rounded-lg">
+                <span className="text-white font-bold">{user.alt}</span>
               </div>
-            </section>
-{/* Additional Message Section */}
-<section className="w-full text-center mt-8">
-  <p className="text-lg text-gray-700 mb-6 max-w-lg mx-auto">
-    Our <span className="text-blue-500 font-bold">GenZ team</span> is working hard to bring this to you!
-  </p>
-  <p className="text-2xl text-red-500 font-bold mb-6">Coming soon!</p>
-</section>
+            </div>
+          ))}
+        </div>
 
+        {/* Second Row with 6 Images */}
+        <div className="grid grid-cols-6 gap-6 justify-items-center mt-4">
+          {userImages.slice(7, 13).map((user, index) => (
+            <div key={index + 7} className="relative group">
+              <img
+                src={user.src}
+                alt={user.alt}
+                className="h-20 w-20 rounded-lg shadow-md border border-gray-300 object-cover transition-transform duration-300 ease-in-out transform group-hover:scale-110 group-hover:shadow-xl"
+              />
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 bg-black bg-opacity-50 rounded-lg">
+                <span className="text-white font-bold">{user.alt}</span>
+              </div>
+            </div>
+          ))}
+        </div>
 
+        {/* Third Row with 7 Images */}
+        <div className="grid grid-cols-7 gap-6 justify-items-center mt-4">
+          {userImages.slice(13, 20).map((user, index) => (
+            <div key={index + 13} className="relative group">
+              <img
+                src={user.src}
+                alt={user.alt}
+                className="h-20 w-20 rounded-lg shadow-md border border-gray-300 object-cover transition-transform duration-300 ease-in-out transform group-hover:scale-110 group-hover:shadow-xl"
+              />
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 bg-black bg-opacity-50 rounded-lg">
+                <span className="text-white font-bold">{user.alt}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
 
-    </>
+      {/* Community Message Section */}
+      <section className="text-center mt-12">
+        <p className="text-lg text-gray-700">
+          Empowering collaboration among young innovators.
+        </p>
+      </section>
+    </div>
   );
 };
 
