@@ -1,21 +1,87 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="MockSkills - Enhance your career with expert guidance and resources." />
-    <meta name="keywords" content="MockSkills, career,life, coaching, expert guidance, online courses" />
-    <link rel="icon" type="image/svg+xml" href="/assets/mockskills-DgASRONj.png" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <title>MockSkills - Enhance Your Career</title> 
-    <script type="module" crossorigin src="/assets/index-Cx32Vcno.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-Cz1JWTKv.css">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Meta Tags -->
+  <meta name="description" content="MockSkills is a career development platform offering CollabZone for team collaboration, BattleGround for coding competitions, and AI-powered mock interviews to boost interview skills, enhance coding abilities, and accelerate professional growth." />
+  <meta name="keywords" content="interview preparation courses, online interview courses, mock interview courses, career coaching courses, professional development courses, technical interview preparation, management interview training, finance interview courses, coding interview prep, AI-powered interview training, job readiness courses, soft skills interview training, resume building courses, interview practice courses, career guidance courses, interview tips and tricks, leadership interview courses, behavioral interview courses, expert interview coaching, job interview simulation, personalized learning paths, online learning platform, skill enhancement courses, interview practice tools, technical skills courses, communication skills training, leadership development courses, time management courses, confidence-building courses, online skill development, mock interview practice, tailored interview preparation, collaboration platform, professional networking, team collaboration tool, collaboration for career growth, career collaboration tools, freelance collaboration, work collaboration app, collaborate with experts, networking for career advancement, career growth networking, collaboration opportunities, skill-sharing platform, networking for professionals, remote collaboration tools, mentorship and collaboration, collaborative project management, collaborative career development, virtual collaboration tools, online professional community, networking for career development, career mentors and collaboration, partnership opportunities for growth, join professional communities, collaborate with peers, collaboration for job seekers, career collaboration apps, innovation collaboration platforms, freelance networking, career building through collaboration, professional networking for job seekers, coding competition platform, competitive programming challenges, online coding contests, code challenge platform, coding battle ground, programming competitions, AI-based coding challenges, job interview coding challenges, algorithm coding contests, programming skill development, code skill enhancement, coding competition platform for developers, competitive programming resources, coding hackathons, AI-powered coding challenges, programming problem-solving, developer coding challenges, coding contest rewards, learn through coding battles, online coding practice, tech competition platform, coding bootcamp challenges, job-ready coding skills, practice coding for interviews, coding challenges for beginners, coding contest leaderboard, code practice site, developer competition network, AI-driven code competitions, real-time coding challenges, code competitions for job seekers, AI-powered mock interviews, artificial intelligence interview prep, AI interview coaching, AI career tools, AI resume enhancement, personalized AI learning paths, AI-based job interview simulation, AI-powered interview questions, AI for professional growth, AI interview analysis, interview preparation with AI, AI-driven career development, AI-powered coding tests, AI interview feedback, career growth with AI tools, AI interview insights, AI mock interview practice, AI job readiness, AI-based career coaching, machine learning for job interviews, AI interview prep platform, artificial intelligence for professional growth, AI interview tips, AI-based learning for career growth, AI job coaching tool, AI career guidance, career growth resources, professional development tools, job readiness programs, career advancement platform, job-ready skills, skill development for professionals, career development platform, online career coaching, professional growth resources, career building tools, job interview readiness, career development through AI, career skill enhancement, professional growth opportunities, job market readiness, career training programs, personal development for career growth, online job coaching, career management tools, job application strategies, career skills training, professional success tools, career coaching platform, building job-ready skills, personal growth for career success, career roadmap tools, job skill development, career coaching online, professional networking tools, career guidance and mentorship" />
+  <meta name="author" content="MockSkills" />
+  <meta name="robots" content="index, follow, noarchive" />
+  <link rel="canonical" href="https://www.mockskills.com/" />
+  
+  <!-- Social Media Metadata -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="MockSkills - Empowering Your Career with Expert Guidance and AI Tools" />
+  <meta property="og:description" content="Discover MockSkills: AI-driven tools, mentorship, and resources designed to accelerate your career growth. Enhance your skills, prepare for interviews, and succeed in your profession." />
+  <meta property="og:image" content="https://www.mockskills.com/assets/og-image.jpg" />
+  <meta property="og:url" content="https://www.mockskills.com/" />
+  <meta property="og:site_name" content="MockSkills" />
+  <meta property="og:locale" content="en_US" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MockSkills - Your Partner in Career Growth" />
+  <meta name="twitter:description" content="MockSkills provides cutting-edge career coaching, interview preparation, and AI-driven tools for professional development." />
+  <meta name="twitter:image" content="https://www.mockskills.com/assets/twitter-image.jpg" />
+  <meta name="twitter:creator" content="@MockSkills" />
+  
+  <!-- Title -->
+  <title>MockSkills - Elevate Your Career and Professional Growth </title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://www.mockskills.com/assets/favicon.png" />
+
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="styles/main.css" />
+
+  <!-- Font Optimization -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" as="style" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" />
+
+  <!-- Structured Data for Enhanced SEO -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "MockSkills",
+      "url": "https://www.mockskills.com",
+      "logo": "https://www.mockskills.com/assets/logo.png",
+      "sameAs": [
+        "https://www.linkedin.com/company/mockskills",
+        "https://twitter.com/mockskills"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91 8521553798",
+        "contactType": "customer service",
+        "areaServed": "IN",
+        "availableLanguage": "English,Hindi"
+      },
+      "address": {
+        "@type": "800010",
+        "streetAddress": "Patna, Bihar",
+        "addressLocality": "India",
+        "addressRegion": "Bihar",
+        "postalCode": "800010",
+        "addressCountry": "IN"
+      },
+      "courseMode": "Online",
+      "educationalCredentialAwarded": "Certificate of Completion"
+    }
+  </script>
+  <script type="module" crossorigin src="/assets/index-B0IfNID4.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DfruwtzD.css">
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Performance Optimization -->
+  <link rel="preload" as="script" href="data:text/jsx;base64,aW1wb3J0IHsgU3RyaWN0TW9kZSB9IGZyb20gInJlYWN0IjsNCmltcG9ydCB7IGNyZWF0ZVJvb3QgfSBmcm9tICJyZWFjdC1kb20vY2xpZW50IjsNCmltcG9ydCBBcHAgZnJvbSAiLi9BcHAuanN4IjsNCmltcG9ydCAiLi9pbmRleC5jc3MiOw0KaW1wb3J0IHsgUHJvdmlkZXIgfSBmcm9tICJyZWFjdC1yZWR1eCI7DQppbXBvcnQgc3RvcmUgZnJvbSAiLi9VdGlscy9zdG9yZS5qc3giOw0KDQpjcmVhdGVSb290KGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJyb290IikpLnJlbmRlcigNCiAgPFN0cmljdE1vZGU+DQogICAgPFByb3ZpZGVyIHN0b3JlPXtzdG9yZX0+DQogICAgICA8QXBwIC8+DQogICAgPC9Qcm92aWRlcj4NCiAgPC9TdHJpY3RNb2RlPg0KKTsNCg==" />
+</body>
 </html>
