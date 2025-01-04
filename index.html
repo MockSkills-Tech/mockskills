@@ -1,20 +1,86 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="MockSkills empowers your career with expert guidance, AI-driven tools, and comprehensive resources for professional growth." />
-    <meta name="keywords" content="career development, professional growth, skill enhancement, online learning, e-learning platform, career coaching, mentorship programs, job preparation, interview skills, resume building, career guidance, career advancement, career training, career resources, career services, career planning, career support, career advice, career coaching online, career counseling, career development programs, career development services, career development training, career guidance online, career management, career mentoring, career opportunities, career planning services, career progression, career skills, career success, career workshops, coaching and mentoring, coaching services, coaching skills, coaching training, e-learning courses, e-learning platform, e-learning programs, e-learning resources, e-learning training, education and training, education platform, educational courses, educational programs, educational resources, educational training, interview coaching, interview preparation, interview skills training, job coaching, job interview preparation, job readiness, job search assistance, job search coaching, job search strategies, learning and development, learning platform, learning resources, learning skills, mentorship programs, online career coaching, online courses, online education, online learning, online mentorship, online training, personal development, professional development, professional skills, skill development, skill enhancement, skill training, training and development, training courses, training programs, training services, virtual learning, virtual training, workplace skills, mock interviews, interview preparation, technical interview prep, management interview prep, finance interview prep, fresher interview tips, professional interview strategies, rapid upskilling, interview simulations, interview practice, interview coaching, interview techniques, interview training, job interview preparation, mock interview sessions, online interview preparation, practice interviews, virtual interview preparation, interview skills development, interview workshops, job interview coaching, job interview practice, job interview skills, job interview training, mock interview coaching, mock interview practice, mock interview training, online interview coaching, online interview practice, online interview training, practice interview sessions, practice interview skills, practice interview training, virtual interview coaching, virtual interview practice, virtual interview training, career coaching, professional mentorship, industry mentors, soft skills training, communication skills, leadership development, problem-solving skills, career insights, personalized coaching, career advice, career counseling, career development coaching, career guidance, career mentoring, career planning, career support, executive coaching, job coaching, leadership coaching, mentorship programs, online coaching, online mentorship, personal development coaching, professional development coaching, professional guidance, professional mentoring, skill development coaching, soft skills coaching, soft skills development, soft skills enhancement, soft skills training programs, AI interview simulations, performance analytics, communication feedback, AI-driven learning, AI career tools, AI mock interviews, AI-powered assessments, AI-powered career tools, AI-powered feedback, AI-powered interview preparation, AI-powered learning tools, AI-powered mock interviews, AI-powered performance analysis, AI-powered simulations, artificial intelligence in career development, artificial intelligence in education, artificial intelligence in learning, artificial intelligence in training, intelligent career tools, intelligent learning platforms, intelligent learning tools, intelligent training tools, machine learning in career development, machine learning in education, machine learning in learning, machine learning in training, smart career tools, smart learning platforms, smart learning tools, smart training tools, professional networking, community building, job opportunities, project collaboration, industry trends, peer networking, career networking, collaboration platforms, collaborative learning, collaborative projects, job networking, networking events, networking opportunities, networking platforms, networking skills, online networking, professional communities, professional connections, professional development networks, professional groups, professional networking events, professional networking platforms, professional networking sites, virtual networking, virtual networking events, virtual networking platforms, programming challenges, coding competitions, data structures, algorithms, competitive programming, beginner coding, intermediate coding, advanced coding, coding practice, coding skills, coding tests, coding tutorials, coding workshops, computer programming challenges, computer programming competitions, computer programming practice, computer programming skills, computer programming tests, computer programming tutorials, computer programming workshops, data structures and algorithms, programming contests, programming exercises, programming practice, programming skills development, programming tutorials, software development challenges, software development competitions, software development practice, software development skills, software development tests, software development tutorials, software development workshops" />
-    <link rel="icon" type="image/svg+xml" href="src/assets/mockskills.png" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <title>MockSkills - Empowering Your Professional Growth</title> 
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Meta Tags -->
+  <meta name="description" content="MockSkills: Elevate your career with AI-driven tools, expert guidance, and resources for professional growth. Your path to success starts here." />
+  <meta name="keywords" content="career coaching, mock interviews, AI tools, job readiness, professional development, skill enhancement, career growth, online education, mentorship, interview preparation, technical skills, soft skills, leadership, AI-powered career tools" />
+  <meta name="author" content="MockSkills" />
+  <meta name="robots" content="index, follow, noarchive" />
+  <link rel="canonical" href="https://www.mockskills.com/" />
+  
+  <!-- Social Media Metadata -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="MockSkills - Empowering Your Career with Expert Guidance and AI Tools" />
+  <meta property="og:description" content="Discover MockSkills: AI-driven tools, mentorship, and resources designed to accelerate your career growth. Enhance your skills, prepare for interviews, and succeed in your profession." />
+  <meta property="og:image" content="https://www.mockskills.com/assets/og-image.jpg" />
+  <meta property="og:url" content="https://www.mockskills.com/" />
+  <meta property="og:site_name" content="MockSkills" />
+  <meta property="og:locale" content="en_US" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MockSkills - Your Partner in Career Growth" />
+  <meta name="twitter:description" content="MockSkills provides cutting-edge career coaching, interview preparation, and AI-driven tools for professional development." />
+  <meta name="twitter:image" content="https://www.mockskills.com/assets/twitter-image.jpg" />
+  <meta name="twitter:creator" content="@MockSkills" />
+  
+  <!-- Title -->
+  <title>MockSkills - Your Gateway to Professional Excellence</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://www.mockskills.com/assets/favicon.png" />
+
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="styles/main.css" />
+
+  <!-- Font Optimization -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" as="style" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" />
+
+  <!-- Structured Data for Enhanced SEO -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "MockSkills",
+      "url": "https://www.mockskills.com",
+      "logo": "https://www.mockskills.com/assets/logo.png",
+      "sameAs": [
+        "https://www.linkedin.com/company/mockskills",
+        "https://twitter.com/mockskills"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-800-123-4567",
+        "contactType": "customer service",
+        "areaServed": "IN",
+        "availableLanguage": "English"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Career Avenue",
+        "addressLocality": "Bangalore",
+        "addressRegion": "KA",
+        "postalCode": "560001",
+        "addressCountry": "IN"
+      },
+      "courseMode": "Online",
+      "educationalCredentialAwarded": "Certificate of Completion"
+    }
+  </script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- JavaScript Libraries -->
+  <script type="module" src="/src/main.jsx"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Performance Optimization -->
+  <link rel="preload" as="script" href="/src/main.jsx" />
+</body>
 </html>
