@@ -25,12 +25,11 @@ const Body = () => {
             <section className="flex flex-col  md:flex-row justify-between  lg:px-8 xl:px-16 space-y-6 md:space-y-0  mt-5">
                 <div className="flex flex-col   items-start text-left md:text-left md:w-[44%]">
                     <h1 className="font-bold  text-3xl md:text-4xl lg:text-5xl mt-6 md:mt-10 mb-2 md:mb-4 leading-tight">
-                        Everything you need to
-                        <span className="text-gradient"> ace</span> your tech interviews
+                    Elevate Your Skills  
+                        <span className="text-gradient"> with</span> Mockskills Today
                     </h1>
                     <p className="text-base text-left  md:text-lg lg:text-xl text-gray-500  md:my-2">
-                        Level up your career and land your next role with courses, mock interviews, and community support.
-                    </p>
+                    Boost your career with expert courses, AI tools, and community support through CollabZone and BattleGround!</p>
                     <button
                         onClick={handleGetStarted}
                         className="mt-2 md:mt-5 px-6 py-3 rounded-2xl bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:scale-105 hover:shadow-lg transition-transform"
@@ -40,7 +39,7 @@ const Body = () => {
                 </div>
                 <img
                     src={interviewImage}
-                    alt="Interview"
+                    alt="MockSkills-Interview-Image"
                     className=" md:h-64 lg:h-auto md:max-w-lg"
                 />
             </section>

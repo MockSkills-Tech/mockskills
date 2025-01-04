@@ -11,30 +11,30 @@ const Footer = () => {
             <div>
               <h2 className="text-3xl font-bold text-white mb-4">MockSkills</h2>
               <p className="text-gray-400 leading-relaxed mb-6">
-                Empowering your interview journey with AI-driven insights and
-                human expertise, delivering unmatched preparation for success.
-              </p>
+               Is a platform that enhances interview skills and career growth with AI mock interviews, career guidance, CollabZone, BattleGround, and personalized learning paths.
+</p>
               <div className="space-y-2 text-gray-300">
                 <p>
                   <strong>Contact Us:</strong>{" "}
                   <a
-                    href="tel:+011234567890"
-                    className="text-gray-400 hover:text-white transition-all duration-300"
+                      href="tel:+918521553798"
+                      className="text-gray-400 hover:text-white transition-all duration-300"
                   >
-                    +01 123 4567 890
+                      +91 8521553798 
                   </a>
+
                 </p>
                 <p>
                   <strong>Email:</strong>{" "}
                   <a
-                    href="mailto:info@mockskills.com"
+                    href="mailto:contact@mockskills.com"
                     className="text-gray-400 hover:text-white transition-all duration-300"
                   >
-                    info@mockskills.com
+                    contact@mockskills.com
                   </a>
                 </p>
                 <p>
-                  <strong>Address:</strong> 1234 Skill Drive, Bangalore, India
+                  <strong>Address:</strong> 800010, Bihar, India
                 </p>
               </div>
             </div>

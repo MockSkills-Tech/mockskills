@@ -6,26 +6,37 @@ const FAQ = () => {
 
     const faqs = [
         {
-            question: "What services does MockSkills offer?",
+            question: "What is Mockskills?",
             answer:
-                "MockSkills provides services like web development, mobile app development, and UI/UX design with a focus on quality.",
+                "Mockskills is a platform offering courses, mock interviews, projects, and community support to help individuals improve their skills and advance their careers.",
         },
         {
-            question: "How does MockSkills ensure high-quality freelancers?",
+            question: "How do I get started with Mockskills?",
             answer:
-                "MockSkills uses a rigorous vetting process, performance reviews, and feedback loops to ensure only top-tier freelancers.",
+                "Simply sign up and explore courses, mock interviews, and community features. You can also join projects and participate in challenges to enhance your skills.",
         },
         {
-            question: "Will freelancers be committed to my NDA?",
+            question: "Are the courses on Mockskills free?",
             answer:
-                "Yes, all freelancers on MockSkills are required to sign and adhere to NDAs before starting any project.",
+                "Currently, Mockskills is free, but we’re working on adding new features, and some may require a subscription in the future.",
         },
         {
-            question: "Who owns the project work delivered by freelancers?",
+            question: "What is the BattleGround feature?",
             answer:
-                "Ownership of all project deliverables is transferred to the client once the work is completed and payments are cleared.",
+                "BattleGround allows you to participate in challenges and contests to test your skills in a fun and competitive way.",
+        },
+        {
+            question: "Can I interact with other users on Mockskills?",
+            answer:
+                "Yes! You can connect with peers, collaborate on projects, and get support through our CollabZone community.",
+        },
+        {
+            question: "What are the benefits of Mockskills for my career?",
+            answer:
+                "Mockskills helps you develop new skills, gain real-world experience, and connect with professionals to boost your career.",
         },
     ];
+    
 
     const toggleFAQ = (index) => {
         setActiveIndex(activeIndex === index ? null : index);
@@ -45,7 +56,7 @@ const FAQ = () => {
                 {faqs.map((faq, index) => (
                     <div
                         key={index}
-                        className={`border border-gray-200 rounded-xl p-6 bg-white shadow-lg transition-transform duration-300 ${activeIndex === index ? "scale-105" : "scale-100"
+                        className={`border border-gray-200 rounded-lg p-4 bg-white shadow-sm transition-transform duration-300 ${activeIndex === index ? "scale-105" : "scale-100"
                             }`}
                         role="region"
                         aria-labelledby={`faq-${index}`}

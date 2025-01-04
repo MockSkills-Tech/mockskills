@@ -1,13 +1,17 @@
 import React, { useState } from "react";
 import { FaExchangeAlt, FaUsers } from "react-icons/fa";
-
+import { useDispatch, useSelector } from "react-redux";
+import { openLoginModal } from "../Utils/modalSlice";
 const AdvancedCallToActionSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
+  const dispatch = useDispatch();
+  const user = useSelector(store => store.user);
   const handleModalToggle = () => {
     setIsModalOpen(!isModalOpen);
   };
-
+  const handleGetStart = () => {
+    user ? navigate("/courses") : dispatch(openLoginModal());
+  }
   return (
     <div className="text-black py-12 rounded-3xl shadow-lg bg-gray-50 mt-5">
       {/* Container */}
@@ -68,7 +72,7 @@ const AdvancedCallToActionSection = () => {
               Join the growing global community of learners who are elevating
               their skills and achieving their dreams with us.
             </p>
-            <button className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-8 rounded-full shadow-md transform hover:scale-105 transition-all duration-300">
+            <button onClick={handleGetStart} className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-8 rounded-full shadow-md transform hover:scale-105 transition-all duration-300">
               Get Started Now
             </button>
           </div>
@@ -105,9 +109,12 @@ const AdvancedCallToActionSection = () => {
               </h2>
               <p className="text-gray-600 mb-6">
                 at{" "}
-                <span className="text-red-500 font-bold">
-                  support@mockskills.com
-                </span>
+                <a
+                    href="mailto:contact@mockskills.com"
+                    className="text-red-700 font-bold transition-all duration-300"
+                  >
+                    contact@mockskills.com
+                  </a>
               </p>
               <p className="text-gray-600">We will get back to you soon.</p>
             </div>
