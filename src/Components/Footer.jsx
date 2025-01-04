@@ -153,25 +153,25 @@ const Footer = () => {
                   href="#"
                   className="text-gray-400 hover:text-white transition-all duration-300"
                 >
-                  <i className="fab fa-facebook-f fa-2x"></i>
+                  <i className="fab fa-facebook-f fa-2x hover:text-blue-700"></i>
                 </a>
                 <a
                   href="#"
                   className="text-gray-400 hover:text-white transition-all duration-300"
                 >
-                  <i className="fab fa-twitter fa-2x"></i>
+                  <i className="fab fa-twitter fa-2x hover:bg-slate-500"></i>
                 </a>
                 <a
                   href="#"
                   className="text-gray-400 hover:text-white transition-all duration-300"
                 >
-                  <i className="fab fa-linkedin-in fa-2x"></i>
+                  <i className="fab fa-linkedin-in fa-2x hover:text-blue-500"></i>
                 </a>
                 <a
                   href="#"
                   className="text-gray-400 hover:text-white transition-all duration-300"
                 >
-                  <i className="fab fa-youtube fa-2x"></i>
+                  <i className="fab fa-youtube fa-2x hover:text-red-500"></i>
                 </a>
               </div>
               <div className="flex flex-col">
