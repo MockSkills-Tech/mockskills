@@ -201,7 +201,7 @@ const NewFeaturesSection = () => {
                         <div className="mt-8 md:mt-0 md:w-1/2 flex justify-center">
                             <img
                                 src={image}
-                                alt={`Feature: ${activeFeature}`}
+                                alt={`MockSkills-Tech-${activeFeature}`}
                                 className="w-full h-auto max-w-sm rounded-xl shadow-lg transform hover:scale-105 transition duration-300 ease-in-out"
                             />
                         </div>

@@ -50,7 +50,7 @@ const CommunityCard = () => {
                                     {/* Set a consistent image size for all */}
                                     <img
                                         src={item.profileImage}
-                                        alt={item.name}
+                                        alt={`MockSkills-Tech-${item.name}`}
                                         className="w-24 h-24 rounded-full object-cover mr-4 border-2 border-blue-500 transition-transform duration-300 hover:scale-105"
                                         style={{ objectFit: "cover" }} // Ensures images are focused
                                     />

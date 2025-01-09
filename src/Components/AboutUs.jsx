@@ -8,7 +8,7 @@ import Team2 from '../assets/Mithalesh.jpeg';
 // Reusable card component for values or features section without background or border
 const ValueCard = ({ imageSrc, title, description }) => (
     <div className="flex flex-col items-center text-center max-w-xs transition-none">
-        <img src={imageSrc} alt={title} className="rounded-lg mb-4" />
+        <img src={imageSrc} alt={`MockSkills-Tech-${title}`} className="rounded-lg mb-4" />
         <h3 className="text-2xl font-bold mb-2 text-blue-700">{title}</h3>
         <p className="text-gray-600">{description}</p>
     </div>
@@ -18,7 +18,7 @@ const ValueCard = ({ imageSrc, title, description }) => (
 // Reusable card component for team members with a light, single-color background
 const TeamMemberCard = ({ imageSrc, name, title, bio }) => (
     <div className="bg-gray-100 p-6 flex flex-col items-center rounded-lg shadow-lg max-w-sm w-full text-center text-gray-800">
-        <img src={imageSrc} alt={name} className="w-28 h-28 rounded-full mb-4 border-4 border-white" />
+        <img src={imageSrc} alt={`MockSkills-Tech-${name}`} className="w-28 h-28 rounded-full mb-4 border-4 border-white" />
         <h3 className="text-2xl font-bold">{name}</h3>
         <p className="text-md font-semibold uppercase mb-4">{title}</p>
         <p className="text-sm mb-4">{bio}</p>

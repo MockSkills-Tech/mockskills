@@ -81,12 +81,12 @@ const Battleground = () => {
         </div>
 
         {/* Image Section */}
-        <div className="relative max-w-2xl w-full mt-8 lg:mt-0">
+        <div className="relative max-w-lg w-full mt-8 lg:mt-0">
           {/* Decorative Glow */}
           <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-purple-500 to-blue-500 blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-500"></div>
 
           {/* Image Container */}
-          <div className="relative overflow-hidden rounded-lg border-4 border-gray-800 shadow-xl group-hover:shadow-2xl transition-all duration-300 ease-in-out">
+          <div className="relative  overflow-hidden rounded-lg border-4 border-gray-800 shadow-xl group-hover:shadow-2xl transition-all duration-300 ease-in-out">
             {/* Image */}
             <img
               src={battleGroundImage}

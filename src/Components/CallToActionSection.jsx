@@ -24,17 +24,17 @@ const AdvancedCallToActionSection = () => {
               <img
                 className="w-12 h-12 rounded-full border-2 border-gray-200 shadow-lg"
                 src="https://randomuser.me/api/portraits/men/32.jpg"
-                alt="User 1"
+                alt={`MockSkills-Tech-First-User`}
               />
               <img
                 className="w-12 h-12 rounded-full border-2 border-gray-200 shadow-lg"
                 src="https://randomuser.me/api/portraits/women/44.jpg"
-                alt="User 2"
+                alt={`MockSkills-Tech-Second-User`}
               />
               <img
                 className="w-12 h-12 rounded-full border-2 border-gray-200 shadow-lg"
                 src="https://randomuser.me/api/portraits/women/55.jpg"
-                alt="User 3"
+                alt={`MockSkills-Tech-Third-User`}
               />
             </div>
             <h2 className="text-2xl font-extrabold text-gray-800 mb-4">

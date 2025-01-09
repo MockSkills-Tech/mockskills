@@ -63,7 +63,7 @@ const FeaturesSection = () => {
                 <SwiperSlide key={index} className="flex items-center justify-center">
                   <img
                     src={feature.imageUrl}
-                    alt={feature.CourseName}
+                    alt={`MockSkills-Tech-${feature.CourseName}`}
                     className="object-cover max-w-full max-h-full rounded-lg"
                   />
                 </SwiperSlide>

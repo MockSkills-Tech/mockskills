@@ -52,11 +52,11 @@ const FAQ = () => {
             </h1>
 
             {/* FAQ List */}
-            <div className="space-y-10">
+            <div className="space-y-5">
                 {faqs.map((faq, index) => (
                     <div
                         key={index}
-                        className={`border border-gray-200 rounded-lg p-4 bg-white shadow-sm transition-transform duration-300 ${activeIndex === index ? "scale-105" : "scale-100"
+                        className={`border border-gray-200 rounded-lg p-3 bg-white shadow-sm transition-transform duration-300 ${activeIndex === index ? "scale-105" : "scale-100"
                             }`}
                         role="region"
                         aria-labelledby={`faq-${index}`}
@@ -70,7 +70,7 @@ const FAQ = () => {
                             aria-expanded={activeIndex === index ? "true" : "false"}
                         >
                             {/* Question */}
-                            <h2 className="text-sm md:text-md sm:text-lg  lg:text-xl font-bold text-gray-700">
+                            <h2 className="text-sm md:text-md sm:text-lg  lg:text-lg font-bold text-gray-700">
                                 {faq.question}
                             </h2>
 

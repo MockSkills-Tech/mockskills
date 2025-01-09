@@ -113,7 +113,7 @@ const AboutUsTeam = () => {
             >
               <img
                 src={member.image}
-                alt={member.name}
+                alt={`MockSkills-Tech-${member.name}`}
                 className="w-24 h-24 rounded-full border-2 border-gray-200 shadow-lg mb-2"
               />
               <p className="text-gray-700 text-center font-semibold">{member.name}</p>
