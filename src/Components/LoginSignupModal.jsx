@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { closeModal } from '../utils/modalSlice';
+import { closeModal } from '../Utils/modalSlice';
 import { Dialog, DialogActions, DialogContent, DialogTitle, Button, Slide, Fade } from '@mui/material';
 import { FaTimes } from 'react-icons/fa';
 import LoginSignup from './LoginSignup';
