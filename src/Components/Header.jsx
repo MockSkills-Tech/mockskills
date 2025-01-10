@@ -7,8 +7,8 @@ import LoginSignup from "./LoginSignup";
 import HeaderMenu, { SearchBar } from "./HeaderMenu";
 import { Link } from "react-router-dom";
 import { onAuthStateChanged, signOut } from 'firebase/auth';
-import { auth } from '../utils/firebase';
-import { addUser, removeUser } from '../utils/userSlice';
+import { auth } from '../Utils/firebase';
+import { addUser, removeUser } from '../Utils/userSlice';
 import { useNavigate, useLocation } from 'react-router-dom'
 import UserProfile from "./UserProfile";
 import { closeModal, openLoginModal, openSignupModal } from "../Utils/modalSlice"
