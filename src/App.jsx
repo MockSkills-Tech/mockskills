@@ -8,7 +8,7 @@ import CourseDetail from "./Components/Courses/CourseDetails/CourseDetail";
 import SingleCourseDetail from "./Components/Courses/CourseDetails/SingleCourseDetail";
 import CollabZone from "./Components/CollabZone/CollabZone";
 import Partners from "./Components/Partners/Partners";
-import BattleGround from "./Components/BattleGround/Battleground"; 
+import BattleGround from "./Components/BattleGround/BattleGround"; 
 import GlobalProtection from "./GlobalProtection"; // Apply GlobalProtection globally
 import ContentBody from "./Components/Courses/ContentDetails/ContentBody";
 import FindGenZ from "./Components/CollabZone/CollabFeatures/FindGenZ";
